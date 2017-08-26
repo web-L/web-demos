@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title></title>
+		<meta name="keywords" content="关键词，关键词">
+		<meta name="description" content="描述">
+
+		<!--css,js-->
+
+		<link rel="stylesheet" href="css/index.css" />
+		
+	</head>
+
+	<body>
+
+	<div id="game">
+		<p class="title">欢迎进入！猜拳：(赌神)争霸赛</p>
+		<ul>
+			<li>
+				<h2 id="name1">我：</h2>
+				<div class="anim user"></div>
+			</li>
+			
+				<img src="images/pk.png" class="pk" />
+			
+			<li>
+				<h2 id="name2">电脑：</h2>
+				<div class="anim comp"></div>
+			</li>
+		</ul>
+		<input type="button" id="op" value="开始" onclick="game.play()"/>
+		<p id="txt" class="text">请点击开始...</p>
+		<ul id="guess">
+			<li><div class="g_guess0" onclick="game.verdic( 0 )">石头</div></li>
+			<li><div class="g_guess1" onclick="game.verdic( 1 )">剪刀</div></li>
+			<li><div class="g_guess2" onclick="game.verdic( 2 )">布</div></li>
+		</ul>
+	</div>
+		
+	<script type="text/javascript" src="js/index.js"></script>
+
+	</body>
+
+
+</html>

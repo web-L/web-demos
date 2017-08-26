@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+ <head>
+
+  <meta charset="UTF-8">
+  <meta name="Keywords" content="关键词一，关键词二">
+  <meta name="Description" content="网站描述内容">
+  <title>门户网站二级滑动菜单</title>
+
+  <!--css js 文件的引入-->
+  <style type="text/css">
+		body,div,
+		body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+		ul,li{
+			list-style:none;
+		}
+		a{
+			text-decoration:none;
+		}
+		img{
+			vertical-align:top;
+			border:none;
+		}
+	 .Menu {
+		width:1206px;
+		height:100px;
+		margin:100px auto;
+	}
+	.Menu .List {
+		width:199px;
+		height:100px;
+		float:left;
+		position:relative;
+		border: 1px solid #fff;
+	}
+	.Menu div.List p.L_hide{
+		position:absolute;
+		width:100%;
+		height:2px;
+		z-index:999;
+		background: white;
+		bottom: -2px;
+		left: 0px;
+		display:none;
+	}
+	.Menu div.List p.on{
+		display:block;
+	}
+	.Menu .hover {
+		border:1px solid #ddd;
+		border-bottom:0px;
+		z-index:4;
+	}
+	.Menu .List dl {
+		padding:0px 14px;
+		height:100px;
+		width:169px;
+		position:absolute;
+		left:0px;
+		top:0px;
+		z-index:4;
+		background:#fff;
+	}
+	.Menu .List dl dt {
+		font-size:18px;
+		font-family:"微软雅黑";
+		line-height:45px;
+	}
+	.Menu .List dl dd {
+		line-height:20px;
+	}
+	.Menu .List dl dd a {
+		color:#000;
+		text-decoration:none;
+		padding-right:14px;
+		font-size:12px;
+	}
+	.Menu .Product {
+		height:183px;
+		width:1194px;
+		border:1px solid #ddd;
+		position:absolute;
+		left:-1px;
+		top:100px;
+		z-index:3;
+		display:none;
+	}
+
+  </style>
+ </head>
+
+ <body>
+	<div class='Menu'>
+		<div class='List' >
+			<dl>
+				<dt>护肤</dt>
+				<dd><a href="">保湿</a> <a href="">补水</a> <a href="">淡斑</a> 
+					<a href="">防晒</a> <a href="">淡化细纹</a> <a href="">美白</a>
+				</dd>
+			</dl>
+			<div class="Product"><img src="images/pic1.png" /></div>
+			<p class="L_hide on"></p>
+		</div>
+		<div class='List'>
+			<dl>
+				<dt>底妆/彩妆</dt>
+				<dd><a href="">粉底</a> <a href="">隔离</a> <a href="">散粉</a> 
+					<a href="">遮瑕</a> <a href="">唇膏</a> <a href="">眼线</a>
+					<a href="">眼影</a>
+				</dd>
+			</dl>
+			<p class="L_hide"></p>
+			<div class="Product"><img src="images/pic2.png" /></div>
+		</div>	
+		<div class='List'>
+			<dl>
+				<dt>香氛</dt>
+				<dd><a href="">男性香水</a> <a href="">女性香水</a> <a href="">情侣香水</a> 
+					<a href="">中性香水</a>
+				</dd>
+			</dl>
+			<p class="L_hide"></p>
+			<div class="Product"><img src="images/pic3.png" /></div>
+		</div>	
+		<div class='List'>
+			<dl>
+				<dt>美发/美体</dt>
+				<dd><a href="">护发</a> <a href="">染发</a> <a href="">洗发</a> 
+					<a href="">身体清洁</a> <a href="">身体滋润</a>
+				</dd>
+			</dl>
+			<p class="L_hide"></p>
+			<div class="Product"><img src="images/pic4.png" /></div>
+		</div>	
+		<div class='List'>
+			<dl>
+				<dt>男士护理</dt>
+				<dd><a href="">保湿</a> <a href="">补水</a> <a href="">控油平衡</a> 
+					<a href="">去角质</a> <a href="">吸油</a>
+				</dd>
+			</dl>
+			<p class="L_hide"></p>
+			<div class="Product"><img src="images/pic5.png" /></div>
+		</div>
+		
+		<div class='List' >
+			<dl>
+				<dt>男士护理</dt>
+				<dd><a href="">保湿</a> <a href="">补水</a> <a href="">控油平衡</a> 
+					<a href="">去角质</a> <a href="">吸油</a>
+				</dd>
+			</dl>
+			<p class="L_hide"></p>
+			<div class="Product"><img src="images/pic6.png" /></div>
+		</div>	
+	</div> 
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		$(".List").hover(function(){
+			var index = $(this).index();
+			var w = -1 + ( -index*199 );
+			$(this).find(".L_hide").show().parent().siblings().find(".L_hide").hide();
+			$(this).addClass("hover").find(".Product").stop().show().css('left',w);
+			
+		},function(){
+			$(this).removeClass("hover").find(".Product").stop().hide();
+		});
+</script>
+ </body>
+</html>

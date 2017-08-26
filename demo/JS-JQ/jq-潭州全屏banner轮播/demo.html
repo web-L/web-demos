@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ <!--声明当前页面的编码格式 UTF-8（国际编码）gbk(中文简体)-->
+	<meta charset="utf-8"/>
+	<!--声明当前页面的三要素-->
+	<title>标题</title>
+	<meta name="Keywords" content="关键字">
+	<meta name="Description" content="描述">
+  <!--样式 css 变漂亮 衣柜-->
+  <style type="text/css">
+		*{margin:0;/*外*/ padding:0;/*内*/}/* *代表所有的标签 */
+	.top{height:77px; width:100%; background:#3E2B24; padding:17px 0px; text-align:center;}
+	.nav{height:50px; width:100%; background:url("img/bg.jpg"); box-shadow:0px 2px 5px #000;/*css3 阴影*/}
+	.nav ul{width:980px; margin:0px auto;}
+	.nav ul li{list-style:none;width:136px;height:50px; float:left;color:#FFFFFF;line-height:50px;text-align:center; font-family:"微软雅黑"; cursor:pointer}
+	.nav ul li a{color:#FFFFFF; text-decoration:none;width:136px;height:50px;display:block;}
+	.nav ul li a:hover{background:url("img/hover.jpg");}
+	.banner{height:450px; width:100%; position:relative;/*设置为参照物*/ overflow:hidden;}
+	.banner .main{width:500%; height:450px; position:absolute; top:0px; -webkit-animation:slide 15S infinite;}
+	.banner .main li{width:20%; height:450px; list-style:none; float:left;}
+	.banner .main li:nth-child(1){background:url("img/1.jpg") center ;}
+	.banner .main li:nth-child(2){background:url("img/2.jpg") center ;}
+	.banner .main li:nth-child(3){background:url("img/3.jpg") center ;}
+	.banner .main li:nth-child(4){background:url("img/4.jpg") center ;}
+	.banner .main li:nth-child(5){background:url("img/5.jpg") center ;}
+	/*动画规则 动画名称 动画实现*/
+	@-webkit-keyframes slide { 
+	0% { left : 0px ; } /* 从{ .... } */
+	20%{left : 0px ;}
+	21%{left : -100% ;}
+	40%{left : -100% ;}
+	41%{left : -200% ;}
+	60%{left : -200% ;}
+	61%{left : -300% ;}
+	80%{left : -300%;}
+	81%{left :-400%;}
+	100%{ left :-400%; } /* 到{ .... } */
+	}
+	.banner .go{width:100px; height:10px; position:absolute; bottom:30px; right:50px;}
+	.banner .go li{height:10px; width:10px; background:rgba(0,0,0,0.5); list-style:none; float:left; margin-right:10px; border-radius:5px;/*css3 圆角*/ box-shadow:1px 1px 3px #fff,-1px -1px 3px #fff;}
+	.banner .go li#in{ position:absolute; top:0px; left:0px;   -webkit-animation:slide_2 15S infinite;}
+	@-webkit-keyframes slide_2 { 
+	0% { left : 0px; background:#fec425;} /* 从{ .... } */
+	20%{left : 0px;background:#fec425;}
+	21%{left : 20px;background:#c40002;}
+	40%{left : 20px ;background:#c40002;}
+	41%{left : 40px ;background:#f06a23;}
+	60%{left : 40px ;background:#f06a23;}
+	61%{left : 60px ;background:#ffffff;}
+	80%{left : 60px;background:#ffffff;}
+	81%{left :80px;background:#f00;}
+	100%{ left :80px; background:#f00;} /* 到{ .... } */
+	}
+  </style>
+ </head>
+ <body>
+	<!-- header-->
+	<div class="top"><!--饭盒， 盒子模型-->
+		<img src="img/logo.png"/>
+	</div>
+	<!-- nav-->
+	<div class="nav">
+		<ul>
+			<li><a href="http://www.baidu.com">首页</a></li>
+			<li><a href="#">HTML总集</a></li>
+			<li><a href="#">HTML5总集</a></li>
+			<li><a href="#">CSS3总集</a></li>
+			<li><a href="#">JS总集</a></li>
+			<li><a href="#">JQ总集</a></li>
+			<li><a href="#">TEST测试</a></li>
+		</ul>
+		<!--导航列表结束-->
+	</div>
+	<!-- banner-->
+	<div class="banner">
+		<ul class="main">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<div class="go">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li id="in"></li>
+			</ul>
+		</div>
+	</div>
+ </body>
+</html>

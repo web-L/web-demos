@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>首页</title>
+    <link rel="stylesheet" href="frame/layui/css/layui.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="image/code.png">
+</head>
+<body>
+
+<!-- admin -->
+<div class="layui-layout layui-layout-admin">
+    <!-- header -->
+    <div class="layui-header my-header">
+        <!--<a href="javascript:;">
+            <img class="my-header-logo" src="" alt="logo">
+        </a>-->
+        <a href="/aliadmin">
+            <div class="my-header-logo">后台管理系统</div>
+        </a>
+
+        <ul class="layui-nav" lay-filter="">
+            <li class="layui-nav-item">
+                <button class="layui-btn layui-btn-small btn-nav"><i class="layui-icon">&#xe620;</i></button>
+            </li>
+           <!--  <li class="layui-nav-item"><a href="javascript:;">列1</a></li>
+            <li class="layui-nav-item"><a href="javascript:;">列2</a></li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">列3</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;">列3-1</a></dd>
+                    <dd><a href="javascript:;">列3-2</a></dd>
+                    <dd><a href="javascript:;">列3-3</a></dd>
+                </dl>
+            </li> -->
+        </ul>
+
+        <ul class="layui-nav my-header-user-nav" lay-filter="side">
+            <!-- <li class="layui-nav-item"><a href="javascript:;" class="pay">支持作者</a></li> -->
+            <li class="layui-nav-item">
+                <a class="name" href="javascript:;"><img src="<%= data[0].head %>" alt="logo"><%= data[0].user_name %></a>
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;" href-url="/aliadmin/user" data-type="tabAdd">个人信息</a></dd>
+                    <dd><a href="javascript:;" href-url="/aliadmin/user/edit" data-type="tabAdd">修改密码</a></dd>
+                    <dd><a href="/aliadmin/logout">退出</a></dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+    <!-- side -->
+    <div class="layui-side my-side">
+        <div class="layui-side-scroll">
+            <ul class="layui-nav layui-nav-tree" lay-filter="side">
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a href="javascript:;">系统设置</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" href-url="/aliadmin/configure/edit" data-type="tabAdd">基本设置</a></dd>
+                        <dd><a href="javascript:;" href-url="/aliadmin/user/list" data-type="tabAdd">用户管理</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">文章管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" href-url="/aliadmin/article" data-type="tabAdd">文章列表</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">内容管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" href-url="/aliadmin/content/navlist" data-type="tabAdd">导航列表</a></dd>
+                        <dd><a href="javascript:;" href-url="/aliadmin/content/template" data-type="tabAdd">模版管理</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- body -->
+    <div class="layui-body my-body">
+        <div class="layui-tab layui-tab-card my-tab" lay-filter="card" lay-allowClose="true">
+            <ul class="layui-tab-title">
+                <li class="layui-this" lay-id="0"><span>欢迎</span></li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                    <iframe id="iframe" src="/aliadmin/welcome" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="layui-footer my-footer">
+        <p><a href="" target="_blank">Node后台管理系统 v0.0.1</a>
+       <p>2017 © copyright 粤ICP备1443975636号</p>
+    </div>
+</div>
+
+<script type="text/javascript" src="frame/layui/layui.js"></script>
+<script type="text/javascript">
+    layui.use(['layer', 'element', 'util'], function () {
+        var element = layui.element(), 
+            layer = layui.layer,
+            $ = layui.jquery, 
+            util = layui.util; //导航的hover效果、二级菜单等功能，需要依赖element模块
+
+        var side = $('.my-side');
+        var body = $('.my-body');
+        var footer = $('.my-footer');
+
+        // 监听导航栏收缩
+        $('.btn-nav').on('click', function(){
+            if(localStorage.log == 0){
+                localStorage.log = 1;
+                navShow(50);
+            }else{
+                localStorage.log = 0;
+                navHide(50);
+            }
+        });
+
+        // 导航栏收缩
+        function navHide(t){
+            var time = t ? t : 100;
+            side.animate({'left':-200},time);
+            body.animate({'left':0},time);
+            footer.animate({'left':0},time);
+        }
+
+        // 导航栏展开
+        function navShow(t){
+            var time = t ? t : 100;
+            side.animate({'left':0},time);
+            body.animate({'left':200},time);
+            footer.animate({'left':200},time);
+        }
+
+        //监听导航(side)点击切换页面
+        element.on('nav(side)', function (elem) {
+            if( elem.children('a').attr('href-url') == undefined ) return;
+            var card    = 'card';                                   // 选项卡对象
+            var title   = elem.text();                              // 导航栏text
+            var src     = elem.children('a').attr('href-url');      // 导航栏跳转URL
+            var id      = new Date().getTime();                     // ID
+            var flag    = getTitleId(card, title);                  // 是否有该选项卡存在
+            // 大于0就是有该选项卡了
+            if(flag > 0){
+                id = flag;
+            }else{
+                //新增
+                element.tabAdd(card, {
+                    title: '<span>'+title+'</span>'
+                    , content: '<iframe src="' + src + '" frameborder="0"></iframe>'
+                    , id: id
+                });
+            }
+            // 切换相应的ID tab
+            element.tabChange(card, id);
+            // 提示信息
+            layer.msg(title);
+            // 关闭弹窗
+            layer.closeAll();
+        });
+
+        // 根据导航栏text获取lay-id
+        function getTitleId(card,title){
+            var id = -1;
+            $(document).find(".layui-tab[lay-filter=" + card + "] ul li").each(function(){
+                if(title === $(this).find('span').text()){
+                    id = $(this).attr('lay-id');
+                }
+            });
+            return id;
+        }
+
+        // 监听控制content高度
+        function init(){
+            // 起始判断收缩还是展开
+            if(localStorage.log == 0){
+                navHide(1);
+            }else{
+                navShow(1);
+            }
+            // 选项卡高度
+            cardTitleHeight = $(document).find(".layui-tab[lay-filter='card'] ul.layui-tab-title").height();
+            // 需要减去的高度
+            height = $(window).height() - $('.layui-header').height() - cardTitleHeight - $('.layui-footer').height();
+            // 设置高度
+            $(document).find(".layui-tab[lay-filter='card'] div.layui-tab-content").height( height - 2 );
+        }
+
+        // 自适应
+        $(window).on('resize', function() {
+            if($(this).width() > 1024){
+                if(localStorage.log == 0){
+                    localStorage.log = 1;
+                    navShow();
+                }
+            }else{
+                if(localStorage.log == 1){
+                    localStorage.log = 0;
+                    navHide();
+                }
+            }
+            init();
+        });
+
+        // 初始化
+        init();
+
+        // 打赏
+        $('.pay').on('click',function(){
+            layer.open({
+                type: 1,
+                title: false,               // 标题不显示
+                closeBtn: false,            // 关闭按钮不显示
+                shadeClose: true,           // 点击遮罩关闭
+                area: ['auto','auto'],      // 宽高
+                content: $('.my-pay-box')   // 弹出内容
+            });
+        })
+
+        // 分辨率小于1024  使用内部工具组件
+        if ($(window).width() < 1024) {
+            util.fixbar({
+                bar1: '&#xe602;'
+                , css: {left: 10, bottom: 54}
+                , click: function (type) {
+                    if (type === 'bar1') {
+                        //iframe层
+                        layer.open({
+                            type: 1,                        // 类型
+                            title: false,                   // 标题
+                            offset: 'l',                    // 定位 左边
+                            closeBtn: 0,                    // 关闭按钮
+                            anim: 0,                        // 动画
+                            shadeClose: true,               // 点击遮罩关闭
+                            shade: 0.8,                     // 半透明
+                            area: ['150px', '100%'],        // 区域
+                            skin: 'my-mobile',              // 样式
+                            content: $('body .my-side').html() // 内容
+                        });
+                    }
+                    element.init();
+                }
+            });
+            localStorage.log = 0;
+            navHide(1);
+        }
+
+    });
+</script>
+</body>
+</html>

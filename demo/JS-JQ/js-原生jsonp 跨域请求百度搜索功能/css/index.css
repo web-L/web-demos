@@ -1,0 +1,95 @@
+body,div,
+ul,li,p,
+input,
+button,
+dl,dt,dd{margin:0px;padding:0px;}
+html,body{
+	width:100%;
+	height:100%;
+}
+ul,li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+img{
+	vertical-align:top;
+	border:none;
+}
+#wrap img.logo{
+	display:block;
+	margin: 26px auto;
+}
+#btn{
+	width:100px;
+	height:38px;
+	background:#3385ff;
+	border:1px solid #3385ff;
+	cursor:pointer;
+	color:#fff;
+	font-size:16px;
+	top: 1px;
+	position: relative;
+	text-align:center;
+	line-height:38px;
+}
+#text{
+	width:500px;
+	height:36px;
+	border:1px solid #b6b6b6;
+	font-size:16px;
+	text-indent:10px;
+	outline:none;
+}
+#wrap{
+	width:604px;
+	text-align:center;
+	margin: 168px auto;
+	position:relative;
+}
+#wrap ul{
+	position: absolute;
+	z-index: 1;
+	width: 501px;
+	background: #fff;
+	border: 1px solid #ccc;
+	box-shadow: 1px 1px 3px #ededed;
+	
+	-webkit-box-shadow: 1px 1px 3px #ededed;
+	display:none;
+}
+#wrap ul li{
+	width: 485px;
+	color: #000;
+	font: 14px arial;
+	line-height: 22px;
+	padding: 0 8px;
+	position: relative;
+	cursor: default;
+	text-align:left;
+	cursor:pointer;
+}
+#wrap ul li:hover{
+	background:rgb(240,240,240);
+}
+#wrap ul li a{
+	font-size:14px;
+	font-weight:900;
+	color:#000;
+}
+#wrap div.w_box{
+	position:relative;
+}
+#wrap div.w_box i.b_icon{
+	width: 18px;
+	height: 16px;
+	position: absolute;
+	top: 12px;
+	right: 117px;
+	background: url("../images/camera_new_679c15cc.png") no-repeat 0px 0px;
+	cursor:pointer;
+}
+#wrap div.w_box i.b_icon:hover{
+	background-position:0px -20px;
+}

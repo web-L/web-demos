@@ -1,0 +1,47 @@
+body,div,
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+ul,li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+img{
+	vertical-align:top;
+	border:none;
+}
+#web{
+	width:735px;height:350px;
+	margin:50px auto;position:relative;
+	}
+body{background:url("../images/bg.jpg");}
+.con{width:735px;height:350px;background:#fff;overflow:hidden;}
+.con ul li{
+	list-style-type:none;
+	width:735px;height:350px;
+	}
+.prev{
+	width:45px;height:100px;
+	position:absolute;left:0px;top:50%;margin-top:-50px;
+	background:url("../images/button.png");
+	opacity:0.5;display:none;
+	cursor:pointer;
+	}
+.next{
+	width:45px;height:100px;
+	position:absolute;right:0px;top:50%;margin-top:-50px;
+	background:url("../images/button.png");
+	opacity:0.5;background-position:-55px 0px;display:none;
+	cursor:pointer;
+}
+.nav{
+	width:720px;height:30px;
+	position:absolute;left:50%;margin-left:-360px;bottom:10px;
+	}
+.nav ul li{
+	width:119px;height:30px;
+	float:left;/**浮动*/background:rgba(255,255,255,0.6);/*设置背景透明*/
+	margin-right:1px;text-align:center;line-height:30px;font-size:12px;
+	color:#333;
+	}
+.nav ul .bg{background:rgba(0,0,0,0.6);color:#fff;}

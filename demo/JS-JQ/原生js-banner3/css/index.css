@@ -1,0 +1,66 @@
+body,div,
+ul,li,p,
+input,
+button,
+dl,dt,dd{margin:0px;padding:0px;}
+img {
+	display:block;
+	border:none;
+	
+}
+a{
+	text-decoration:none;
+}
+#box{
+	width:500px;
+	height:360px;
+	border:3px solid #999;
+	margin:100px auto 20px;
+	position:relative;
+}
+#box .a{
+	width:30px;
+	background:rgba(0,0,0,0.6);
+	position:absolute;
+	color:#fff;
+	font-size:30px;
+	text-align:center;
+	line-height:50px;
+	border-radius:4px;
+	display:none;
+}
+#box:hover .a{
+	display:block;
+}
+#box .a:hover{
+	background:rgba(0,0,0,0.8);
+}
+#box #left{
+	left:10px;
+	top:180px;
+}
+#box #right{
+	right:10px;
+	top:180px;
+}
+#p1{
+	text-align:center;
+	font-size:20px;
+}
+#box #list{
+	position:absolute;
+	left:220px;
+	bottom:20px;
+
+}
+#box #list li{
+	width:16px;
+	height:16px;
+	background:#B7B7B7;
+	border-radius:8px;
+	list-style:none;
+	float:left;
+	margin:0 4px;
+	background:rgba(0,0,0,0.6);
+	cursor:pointer;
+}

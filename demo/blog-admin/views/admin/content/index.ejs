@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>导航列表</title>
+    <link rel="stylesheet" href="../../frame/layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="icon" href="../../image/code.png">
+    <style>
+        .layui-colla-title-hide{
+            position: relative;
+            height: 42px;
+            line-height: 42px;
+            padding: 0 15px 0 18px;
+            color: #333;
+            background-color: #f2f2f2;
+            cursor: pointer;
+        }
+        .layui-colla-item,.layui-colla-content{
+            position: relative;
+        }
+        .layui-btn-group{
+            position: absolute;
+            top: 0;
+            right: 30px;
+            top: 6px;
+        }
+        .two-nav{
+            padding-left: 44px;
+        }
+    </style>
+</head>
+<body class="body">
+    <div class="my-btn-box">
+        <span class="fl">
+            <a href="/aliadmin/content/nav/add" class="layui-btn btn-add btn-default" id="btn-add-article">添加</a>
+        </span>
+    </div>
+    <div class="layui-collapse" lay-accordion="">
+        <% if( locals.navdata != undefined&&locals.navdata.length != 0 ){ %>
+            <% for( var i = 0 ; i < locals.navdata.length ;i++ ){ %>
+                <% if( locals.navdata[i].towdata.length == 0 ){ %>
+                    <div class="layui-colla-item">
+                        <h2 class="layui-colla-title-hide"><%= locals.navdata[i].title %></h2><div class="layui-btn-group">
+                            <a href="/aliadmin/content/nav/edit?id=<%= locals.navdata[i].id%>" class="layui-btn layui-btn-small"><i class="layui-icon"></i></a>
+                            <button class="layui-btn layui-btn-small" data-id="<%= locals.navdata[i].id %>"><i class="layui-icon"></i></button>
+                        </div>
+                    </div>
+                <% }else{ %>
+                    <div class="layui-colla-item">
+                        <h2 class="layui-colla-title one-nav"><%= locals.navdata[i].title %></h2>
+                        <div class="layui-btn-group">
+                            <a href="/aliadmin/content/nav/edit?id=<%= locals.navdata[i].id%>" class="layui-btn layui-btn-small"><i class="layui-icon"></i></a>
+                            <button class="layui-btn layui-btn-small" data-id="<%= locals.navdata[i].id %>"><i class="layui-icon"></i></button>
+                        </div>
+                        <% for( var j = 0 ; j < locals.navdata[i].towdata.length ;j++ ){ %>
+                            <div class="layui-colla-content two-nav"><%= locals.navdata[i].towdata[j].title %>
+                                <div class="layui-btn-group">
+                                    <a href="/aliadmin/content/nav/edit?id=<%= locals.navdata[i].towdata[j].id%>" class="layui-btn layui-btn-small"><i class="layui-icon"></i></a>
+                                    <button class="layui-btn layui-btn-small" data-id="<%= locals.navdata[i].towdata[j].id %>"><i class="layui-icon"></i></button>
+                                </div>
+                            </div>
+                         <% } %>
+                    </div>
+                <% } %>
+            <% } %>
+        <% }else{ %>
+            <div class="my-page-box">
+                <i class="layui-icon"></i>
+                <p class="text">没有导航啦！添加一个吧~~~</p>
+                <div class="my-btn-box">
+                    <a class="layui-btn layui-btn-danger layui-btn-small " href="/aliadmin/content/nav/add">添加导航</a>
+                </div>
+            </div>
+         <% } %>
+    </div>
+
+<script type="text/javascript" src="../../frame/layui/layui.js"></script>
+<script type="text/javascript">
+    layui.use(['layer','element','jquery'], function () {
+        var layer = layui.layer, element = layui.element(),$ = layui.jquery;
+
+        $('button[data-id]').click(function() {
+            var ids = [];
+            if ( $(this).parents('.two-nav').length >= 1 ) {
+                ids.push( $(this).attr('data-id') );
+            }else{
+                $(this).parents('.layui-colla-item').find('[data-id]').each(function(index, el) {
+                    ids.push( $(this).attr('data-id') );
+                });
+            }
+            
+            layer.confirm('您确定删除吗？', { btn: ['Yes','No'] },function(){
+                $.post('/aliadmin/content/nav/remove', {ids: ids}, function(res) {
+                    if(res.type=='success'){
+                      layer.msg(res.content, {icon: 1});
+                      setTimeout(function(){
+                        window.location.reload();
+                      },500)
+                    }else{
+                          layer.msg(res.content,{time:1000});
+                    }
+                });
+            });
+        });
+    });
+</script>
+</body>
+</html>

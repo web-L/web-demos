@@ -1,0 +1,96 @@
+body,div,
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+ul,li{
+	list-style:none;
+	font-family:"微软雅黑";
+}
+a{
+	text-decoration:none;
+}
+img{
+	vertical-align:top;
+	border:none;
+}
+#header{
+	width:1071px;
+	height:654px;
+	margin:0px auto;
+}
+#content{
+	width:1071px;
+	margin:10px auto;
+}
+#content .main{
+	width:668px;
+}
+#content .main h2{
+	font-weight:500;
+	font-size:22px;
+	color:rgb(50,50,50);
+	line-height:30px;
+	border-bottom:1px solid #ddd;
+}
+#content .main ol{
+	margin:30px 0px 0px 18px;
+}
+#content .main ol li{
+	width:630px;
+	height:500px;
+	border-left:2px dotted #ddd;
+	position:relative;
+	padding-left:30px;
+}
+#content .main ol li div.main_step{
+	width:32px;
+	height:32px;
+	background:url("../img/step.png");
+	color:#fff;
+	font-size:16px;
+	text-align:center;
+	line-height:32px;
+	position:absolute;
+	left:-16px;
+	top:0px;
+	background-position:0px -34px;
+}
+#content .main ol li div.on{
+	background-position:0px 0px;
+}
+#content .main ol li p{
+	line-height:26px;
+	margin-bottom:16px;
+}
+
+.top{
+	width:100%;
+	min-width:1071px;
+	height:40px;
+	background:url("../img/top.png")center;
+	display:none;
+	position:fixed;
+	top:0px;
+	left:0px;
+	z-index:9999;
+	box-shadow:0 2px 6px #ddd;
+}
+
+#content .main div.slide{
+	position:fixed;
+	top:42px;
+	margin-left:4px;
+	background:#fff;
+}
+#content .main div.slide ul li{
+	width:32px;
+	height:32px;
+	background:url("../img/step.png") 0px -68px;
+	color:#fff;
+	font-size:16px;
+	text-align:center;
+	line-height:32px;
+	display:none;
+	cursor:pointer;
+}
+#content .main div.slide ul li.on,#content .main div.slide ul li.hover{
+	background-position:0px 0px;
+}

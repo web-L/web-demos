@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>jq-全屏滚动</title>
+		<meta name="keywords" content="关键词，关键词">
+		<meta name="description" content="描述">
+
+		<!--css,js-->
+		<link rel="stylesheet" href="css/fullroll.css" />
+		<style type="text/css">
+			body,div,
+			ul,li,p,
+			input,
+			button,
+			dl,dt,dd{margin:0px;padding:0px;}
+			html,body{
+				width:100%;
+				height:100%;
+				overflow:hidden;
+			}
+			ul,li{
+				list-style:none;
+			}
+			a{
+				text-decoration:none;
+			}
+			img{
+				vertical-align:top;
+				border:none;
+			}
+			#viewer div.Mi1{
+				background:url("images/m1.jpg")center;
+				position:relative;
+			}
+			#viewer div.Mi1 .M_box{
+				position:absolute;
+				width: 605px;
+				left: 21.28906%;
+				top: 31.94444%;
+			}
+			#viewer div.Mi1 div.M_box h2{
+				font-size: 40px;
+				line-height: 50px;
+				color:#212121;
+				font-weight:300;
+			}
+			#viewer div.Mi1 div.M_box p.p1{
+				    font-size: 14px;
+					line-height: 18px;
+					margin-top: 15px;
+					color: #757575;
+			}
+			#viewer div.Mi1 div.M_box p.b_price{
+				font-size: 36px;
+				line-height: 40px;
+				margin-top: 24px;
+				color:#333;
+				margin-bottom:10px;
+			}
+			#viewer div.Mi1 div.M_box div.video i{
+				width:20px;
+				height:16px;
+				display:inline-block;
+				background:url("images/icon.jpg");
+				vertical-align:text-bottom;
+			}
+			#viewer div.Mi1 div.M_box div.video a{
+				font-size:14px;
+				color:#ff6700;
+				padding-left:6px;
+			}
+			#viewer div.Mi2{
+				background:url("images/m2.jpg")center;
+			}
+			#viewer div.Mi3{
+				background:url("images/m3.jpg")center;
+			}
+			#viewer div.Mi4{
+				background:url("images/m4.jpg")center;
+			}
+			#viewer div.Mi5{
+				background:url("images/m5.jpg")center;
+			}
+			#viewer div.Mi6{
+				background:url("images/m6.jpg")center;
+			}
+			#viewer ul.btus{
+				position: fixed;
+				top: 50%;
+				right: 20px;
+				z-index: 99;
+				width: 20px;
+				margin: 0;
+				padding: 0;
+			}
+			#viewer ul.btus li{
+				width: 6px;
+				height: 6px;
+				margin: 7px 0;
+				border-radius:50%;
+				background:#757575;
+				cursor:pointer;
+				border: 2px solid transparent;
+			}
+			#viewer ul.btus li.curs{
+				border: 2px solid #95d7fd;
+				background: none;
+			}
+		</style>
+		
+	</head>
+
+	<body>
+
+	<div id="viewer">
+		<div class="Mi1">
+			<div class="M_box">
+				<h2>
+					小米手机5
+					<br />
+					十余项黑科技，很轻狠快
+				</h2>
+				<p class="p1">
+				骁龙820处理器，最大可选 4GB 内存 + 128GB 闪存 <br />
+				4 轴防抖相机，3D陶瓷 / 玻璃机身
+				</p>
+				<p class="b_price">1999 元起</p>
+				<div class="video">
+					<i></i><a href="#">外观视频</a>
+					<i></i><a href="#">4 轴防抖视频</a>
+				</div>
+			</div>
+		</div>
+		<div class="Mi2"></div>
+		<div class="Mi3"></div>
+		<div class="Mi4"></div>
+		<div class="Mi5"></div>
+		<div class="Mi6"></div>
+		<ul class="btus">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/fullroll.js"></script>
+	<script type="text/javascript">
+		function callback(index , $parg ){
+			$("#viewer ul.btus li").eq(index).addClass("curs").siblings().removeClass("curs");
+		}
+		$("#viewer").fullroll(callback);
+
+	
+	/*
+		//全屏滚动特效
+		$("#viewer").bind("mousewheel",function( event ){
+			var dir	= event.originalEvent.wheelDelta;//获取滚动值
+			dir = dir>0 ? 1 : 0; //判断滚动值
+			var $this = $(this);
+			var $length = $("div.UI_pageviewer div.UI_pag");
+			var maxIndex = $length.size()-1;//获取div 数量 
+			
+			var index = $this.attr("index");
+			
+			if( dir ){
+				if( --index < 0 ){
+					index = maxIndex
+				}
+			}else{
+				if( ++index > maxIndex ){
+					index = 0;
+				}
+			};
+			if( !$this.is(":animated") ){
+				$this.animate({"top":"-"+index+"00%"} , 1000);
+				$this.attr( "index",index )
+				console.log(index)
+			}
+	
+		})
+	*/
+	</script>
+	</body>
+
+
+</html>

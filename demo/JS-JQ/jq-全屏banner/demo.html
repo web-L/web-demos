@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>jq-全屏banner</title>
+  <link rel="stylesheet" href="css/demo.css" />
+ </head>
+ <body>
+	<div id="web">
+		<div class="con">
+			<img src="images/1.jpg" />
+			<img src="images/2.jpg" />
+			<img src="images/3.jpg" />
+			<img src="images/4.jpg" />
+			<img src="images/5.jpg" />
+			<img src="images/6.jpg" />
+		</div>
+		<div class="nav">
+			<ul>
+				<li style="background:blue"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript">
+	$('.nav ul li').click(function(){
+		var i =0;
+		i =$(this).index();
+		$(this).css("background","blue").siblings().css("background","#fff");
+		$(".con img").eq(i).fadeIn(400).siblings().fadeOut(400);
+	})
+
+  </script>
+ </body>
+</html>

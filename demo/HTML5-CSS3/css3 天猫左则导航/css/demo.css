@@ -1,0 +1,91 @@
+html,body{
+	margin:0px;
+	padding:0px;
+	width:100%;
+	height:100%;
+}
+div.nav{
+	width:35px;
+	height:100%;
+	background-color:#000;
+	position:fixed;
+	top:0px;
+	bottom:0px;
+}
+div.nav ul{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	color:#fff;
+}
+div.nav ul li{
+	width:35px;
+	height:35px;
+	margin-top:10px;
+	cursor:pointer;
+	background-image:url(../images/1.png);
+	position:relative;/**/
+}
+div.nav ul li:hover{
+	background-color:#c40000;
+}
+div.nav ul li:nth-child(1) {
+	margin-top:80px;
+	background-image:url(../images/1.png);
+}
+div.nav ul li:nth-child(2) {
+	margin-top:80px;
+	background-image:url(../images/4.png);
+}
+div.nav ul li:nth-child(3) {
+	background-image:url(../images/5.png);
+}
+div.nav ul li:nth-child(4) {
+	background-image:url(../images/6.png);
+}
+div.nav ul li:nth-child(5) {
+	background-image:url(../images/7.png);
+}
+div.nav ul li:nth-child(6) {
+	background-image:url(../images/8.png);
+}
+div.nav ul li:nth-child(7) {
+	margin-top:50px;
+	background-image:url(../images/9.png);
+}
+div.nav ul li:nth-child(8) {
+	background-image:url(../images/10.png);
+}
+div.nav ul li:nth-child(9) {
+	background-image:url(../images/11.png);
+}
+div.nav ul li div{
+	position:absolute;
+	height:35px;
+	left:65px;
+	width:100px;
+	background-color:#494949;
+	text-align:center;/*文字居中*/
+	line-height:35px;/*设置行高*/
+	font-family:'Microsoft Yahei';
+	font-size:10px;/*文字大小*/
+	opacity:0;
+	transition:all .2s;
+}
+div.nav ul li:hover div{
+	display:block;
+	opacity:1;
+	left:35px;
+}
+div.nav ul li div b{
+	position:absolute;
+	left:-10px;
+	font-size:40px;
+	color:#494949;
+}
+div.myDiv{
+	margin-left:50px;
+	display:inline-block;
+	border:10px solid #fff;
+	border-top:10px solid #494949;
+}

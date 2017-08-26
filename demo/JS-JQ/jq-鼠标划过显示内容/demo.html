@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ <!--声明当前页面的编码集charset=gbk，bg2312中文编码，utf-8国际编码-->
+  <meta charset="UTF-8">
+  <!--当前页面的三要素-->
+  <title>结合jQuery鼠标划过显示内容</title>
+  <meta name="Keywords" content="关键词，关键词">
+  <meta name="Description" content="描述">
+<script language="javascript" src="js/jquery_1.1.1.js"/></script>
+  <!--css-->
+<style>
+*{margin:0;padding:0;}
+body{font-size:14px;
+	font-family:"微软雅黑";
+	background:#f3f3f3;}
+ul{list-style:none}
+.house{width:1150px;
+		height:500px;
+		margin:100px auto;}
+.house ul li{width:260px;
+             height:260px;
+			 overflow:hidden;
+			 float:left;
+             margin-right:25px;
+			 margin-top:25px;
+			 position:relative;
+			 }
+/*划过显示内容-开始*/
+.text{position:absolute;bottom:-260px;left:0;
+      z-index:1;
+	  background:url(images/bg.png) repeat;
+	  width:240px;
+	  height:240px;
+	  padding:10px;
+	  transition:all 230ms linear;
+	  
+	  }
+.text_a{display:inline-block;
+		padding:10px 15px;
+	    background:#fff;
+		height:220px;
+		width:210px;
+		color:#252525;
+		text-decoration:none
+		}
+.text_a h1{font-size:26px;
+		   text-align:center;
+		   margin:35px 0 15px;
+		   }
+.title{text-align:center;
+	   margin-bottom:10px;
+	  }
+.txt_2{color:#999}
+/*划过显示内容-结束*/
+.hover .text{bottom:0;}
+
+/*鼠标划过显示代码-开始
+.house ul li:hover .text{bottom:0;}*/
+/*鼠标划过显示代码-结束*/
+</style>
+ </head>
+ <body>
+  <div class="house">
+   <ul>
+    <li>
+	<img src="images/1.jpg"/>
+	<!--图片上内容-开始-->
+	<div class="text">
+	<a href="" target="_blank" class="text_a">
+	 <h1>健康</h1>
+	 <h3 class="title">5招摆脱周一综合症</h3>
+	 <p class="txt_2">很多上班族忙碌五天后，周末不甘寂寞，星期五、星期六晚上都</p>
+	 </a>
+	</div>
+	<!--图片上内容-结束-->
+	</li>
+	<li>
+	<img src="images/2.jpg"/>
+	<!--图片上内容-开始-->
+	<div class="text">
+	<a href="" target="_blank" class="text_a">
+	 <h1>萌宠</h1>
+	 <h3 class="title">你迟到怪我咯？萌宠耍赖篇</h3>
+	 <p class="txt_2">爆笑宠乐园372:我健忘症</p>
+	 </a>
+	</div>
+	<!--图片上内容-结束-->
+	</li>
+	<li>
+	<img src="images/3.jpg"/>
+	<!--图片上内容-开始-->
+	<div class="text">
+	<a href="" target="_blank" class="text_a">
+	 <h1>萌宠</h1>
+	 <h3 class="title">你迟到怪我咯？萌宠耍赖篇</h3>
+	 <p class="txt_2">爆笑宠乐园372:我健忘症</p>
+	 </a>
+	</div>
+	<!--图片上内容-结束-->
+	</li>
+	<li>
+	<img src="images/4.jpg"/>
+	<!--图片上内容-开始-->
+	<div class="text">
+	<a href="" target="_blank" class="text_a">
+	 <h1>萌宠</h1>
+	 <h3 class="title">你迟到怪我咯？萌宠耍赖篇</h3>
+	 <p class="txt_2">爆笑宠乐园372:我健忘症</p>
+	 </a>
+	</div>
+	<!--图片上内容-结束-->
+	</li>
+   </ul>
+  </div>
+ </body>
+<script>
+$(document).ready(function(){//加载完页面结构，执行代码，（文档）
+  $(".house ul li:first").addClass("hover");/*:first定义第一个class样式*/
+  $(".house ul li").mouseover(function(){
+  $(this).addClass("hover").siblings().removeClass("hover");
+  // .siblings()获得匹配集合中每个元素的同胞，通过选择器进行筛选是可选的。.removeClass移除样式
+  //alert("hello");
+});
+});
+</script>
+
+
+
+
+</html>

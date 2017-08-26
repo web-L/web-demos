@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title></title>
+		<meta name="keywords" content="关键词，关键词">
+		<meta name="description" content="描述">
+
+		<!--css,js-->
+
+		<style type="text/css">
+			body,div,
+			ul,li,p,
+			input,
+			button,
+			dl,dt,dd{margin:0px;padding:0px;}
+			html,body{
+				width:100%;
+				height:100%;
+				background:#333;
+			}
+			ul,li{
+				list-style:none;
+			}
+			a{
+				text-decoration:none;
+			}
+			img{
+				vertical-align:top;
+				border:none;
+			}
+
+			#ball{
+				width:500px;
+				height:500px;
+				margin:100px auto;
+			}
+			#ball div.ball_cube{
+				width:100%;
+				height:100%;
+				transform-style:preserve-3d;
+				transform:rotate(-20deg) rotateX(-20deg) rotateY(0deg);
+				animation:ball 20s linear infinite;
+			}
+			@keyframes ball{
+				0%{
+					transform:rotate(-20deg) rotateX(-20deg) rotateY(0deg);
+				}
+				100%{
+					transform:rotate(-20deg) rotateX(-20deg) rotateY(360deg);
+				}
+			}
+
+			#ball div.ball_cube div{
+				width:100%;
+				height:100%;
+				border:1px solid #ccc;
+				border-radius:50%;
+				position:absolute;
+				top:0px;
+				left:0px;
+				transition:0.5s;
+			}
+			#ball div.ball_cube div.x1{
+				transform:rotateY(0deg);
+			}
+			#ball div.ball_cube div.x2{
+				transform:rotateY(20deg);
+			}
+			#ball div.ball_cube div.x3{
+				transform:rotateY(40deg);
+			}
+			#ball div.ball_cube div.x4{
+				transform:rotateY(60deg);
+			}
+			#ball div.ball_cube div.x5{
+				transform:rotateY(80deg);
+			}
+			#ball div.ball_cube div.x6{
+				transform:rotateY(100deg);
+			}
+			#ball div.ball_cube div.x7{
+				transform:rotateY(120deg);
+			}
+			#ball div.ball_cube div.x8{
+				transform:rotateY(140deg);
+			}
+			#ball div.ball_cube div.y1{
+				transform:rotateX(90deg) translateZ(200px) scale(0.6);
+			}
+			#ball div.ball_cube div.y2{
+				transform:rotateX(90deg) translateZ(150px) scale(0.8);
+			}
+			#ball div.ball_cube div.y3{
+				transform:rotateX(90deg) translateZ(100px) scale(0.92);
+			}
+			#ball div.ball_cube div.y4{
+				transform:rotateX(90deg) translateZ(50px) scale(0.98);
+			}
+			#ball div.ball_cube div.y5{
+				    transform: rotateX(90deg) translateZ(0px);
+			}
+			#ball div.ball_cube div.y6{
+				    transform: rotateX(90deg) translateZ(-50px) scale(0.98);
+			}
+			#ball div.ball_cube div.y7{
+				    transform: rotateX(90deg) translateZ(-100px) scale(0.92);
+			}
+			#ball div.ball_cube div.y8{
+				    transform: rotateX(90deg) translateZ(-150px) scale(0.8);
+			}
+			#ball div.ball_cube div.y9{
+				    transform: rotateX(90deg) translateZ(-200px) scale(0.6);
+			}
+		</style>
+		
+	</head>
+
+	<body >
+	
+		<div id="ball">
+			<div class="ball_cube" id="list">
+				<div class="x1"></div>
+				<div class="x2"></div>
+				<div class="x3"></div>
+				<div class="x4"></div>
+				<div class="x5"></div>
+				<div class="x6"></div>
+				<div class="x7"></div>
+				<div class="x8"></div>
+				<div class="x9"></div>
+				<div class="y1"></div>
+				<div class="y2"></div>
+				<div class="y3"></div>
+				<div class="y4"></div>
+				<div class="y5"></div>
+				<div class="y6"></div>
+				<div class="y7"></div>
+				<div class="y8"></div>
+				<div class="y9"></div>
+			</div>
+		</div>
+	
+	<script type="text/javascript">
+		//获取随机颜色方法一
+		function color(){
+			var colors = [0,1,2,3,4,5,6,7,8,9,"a","c","d","e","f"];
+			var color = "";
+			for( var i=0;i<6;i++ ){
+				var n = Math.ceil( Math.random()*15 );
+				color += colors[n];
+				if( i == 5 ){
+					return "#"+color;
+				}
+			}
+		}
+		//获取随机颜色方法二
+		function color2(){
+			var color = Math.ceil( Math.random()*16777215 ).toString( 16 );
+			while( color.length < 6 ){
+				color = "0"+color;
+			}
+			return "#"+color;
+		}
+
+		var oList = document.getElementById("list");
+		var odiv = oList.getElementsByTagName("div");
+
+		setInterval(function(){
+			for( var i=0;i<odiv.length;i++ ){
+				odiv[i].style.borderColor = color2();
+				odiv[i].style.boxShadow = "2px 6px 28px"+color2();
+			}	
+		},1000)
+		
+
+	</script>
+	</body>
+
+
+</html>

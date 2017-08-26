@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>上传图片放大镜效果</title>
+		<meta name="keywords" content="关键词，关键词">
+		<meta name="description" content="描述">
+
+		<!--css,js-->
+
+		<style type="text/css">
+			body,div,
+			body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+			ul,li{
+				list-style:none;
+			}
+			body{
+				background:#3c8fc1;
+			}
+			a{
+				text-decoration:none;
+			}
+			img{
+				vertical-align:top;
+				border:none;
+			}
+			#wrap{
+				width: 900px;
+				height: 350px;
+				background:url("images/bg.jpg");
+				position:relative;
+				top:120px;
+				margin:auto;
+			}
+			#wrap div.upload{
+				background:#fff;
+				width:322px;
+				height:80px;
+				border-radius:6px;
+				position:absolute;
+				left:40px;
+				top:180px;
+				padding:10px;
+			}
+			#wrap div.upload a.u_btn{
+				width:80px;
+				height:78px;
+				float:left;
+				border:1px solid #ccc;
+				border-radius:6px 0px 0px 6px;
+				background:url("images/img.png") no-repeat center;
+				cursor:pointer;
+			}
+			#wrap div.upload a.u_btn:hover{
+				background:#f2f2f2 url("images/img.png") no-repeat center;
+			}
+
+			#wrap div.upload input#u_text{
+				width:74%;
+				float:left;
+				height:78px;
+				border:1px solid #ccc;
+				border-left:none;
+				outline:none;
+				font-size:18px;
+				color:#ccc;
+			}
+			#wrap div.upload a.u_btn input.u_file{
+				width:80px;
+				height:80px;
+				opacity:0;
+			}
+			#wrap div.w_box{
+				width:286px;
+				height:286px;
+				position:absolute;
+				top:0px;
+				right:0px;
+				top: 32px;
+				right: 58px;
+				overflow:hidden;
+			}
+		</style>
+		
+	</head>
+
+	<body>
+
+		<div id="wrap">
+			<div class="upload">
+				<a href="javascript:;" class="u_btn">
+					<input type="file" class="u_file" onchange="upload(this);" />
+				</a>
+				<input type="text" id="u_text" />
+				
+			</div>
+
+			<div class="w_box">
+				<img id="img" class="img" height="286" alt="" />
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/magnifier.js"></script>
+		<script type="text/javascript">
+			var oText = document.getElementById("u_text");
+			var oImg = document.getElementById("img");
+	
+			function upload( obj ){
+				if( ! obj.value.match(/.jpg|.gif|.bmp|.png/i) ){
+					alert("请选择图片文件！")	
+				}else{
+					oText.value = obj.files[0].name;
+					oImg.src = window.URL.createObjectURL( obj.files[0] );
+					oImg.setAttribute( "bigsrc" , oImg.src )
+				}
+			}
+	
+		</script>
+	</body>
+
+
+</html>

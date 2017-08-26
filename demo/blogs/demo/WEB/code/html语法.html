@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<!--声明当前页面编码集（中文编码《gbk-gb2312》,国际编码<utf-8>）-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--声明当前页面的三要素-->
+		<title></title>
+		<meta name="keywords" content="关键词，关键词">
+		<meta name="description" content="描述">
+
+		<!--css,js-->
+
+		<link type="text/css" rel="stylesheet" href="css/index.css" />
+
+	</head>
+
+<body>
+
+	<h1>HTML 语法</h1>
+		
+	<div id="nav">
+		<ul class="n_topnav">
+			<li><a href="#one">HTML特性</a></li>
+			<li><a href="#two">DOCTYPE文档说明</a></li>
+			<li><a href="#three">HTML标签特性</a></li>
+			<li><a href="#four">对标签和单标签</a></li>
+			<li><a href="#fivo">&lt head&gt头元素中的标签</a></li>
+			<li><a href="#botton">body元素中的标签</a></li>
+		</ul>
+	</div>
+
+	<a name="one"></a>
+	<h2>HTML特性：</h2>
+	<ul>
+		<li>简易性</li>
+		<li>可扩展性</li>
+		<li>平台无关性</li>
+		<li>通用性</li>
+	</ul>
+	<div class="i"></div>
+	<h2>HTML页面主体结构：</h2>
+	<ul class="ts">
+		<li>
+		&lt html&gt	网页文件最外层的标记
+		<li>&nbsp &nbsp &nbsp &lt head&gt
+			头信息，不会显示在浏览器中，包括基本的描述，整个网页的公共属性
+		&lt/head&gt</li>
+		<li>&nbsp &nbsp &nbsp &lt body&gt
+			是网页文件的主体部分，包括文字、图片、链接、表单等
+		&lt/body&gt</li>
+		&lt/html>	
+	</li>
+	</ul>
+	<div class="i"></div>
+
+	<a name="two"></a>
+	<h2>DOCTYPE文档说明：</h2>
+	<ul>
+		<li>&lt!DOCTYPE&gt 声明必须是 HTML 文档的第一行，位于 &lt html &gt 标签之前。</li>
+		<li>1  每一个HTML文档里都添加一个 &gt DOCTYPE &lt声明，这样浏览器才能获知文档类型， 并且在HTML5中一定书写为&lt!doctype html&gt，并且向下兼容。</li>
+		<li class="i_com">
+			1. doctype标签完整的写法：&lt !doctype html public ”-//w3c//dtd html 4.01 transitional|frameset//en” “http://www.w3.org/tr/html4/strict|loose|frameset.dtd”&gt
+		</li>
+		<li class="i_com">
+			2.  为了简便和更好的兼容性，推荐HTML5中的写法：&lt!doctype html&gt
+		</li>
+	</ul>
+	<div class="i"></div>
+
+	<a name="three"></a>
+	<h2>HTML标签特性：</h2>
+	<h3>HTML里所有的标签一共只分为两种大类，即：</h3>
+	<ul>
+		<li><b>非可视化标签：</b></li>
+		<li>标签不能在网页的内容区域所看见</li>
+		<li>如：head、title、meta、script、style等</li>
+		<li><b>可视化标签：</b></li>
+		<li>标签可以在网页的内容区域所看见</li>
+		<li>如：html、body、div、img等等</li> 
+	</ul>
+		<div class="i"></div>
+
+		<a name="four"></a>
+	<h2>对标签和单标签</h2>
+	<ul>
+		<li><b>对标签：</b></li>
+		<li>简单的说就是成对出现的标签，例如我们之前学到的<title></title>就是对标签</li>
+		<li><b>基本语法：</b></li>
+		<li>&lt标签名 属性名="属性值" 属性名="属性值"&gt内容&lt/标签名&gt </li>
+		<br />
+		<li><b>单标签：</b></li>
+		<li>常用的单标签有：</li>
+		<li>&lt link&gt 链接引入外部资源标签。</li>
+		<li>&lt img&gt 向网页中嵌入一幅图像。</li>
+		<li>&lt hr&gt 标签在 HTML 页面中创建一条水平线。</li>
+		<br />
+		<li>建议所有的单标签都书写为&lt hr /&lt的方式</li>
+		<li style="color:red;">理解方式：某些标签是不可能包含文本内容和子标签的，这些标签都是单标签</li>
+		<li style="color:red;">以上的标签后面有详细的讲解。。。</li>
+
+	</ul>
+	<div class="i"></div>
+
+	<a name="fivo"></a>
+	<h2>&lt head&gt头元素中的标签：</h2>
+	<ul>
+		<li>&lt title&gt&lt /title&gt网页唯一的标签 标题标签-title 标签&nbsp 如下：</li>
+		<li class="i_com">
+			<pre>&lt title&gt 我是标题 &lt /title&gt</pre>
+		</li>
+		<li>&lt meta&gt 包含广泛的内容标签，如：关键词，网页介绍，作者，网页编码，自动跳转，声明以及说明标签&nbsp 如下：
+		</li>
+		<li class="i_com">
+		  1.&nbsp声明当前页面编码集（中文编码&lt gbk,gb2312&gt,国际编码&ltutf-8&gt现于兼容性方面的考滤，推荐下面的写法：
+			&lt meta http-equiv="Content-Type" content="text/html; charset=UTF-8|gbk|gb2132|...">
+		</li>
+		<li class="i_com">
+			网页编码就是对字符串的保存方式常见编码：ANSI、GBK、GB2312、UTF-8、GB18030和 UNICODE
+		</li>
+		<li class="i_com">
+			2.&nbsp指定网页内容的关键字：&lt meta name="Keywords" content="关键词,关键词"&gt 注：多个关键字之间用逗号分隔
+		</li>
+		<li class="i_com">
+			3  指定网页的说明文字内容：&lt meta name="Description" content=""&gt
+		</li>
+		<li>&lt link&gt是一个连接标签，包括外部css文件引用，js文件引用 faviccon.ioo图标引用</li>
+		<li>&lt script&gt&lt/script&gt 直接嵌入的网页js或css文件标签放在&lt head&gt&lt script&gt&lt/script&gt &lt/head&gt之间或body尾部推荐第二个。</li>
+		<li>base 是网页默认打开方式 - base&nbsp如下：</li>
+		<li class="i_com">
+			<a href="#" target="blnk">点击我试试&gt&gt&gt</a>
+		</li>
+		<li></li>
+	</ul>
+	<div class="i"></div>
+
+	<a name="botton"></a>
+	<h2>body元素中的标签：</h2>
+	<ul>
+		<li>body是html网页结构最重要的标签，也叫主体内容标签，一般网页内容均放入此标签组之间。</li>
+		<li>body 元素包含文档的所有内容（比如文本、超链接、图像、表格和列表等等）</li>
+	</ul>
+	<div class="i"></div>
+</body>
+
+
+</html>

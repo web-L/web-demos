@@ -1,0 +1,89 @@
+html,body,.main {
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	background-image:linear-gradient(to bottom,#2E2E30,#2E2E30);
+	overflow:hidden;
+}
+.cont {
+	width:800px;
+	height:200px;
+	padding-top:100px;
+	margin:0 auto;
+	text-align:center;
+	animation:erya 3s;
+	position:relative;
+	z-index:2;
+}
+.cont h1 {
+	font-size:72px;
+	color:#EE330A;
+}
+.cont p {
+	height:30px;
+	line-height:30px;
+	color:#c3c3c3;
+}
+.cont strong {
+	font-size:24px;
+	color:#EE330A;
+}
+.main {
+	overflow:hidden;
+}
+.mi4 {
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:1909px;
+	height:736px;
+	margin-left:-1144px;
+	margin-top:-150px;
+	background:url(../img/fea-1.png) no-repeat scroll center center;
+	background-size:1592px auto;
+	animation:mi4 2s;
+	-o-animation:mi4 2s;
+	-webkit-animation:mi4 2s;
+	-moz-animation:mi4 2s;
+}
+@keyframes mi4 {
+	from {
+	top:100%;
+	left:-50%;
+}
+to {
+	top:50%;
+	left:50%;
+}
+}
+@-moz-keyframes mi4 {
+	from {
+	top:100%;
+	left:-50%;
+}
+to {
+	top:50%;
+	left:50%;
+}
+}
+@-webkit-keyframes mi4 {
+	from {
+	top:100%;
+	left:-50%;
+}
+to {
+	top:50%;
+	left:50%;
+}
+}
+@-o-keyframes mi4 {
+	from {
+	top:100%;
+	left:-50%;
+}
+to {
+	top:50%;
+	left:50%;
+}
+}

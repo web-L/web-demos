@@ -1,0 +1,25 @@
+/*min-width ：当最小宽度为 */
+.logo{
+	position: fixed;
+	top: 14px;
+}
+div.box{
+		padding-top: 27px;
+}
+div.nav{
+	width:870px;
+	height:70px;
+	background:#fff;
+	margin:0px auto;
+	margin-left: 100px;
+	border-radius:10px;
+	transition:1s;
+	
+}
+a{
+	display:block;
+	float:left;
+	width:40px;
+	height:40px;
+	margin:15px 34px;
+}

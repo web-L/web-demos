@@ -1,0 +1,67 @@
+body,div,
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }{ margin:0; padding:0;}
+li{
+	list-style:none;
+}
+#banner{
+	width:730px;
+	height:454px;
+	margin:50px auto;
+	position:relative;
+}
+#banner .pic{
+	width:100%;
+	height:100%;
+	position:relative;
+}
+#banner .pic ul li{
+	position:absolute;
+	display:none;
+}
+#banner .tab{
+	width:148px;
+	height:20px;
+	position:absolute;
+	bottom:10px;
+	left:50%;
+	margin-left:-70px;
+}
+#banner .tab ul li{
+	width:18px;
+	height:18px;
+	background:#666;
+	border-radius:100%;
+	float:left;
+	margin:1px 3px;
+	color:#fff;
+	text-align:center;
+	line-height:18px;
+	font-family:'Microsoft yahei';
+	font-size:12px;
+	cursor:pointer;
+}
+#banner .tab ul li.on{
+	background:#f60;
+}
+#banner .btn{
+	display:none;
+}
+#banner .btn div{
+	width:30px;
+	height:60px;
+	background:rgba(0,0,0,0.3);
+	text-align:center;
+	line-height:60px;
+	color:#fff;
+	font-size:24px;
+	position:absolute;
+	top:50%;
+	margin-top:-30px;
+	cursor:pointer;
+}
+#leftBtn{
+	left:0;
+}
+#rightBtn{
+	right:0;
+}

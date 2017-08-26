@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<!--声明当前页面编码集（中文编码《gbk-gb2312》,国际编码<utf-8>）-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--声明当前页面的三要素-->
+		<title></title>
+		<meta name="keywords" content="关键词，关键词">
+		<meta name="description" content="描述">
+
+		<!--css,js-->
+
+		<style type="text/css">
+			*{margin:0px;padding:0px;}
+			body{
+				font-size:12px;
+				font-family:"微软雅黑";
+			}
+			ul,li{
+				list-style:none;
+			}
+			#banner{
+				width:590px;
+				height:280px;
+				margin:100px auto;
+				position:relative;
+
+			}
+			#banner #pic{
+				width:590px;
+				height:280px;
+				position:relative;
+			}
+			#banner #pic img{
+				position:absolute;
+				top:0:
+				left:0;
+				display:none;
+			}	
+			#banner #tab{
+				width:590px;
+				height:40px;
+				position:absolute;
+				left:0;
+				bottom:0;
+			}
+			#banner #tab ul li{
+				width:117px;
+				height:40px;
+				border-right:1px solid #111;
+				float:left;
+				color:#fff;
+				font-size:14px;
+				line-height:40px;
+				text-align:center;
+				background:rgba(0,0,0,0.8);
+				cursor:pointer;
+				opacity:0.8;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				var oTab = document.getElementById("tab");
+				var oLi = oTab.getElementsByTagName("li");
+				var oImg = document.getElementById("pic").getElementsByTagName("img");
+				var index = 0 , timer = null;
+				for(var i=0;i<oLi.length;i++){
+					oLi[i].index = i;
+					oLi[i].onmouseover = function(){
+						index = this.index;
+						for(var j=0;j<oLi.length;j++){
+							oLi[j].style.background = "#000";
+							oImg[j].style.display = "none";
+						}
+						this.style.background="#ec3200";
+						oImg[this.index].style.display = "block";
+					}
+				}
+				timer = setInterval(function(){
+					index++;
+					if(index>4){
+						index=0;
+					}
+					for(var j=0;j<oLi.length;j++){
+						oLi[j].style.background = "#000";
+						oImg[j].style.display = "none";
+					}
+						oLi[index].style.background="#ec3200";
+						oImg[index].style.display = "block";
+				},2000);
+			};
+		</script>
+		
+	</head>
+
+	<body>
+
+		<div id="banner">
+			<div id="pic">
+				<img src="images/1.jpg" width="590"　height="280" alt="banner" style="display:block;" />
+				<img src="images/2.jpg" width="590"　height="280" alt="banner" />
+				<img src="images/3.jpg" width="590"　height="280" alt="banner"  />
+				<img src="images/4.jpg" width="590"　height="280" alt="banner" />
+				<img src="images/5.jpg" width="590"　height="280" alt="banner" />
+			</div>
+			<div id="tab">
+				<ul>
+					<li style="background:#ec3200;">明星直击季前赛</li>
+					<li>赛季奖励即将发放</li>
+					<li>丧失和杀手</li>
+					<li>高校联赛上海区域赛</li>
+					<li>限时折扣促销</li>
+				</ul>
+			</div>
+		</div>
+
+	</body>
+
+
+</html>

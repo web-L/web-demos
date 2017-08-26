@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<!--声明当前页面编码集（中文编码《gbk-gb2312》,国际编码<utf-8>）-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--声明当前页面的三要素-->
+		<title>换肤</title>
+		<meta name="keywords" content="关键词，关键词">
+		<meta name="description" content="描述">
+
+		<!--css,js-->
+
+		<style type="text/css">
+			body,div,
+			ul,li,p,
+			input,
+			button,
+			dl,dt,dd{margin:0px;padding:0px;list-style:none;}
+			img{
+				display:block;
+			}
+			body,html{
+				width:100%;
+				height:100%;
+			}
+			.body{
+				position:relative;
+				background:url("images/2.jpg");
+				width: 100%;
+				height: 100%;
+				background-size:100% 100%;
+			}
+			.kf{
+				width:50px;
+				height:50px;
+				background:url("images/upseek.png");
+				display:block;
+				position:fixed;
+				top:0;
+				right:0;
+				z-index:999;
+				
+			}
+			.kf:hover{
+				background-position:0px -64px;
+			}
+			.hf{
+				width:100%;
+				height:120px;
+				background:rgba(0,0,0,0.4);
+				position:fixed;
+				top:0;
+				left:0;
+				display:none;
+			}
+			.hf .h_con{
+				width:700px;
+				height:120px;
+				margin:0 auto;
+			}
+			.hf .h_con .left{
+				margin-top:46px;
+				float:left;
+			}
+			.hf .h_con .right{
+				float:right;
+				margin-top:46px;
+			}
+			.hf .h_con .scroll{
+				width:670px;
+				height:120px;
+				margin:0 auto;
+				position:relative;
+				overflow:hidden;
+			}
+			.hf .h_con .scroll .imgList{
+				width:1000%;
+				height:120px;
+				position:absolute;
+				top:0;
+				left:0;
+			}
+			.hf .h_con .scroll .imgList li{
+				width:138px;
+				height:75px;
+				float:left;
+				background:#fff;
+				padding:4px;
+				margin:16px 10px;
+			}
+		</style>
+		
+	</head>
+
+	<body>
+	<div class="body">
+		<a href="javascrip:void(0);" class="kf"></a>
+		
+		<div class="hf">
+			<div class="h_con">
+				<a href="javascript:;"><img src="images/dirl.png" class="left" width="15" height="24" alt=""></a>
+				<a href="javascript:;"><img src="images/dirr.png" class="right" width="15" height="24" alt=""></a>
+				<div class="scroll">
+					<ul class="imgList">
+						<li><a href="javascript:;"><img src="images/1-1.jpg" width="138" height="75" alt="" date="images/1.jpg"></a></li>
+
+						<li><a href="javascript:;"><img src="images/2-2.jpg" width="138" height="75" alt="" date="images/2.jpg"></a></li>
+
+						<li><a href="javascript:;"><img src="images/3-3.jpg" width="138" height="75" alt="" date="images/3.jpg"></a></li>
+
+						<li><a href="javascript:;"><img src="images/4-4.jpg" width="138" height="75" alt="" date="images/4.jpg"></a></li>
+
+						<li><a href="javascript:;"><img src="images/5-5.jpg" width="138" height="75" alt="" date="images/5.jpg"></a></li>
+
+						<li><a href="javascript:;"><img src="images/6-6.jpg" width="138" height="75" alt="" date="images/6.jpg"></a></li>
+
+						<li><a href="javascript:;"><img src="images/7-7.jpg" width="138" height="75" alt="" date="images/7.jpg"></a></li>
+
+						<li><a href="javascript:;"><img src="images/8-8.jpg" width="138" height="75" alt="" date="images/8.jpg"></a></li>
+
+						<li><a href="javascript:;"><img src="images/9-9.jpg" width="138" height="75" alt="" date="images/9.jpg"></a></li>
+
+						<li><a href="javascript:;"><img src="images/10-10.jpg" width="138" height="75" alt="" date="images/10.jpg"></a></li>
+
+						<li><a href="javascript:;"><img src="images/11-11.jpg" width="138" height="75" alt="" date="images/11.jpg"></a></li>
+
+						<li><a href="javascript:;"><img src="images/12-12.jpg" width="138" height="75" alt="" date="images/12.jpg"></a></li>
+
+						<li><a href="javascript:;"><img src="images/13-13.jpg" width="138" height="75" alt="" date="images/13.jpg"></a></li>
+
+						<li><a href="javascript:;"><img src="images/14-14.jpg" width="138" height="75" alt="" date="images/14.jpg"></a></li>
+
+						<li><a href="javascript:;"><img src="images/15-15.jpg" width="138" height="75" alt="" date="images/15.jpg"></a></li>
+
+						<li><a href="javascript:;"><img src="images/16-16.jpg" width="138" height="75" alt="" date="images/16.jpg"></a></li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript">
+		//隐藏显示div
+		$("a.kf").click(function(){
+			$(".hf").slideToggle("show");
+		});
+		
+		//点击图片背景更改
+		$(".hf .h_con .scroll .imgList li a img").click(function(){
+			var daTe = $(this).attr("date");
+			$(".body").css({"background":"url("+daTe+")",backgroundSize:"100% 100%"})
+		});
+
+		//点击按钮左右滚动
+		var i = 0;
+		$(".hf .h_con .left").click(function(){
+			i++;
+			if(i==3){
+				i = 0;
+			}
+			$(".hf .h_con .scroll .imgList").animate({
+				left:-664*i
+			},500);
+		});
+		$(".hf .h_con .right").click(function(){
+			i--;
+			if(i==-1){
+				i = 3;
+			}
+			$(".hf .h_con .scroll .imgList").animate({
+				left:-664*i
+			},500);
+		});
+	</script>
+	</body>
+
+
+</html>

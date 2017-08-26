@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Keywords" content="关键词一，关键词二">
+  <meta name="Description" content="网站描述内容">
+  <title>选项卡新闻动态切换效果</title>
+  <!--css js 文件的引入-->
+
+	<style type="text/css">
+		body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+		ul,li{
+			list-style:none;
+		}
+		a{
+			text-decoration:none;
+		}
+		img{
+			vertical-align:top;
+			border:none;
+		}
+		#News {
+		width:300px;
+		height:380px;
+		 background:#ECECEC;
+		 margin:100px auto 0px;
+		}
+		#News ul.sel {
+			height:25px;
+			padding-left:10px;
+		}
+		#News ul.sel li {
+			width:50px;
+			height:25px;
+		float:left;
+		 font-size:12px;
+			text-align:center;
+		 line-height:25px;
+			background:#fff;
+			margin-right:1px;
+		}
+		#News ul.sel li.hover {
+			background:#cc3399;
+			color:#fff;
+		}
+		#News .NewsCon {
+			width:280px;
+			height:310px;
+			background:#fff;
+			margin:0px auto;
+		}
+		#News .NewsCon .NewsList {
+			width:260px;
+			height:310px;
+			margin:0px auto;
+			display:none;
+		}
+		#News .NewsCon .NewsList ul {
+			background:url("images/bg.gif") no-repeat 0px 10px;
+		}
+		#News .NewsCon .NewsList ul li {
+			list-style-type:none;
+			width:260px;
+			height:36px;
+			border-bottom:1px dotted #ddd;
+			font-size:12px;
+			line-height:36px;
+			text-indent:25px;
+		}
+		#News .NewsCon .NewsList ul li a{
+			color:#333;
+		}
+	</style>
+
+ </head>
+
+
+ <body>
+	 <div id="News">
+		<img src="images/title.gif" />
+		<ul class="sel">
+			<li class="hover">时尚</li>
+			<li>美体</li>
+			<li>生活</li>
+			<li>娱乐</li>
+		</ul>
+
+		<div class="NewsCon">
+			<div class="NewsList" style='display:block;'>
+				<ul>
+					<li><a href="">5个心水毛毛包 时髦又贴心</a></li>
+					<li><a href="">《我是歌手》张靓颖造型夺目</a></li>
+					<li><a href="">中性装扮也妩媚 萌妹子们也很爱</a></li>
+					<li><a href="">冬季必备羔羊毛大衣 让你赚足回</a></li>
+					<li><a href="">12款有心机的搭配技巧 让你脑洞</a></li>
+					<li><a href="">4款简易发髻 保持美丽浪漫情调</a></li>
+					<li><a href="">大风来袭不再怕 精致刘海甜美爆</a></li>
+					<li><a href="">皮草外套穿出街 霸气外露温暖过</a></li>
+				</ul>
+			</div>
+
+			<div class="NewsList">
+				<ul>
+					<li><a href="">5个心水毛毛包 时髦又贴心</a></li>
+					<li><a href="">《我是歌手》张靓颖造型夺目</a></li>
+					<li><a href="">中性装扮也妩媚 萌妹子们也很爱</a></li>
+					<li><a href="">冬季必备羔羊毛大衣 让你赚足回</a></li>
+					<li><a href="">12款有心机的搭配技巧 让你脑洞</a></li>
+					<li><a href="">4款简易发髻 保持美丽浪漫情调</a></li>
+					<li><a href="">大风来袭不再怕 精致刘海甜美爆</a></li>
+
+				</ul>
+			</div>
+
+			<div class="NewsList">
+				<ul>
+					<li><a href="">5个心水毛毛包 时髦又贴心</a></li>
+					<li><a href="">《我是歌手》张靓颖造型夺目</a></li>
+					<li><a href="">中性装扮也妩媚 萌妹子们也很爱</a></li>
+					<li><a href="">冬季必备羔羊毛大衣 让你赚足回</a></li>
+					<li><a href="">12款有心机的搭配技巧 让你脑洞</a></li>
+
+				</ul>
+			</div>
+
+			<div class="NewsList">
+				<ul>
+					<li><a href="">5个心水毛毛包 时髦又贴心</a></li>
+					<li><a href="">《我是歌手》张靓颖造型夺目</a></li>
+					<li><a href="">中性装扮也妩媚 萌妹子们也很爱</a></li>
+					<li><a href="">冬季必备羔羊毛大衣 让你赚足回</a></li>
+					<li><a href="">12款有心机的搭配技巧 让你脑洞</a></li>
+					<li><a href="">4款简易发髻 保持美丽浪漫情调</a></li>
+
+				</ul>
+			</div>
+		</div>
+		<!--新闻列表结束-->
+	 </div>
+
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		$("ul.sel li").mouseover(function(){
+
+			$(this).addClass("hover").siblings("li").removeClass('hover'); //添加class='hover'
+			var _index=$(this).index();//获取到序列号
+			$(".NewsCon .NewsList").eq(_index).show().siblings("div").hide();
+			 
+		});
+	</script>
+
+
+ </body>
+
+</html>

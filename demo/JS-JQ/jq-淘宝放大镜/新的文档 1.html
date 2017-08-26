@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>淘宝放大镜头效果</title>
+		<meta name="keywords" content="关键词，关键词">
+		<meta name="description" content="描述">
+
+		<!--css,js-->
+
+		<style type="text/css">
+			body,div,
+			body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+			ul,li{
+				list-style:none;
+			}
+			a{
+				text-decoration:none;
+			}
+			img{
+				vertical-align:top;
+				border:none;
+			}
+			#wrap{
+				width:400px;
+				height:500px;
+				border:1px solid #bbb;
+				margin:100px;
+			}
+			#wrap div#pic{
+				width:400px;
+				height:400px;
+				background:#f0f0f0;
+				position:relative;
+			}
+			#wrap div#pic img{
+				display:block;
+				margin:0px auto;
+			}
+			#wrap div.tab{
+				width:400px;
+				height:50px;
+				margin-top:20px;
+			}
+			#wrap div.tab ul li{
+				width:50px;
+				height:50px;
+				float:left;
+				margin:0px 12px;
+				cursor:pointer;
+				border:2px solid #fff;
+				transition:border 0.8s;
+			}
+			#wrap div.tab ul li img{
+				display:none;
+			}
+			#wrap div.tab ul li.on{
+				border:2px solid #f60;
+			}
+			#wrap div#pic div.pic_box div.cover{
+				width:200px;
+				height:200px;
+				position:absolute;
+				top:0px;
+				left:0px;
+				background:url("img/cover.png");
+				cursor:move;
+				display:none;
+			}
+			#wrap div#pic div.pic_box div.show{
+				width:400px;
+				height:400px;
+				position:absolute;
+				top:0px;
+				right:-410px;
+				display:none;
+				background:url("img/1.jpg");
+			}
+		</style>
+		
+	</head>
+
+	<body>
+
+		<div id="wrap">
+			<div id="pic">
+				<div class="pic_box">
+					<img src="img/1.jpg" width="400" height="400" alt="" />
+					<div class="cover"></div>
+					<div class="show"></div>
+				</div>
+				
+			</div>
+			<div class="tab">
+				<ul>
+					<li class="on"><img src="img/1.jpg" alt="" /></li>
+					<li><img src="img/2.jpg" alt=""/></li>
+					<li><img src="img/3.jpg" alt="" /></li>
+					<li><img src="img/4.jpg" alt="" /></li>
+					<li><img src="img/5.jpg" alt="" /></li>
+				</ul>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+				var $tabLi = $("#wrap div.tab ul li");
+				var $img = $("#wrap div#pic img");
+				var $tabLiimg = $("#wrap div.tab ul li img");
+				var $picCover = $("#wrap div#pic div.pic_box div.cover");
+				var pic_box = $("#wrap div#pic div.pic_box");
+				var $show = $("#wrap div#pic div.pic_box div.show");
+				var $index = 0;
+				var imgArr = [];
+				
+				init();
+				//图片切换
+				$tabLi.hover(function(){
+					$index = $(this).index();
+
+					$(this).addClass("on").siblings().removeClass("on");
+					var src = $(this).find("img").attr("src");
+					$show.css("backgroundImage" , "url("+src+")");
+					$img.prop({
+						src : src ,
+						width : imgArr[$index].width * 400,
+						height : imgArr[$index].height * 400
+					});
+				});
+
+				
+				pic_box.mousemove(function( ev ){
+					
+					$picCover.show();
+					$show.show();
+					var pic_boxX = pic_box.offset().left;//元素距离文档 左边距离
+					var pic_boxY = pic_box.offset().top;//元素距离文档 头部距离
+					
+					var px = ev.pageX;//鼠标距离文档 左边距离
+					var py = ev.pageY;//鼠标距离文档 头部距离
+					
+					var minusX = px - pic_boxX - $picCover.width()/2;
+					var minusY = py - pic_boxY - $picCover.height()/2;
+					
+					minusX = Math.max( minusX , 0 );//最小值不能小于 0
+					minusX = Math.min( minusX , pic_box.width() - $picCover.width() );//最大值
+					minusY = Math.max( minusY , 0 );//最小不能小于 0
+					minusY = Math.min( minusY , pic_box.width() - $picCover.width() );//最大值
+
+
+					$picCover.css({
+						left : minusX + 'px',
+						top : minusY + 'px'
+					});
+					
+					$show.css("backgroundPosition" ,(-(minusX/$picCover.width())*imgArr[$index].imgW ) +'px '+ (-(minusY / $picCover.height())*imgArr[$index].imgH )+"px" )
+				}).mouseleave(function(){
+					$picCover.hide();
+					$show.hide();
+				});
+
+			
+				//图片等比列改变宽高
+				function init(){
+					$tabLiimg.each(function( i ){
+					
+						var imgW = $(this).width();
+						var imgH = $(this).height();
+					
+						if( imgW >= imgH ){
+							$(this).prop({
+								width : 50,
+								height : 50 / imgW * imgH
+							});
+							imgArr[i] = { width : 1 , height : imgH / imgW , imgW : imgW , imgH : imgH };
+						}else{
+							$(this).prop({
+								width : 50 / imgH * imgW,
+								height : 50
+							});
+
+							imgArr[i] = { width : imgW / imgH , height : 1 , imgW : imgW , imgH : imgH  };
+						}
+						$(this).css({
+							"margin" : "0px auto",
+							"display" : "block"
+						});
+					});
+				}
+			});
+		</script>
+	</body>
+
+
+</html>

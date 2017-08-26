@@ -1,0 +1,238 @@
+body,div,
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+ul,li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+img{
+	vertical-align:top;
+	border:none;
+}
+body{
+	font-family:"微软雅黑";
+	font-size:16px;
+}
+#musuic{
+	width:330px;
+	margin:100px auto;
+	position:relative;
+	background:url("../images/bg2.jpg") no-repeat;
+	border-radius: 6px;
+}
+#musuic .header{
+	width:100%;
+	height: 228px;
+	padding-top: 2px;
+	text-align:center;
+	opacity:0;
+	transition:2s;
+}
+#musuic .header p{
+	color:#fff;
+	margin:10px 0;
+	
+}
+#musuic .header img{
+	border-radius:100%;
+	width: 134px;
+	height: 133px;
+}
+#musuic .header img.img{
+	animation:mov 10s linear infinite;
+}
+@keyframes mov{
+	0%{ transform:rotate(0deg); }
+	100%{ transform:rotate(360deg); }
+}
+#musuic .Com {
+	width:100%;
+	height:276px;
+	overflow:hidden;
+	text-align:center;
+	transition:2s;
+}
+#musuic .Com .text{
+	transition:1s;
+}
+#musuic .Com p{
+	line-height:30px;
+	opacity:.0;
+	transition:color 1s;
+	cursor:-webkit-grabbing;
+}
+#musuic div.play{
+	width:100%;
+	height:114px;
+	background:#000;
+	padding-top:16px;
+	border-radius: 0 0 6px 6px;
+	position:relative;
+}
+#musuic div.play div{
+	width:45px;
+	height:44px;
+	float:left;
+	background:url("../images/player_bg.png") no-repeat;
+	margin-left:20px;
+	margin-top: 20px;
+	cursor:pointer;
+	position:absolute;
+}
+#musuic div.play div.pre{
+	background-position:-68px 10px;
+	top: 48px;
+	left: 68px;
+}
+#musuic div.play div.pre:hover{
+	background-position: -68px -22px;
+}
+#musuic div.play div.btn{
+	background-position:-110px 5px;
+	width:45px;
+	height:46px;
+	margin-top:14px;
+	top: 50px;
+	left: 131px;
+}
+#musuic div.play div.btn:hover{
+		background-position: -110px -37px;
+}
+#musuic div.play div.next{
+	background-position:-148px 10px;
+	top: 48px;
+	left: 180px;
+}
+#musuic div.play div.next:hover{
+	background-position: -148px 10px;
+}
+#musuic div.play div.next1{
+	background-position: -211px 10px;
+	top: 6px;
+	left: 140px;
+}
+#musuic div.play div.next1:hover{
+	background-position: -211px -22px;
+}
+#musuic div.play div.next2{
+	background-position: -450px 16px;
+	top: 6px;
+	left: 119px;
+	width: 18px;
+	height: 30px;
+}
+
+#musuic div.play div.next2:hover{
+	background-position: -473px 16px;
+}
+#musuic div.next3{
+	position:absolute;
+	top: 0px;
+	right: 0px;
+	width: 32px;
+	height: 30px;
+	background:url("../images/player_bg.png") no-repeat -560px 8px;
+	cursor:pointer;
+}
+#musuic div.play div.next4{
+	background-position: -334px -35px;
+	top: 18px;
+	left: 80px;
+	width: 23px;
+	height: 20px;
+}
+#musuic div.play div.next4:hover{
+	background-position: -334px -63px;
+}
+#musuic div.play div.vom{
+	background-position: -192px -4px;
+	width: 20px;
+	height: 20px;
+	position: relative;
+	top: 4px;
+	right: -192px;
+}
+#musuic div.play div.vom:hover{
+	background-position: -192px -36px;
+}
+#musuic div.play div.vom:hover div.jd{
+	display:block;
+	opacity:1;
+}
+#musuic div.play div.vom div.jd{
+	width:94px;
+	height: 4px;
+	border:1px solid #aaa;
+	position:absolute;
+	border-radius:6px;
+	left: 0px;
+	top: -12px;
+	background:#aaa;
+	opacity:0;
+	transition:0.5s;
+}
+#musuic div.play div.vom div.div1{
+	width: 14px;
+	height: 14px;
+	position: absolute;
+	border-radius: 50%;
+	right: 0px;
+	top: -25px;
+	background:#00f;
+}
+#musuic div.play div.vom div.div2{
+	width: 100%;
+	height: 6px;
+	position: absolute;
+	border-radius: 6px;
+	left: -22px;
+	top: -21px;
+	background:#00f;
+}
+
+#musuic div#box{
+	width: 100%;
+	height: 10px;
+	position: absolute;
+	bottom: 124px;
+	left: -20px;
+	background:#757575;
+	border-radius:10px;
+}
+#musuic div#box div.div1{
+	width:5px;
+	height:10px;
+	background:#0f0;
+	position:absolute;
+	top: -20px;
+	left: -20px;
+	border-radius:10px;
+}
+#musuic div#box div.div2{
+	width:16px;
+	height:16px;
+	background:#0f0;
+	position:absolute;
+	top: -24.5px;
+	left: -20px;
+	border-radius:50%;
+	box-shadow: 0px 0px 20px #0f0;
+}
+#musuic span{
+	position: absolute;
+	right: 38px;
+	bottom: 105px;
+	border: none;
+	color: #8e8e8e;
+}
+#musuic input {
+	width: 36px;
+	position: absolute;
+	right: 0px;
+	bottom: 105px;
+	background: #000;
+	border: none;
+	color: #8e8e8e;
+	outline:none;
+}

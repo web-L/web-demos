@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+	<head>
+		<!--声明当前页面编码集（中文编码<gbk,gb2312>,国际编码<utf-8>）-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--声明当前页面的三要素-->
+		<title>form 表单</title>
+		<meta name="keywords" content="关键词,关键词">
+		<meta name="description" content="">
+
+		<!--css/js-->
+		
+		<style type="text/css">
+			body{ background:url("../images/2.gif");font-size:14px;font-family:"微软雅黑";color:#fff;}
+		</style>
+
+	</head>
+
+
+<body >
+	<h1>form 表单</h1>
+	<p>表单是一个包含表单元素的区域，用于搜集不同类型的用户输入，
+	表单使用表单标签&lt form&gt定义。</p>
+		
+		<p>	get:方式提交
+				
+				1、不安全（所有的参与都会暴露在url里边）
+				2、url的长度是有限制的
+		</p>
+		<p>
+			post：方式提交
+
+			1、安全性高
+			2、没有长度限制
+		</p>
+	&lt form action="url路径" method="get/post" name="" target="" enctype=""/&gt		
+	&lt/form&gt
+		<img src="../images/form.png" width="" height="" alt="" /><br />
+	<h2>表单案例：</h2>
+		<form action="" method="">
+			姓名：<input type="text" name="" /><br />
+			密码：<input type="password" name="" /><br />
+
+			性别：
+				<input type="radio" name="sex" id="l" /><label for="l">男</label>
+				<input type="radio"name="sex" id="n" /><label for="n">女</label>
+				<input type="radio" name="sex" id="w" /><label for="w">人</label>
+				<br /><br />
+			爱好：
+				<input type="checkbox" id="lc" /><label for="lc">篮球</label>
+				<input type="checkbox" id="yl" /><label for="yl">音乐</label>
+				<input type="checkbox" id="jsj" /><label for="jsj">计算机</label>
+				<br /><br />
+			上传文件：
+				<input type="file" />
+			<br /><br />
+			描述：<textarea cols="50" rows="10"></textarea>
+
+		</form>
+
+</body>
+
+</html>

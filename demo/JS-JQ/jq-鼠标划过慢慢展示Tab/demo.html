@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style type="text/css">
+	*{margin:0px;padding:0px;}
+	.nav{
+			width:970px;height:345px;
+			margin:0px auto;
+			position:relative;
+			overflow:hidden;
+			}
+	.nav .con{width:960px;height:345px;position:relative;}
+	.con img{position:absolute;top:0;left:0;display:none;}
+	.nav ul li{	width:230px;height:70px;
+				list-style-type:none;
+				float:left;
+				padding-left:10px;
+				position:relative;
+				}
+	.nav ul .blue{background:rgba(0,185,148,0.8);}
+	.nav ul .green{background:rgba(147,212,53,0.8);}
+	.nav ul li p{
+		color:#fff;
+		font-size:26px;
+		font-weight:bold;
+		line-height:35px;
+	}
+
+	.nav ul li span{
+		color:#fff;
+		font-size:14px;
+		line-height:35px;
+	}
+	.but{width:970px;height:70px;position:absolute;left:0;bottom:-35px;}
+  </style>
+ </head>
+ <body>
+	<div class="nav">
+
+		<div class="con">
+			<img src="images/1.jpg" style="display:block;"/>
+			<img src="images/2.jpg" />
+			<img src="images/3.jpg" />
+			<img src="images/4.jpg" />
+		</div>
+
+		<div class="but">
+			<ul>
+				<li class="blue">
+					<p>儿童牛奶选对了吗</p>
+					<span>牛奶选择有讲究</span>
+				</li>
+				<li class="green">
+					<p>公主茜茜校园篇</p>
+					<span>CC公主在学校有哪些遭遇呢</span>
+				</li>
+				<li class="blue">
+					<p>海底小纵队</p>
+					<span>海底探险小队出发啦！</span>
+				</li>
+				<li class="green">
+					<p>钟虫宝宝</p>
+					<span>海底大冒险</span>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		$('.nav ul li').hover(function(){
+			var i=$(this).index();
+			$(this).animate({bottom:"35px"},1000);
+			$('.nav .con img').eq(i).show().siblings().hide();
+		},function(){
+			$(this).animate({bottom:"0px"},1000);
+			$('.nav ul').animate({bottom:"-35px"},1000);
+		})
+	</script>
+ </body>
+</html>

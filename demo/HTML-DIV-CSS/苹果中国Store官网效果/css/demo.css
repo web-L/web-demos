@@ -1,0 +1,114 @@
+*{
+	margin:0px;
+	padding:0px;
+	font-family:'Microsoft Yahei';
+}
+html,body{
+	width:100%;
+	height:100%;
+	background-color:#F2F2F2;
+}
+#ui-container{
+	width:980px;
+	height:100%;
+	margin:auto;
+}
+#ui-container div.ui-logo{
+	width:410px;
+	height:30px;
+	margin:auto;
+	background-image:url("../images/watch-logo.jpg");
+	background-repeat:no-repeat;
+	background-position:top center;
+	padding-top:80px;
+	text-align:center;
+	font-size:20px;
+	color:#666;
+	position:relative;
+	top:30px;
+	opacity:.0;
+}
+#ui-container ul.ui-product{
+	margin-top:60px;
+}
+#ui-container ul.ui-product li{
+	display:inline-block;
+	width:33%;
+	text-align:center;
+	float:left;
+}
+#ui-container ul.ui-product li.ui-watch1 div{
+	margin:auto;
+	width:337px;
+	height:430px;
+	background-image:url('../images/watch1/watch.jpg');
+	position:relative;
+	background-position:center;
+}
+#ui-container ul.ui-product li.ui-watch1 div video{
+	position:absolute;
+	left: 170px;
+	top: 122px;
+	width: 129px;
+	height: 186px;
+}
+#ui-container ul.ui-product li.ui-watch1 div span{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background-image:url('../images/watch1/mask.png');
+}
+#ui-container ul.ui-product li.ui-watch2 div{
+	margin:auto;
+	width:231px;
+	height:410px;
+	background-image:url('../images/watch2/watch.jpg');
+	position:relative;
+	background-position:center;
+}
+#ui-container ul.ui-product li.ui-watch2 div video{
+	position:absolute;
+	left: 45px;
+	top: 115px;
+	width: 129px;
+	height: 186px;
+}
+#ui-container ul.ui-product li.ui-watch2 div span{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background-image:url('../images/watch2/mask.png');
+}
+#ui-container ul.ui-product li.ui-watch3 div{
+	margin:auto;
+	width:326px;
+	height:418px;
+	background-image:url('../images/watch3/watch.jpg');
+	position:relative;
+	background-position:center;
+}
+#ui-container ul.ui-product li.ui-watch3 div video{
+	position:absolute;
+	left: 25px;
+	top: 115px;
+	width: 129px;
+	height: 186px;
+}
+#ui-container ul.ui-product li.ui-watch3 div span{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background-image:url('../images/watch3/mask.png');
+}
+#ui-container ul.ui-product li p{
+	margin-top:50px;
+	opacity:0;
+	position:relative;
+	top:40px;
+}

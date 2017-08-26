@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title></title>
+		<meta name="keywords" content="关键词，关键词">
+		<meta name="description" content="描述">
+		
+		<!--css,js-->
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<link rel="stylesheet" href="css/demo.css" />
+		
+	</head>
+
+	<body>
+
+		<div id="banner">
+			<div class="box">
+				<ul class="list_box">
+					<li><a href="#"><img src="images/5.jpg" /></a></li>
+					<li><a href="#"><img src="images/1.jpg" /></a></li>
+					<li><a href="#"><img src="images/2.jpg" /></a></li>
+					<li><a href="#"><img src="images/3.jpg" /></a></li>
+					<li><a href="#"><img src="images/4.jpg" /></a></li>
+					<li><a href="#"><img src="images/5.jpg" /></a></li>
+					<li><a href="#"><img src="images/1.jpg" /></a></li>
+				</ul>
+				<ul class="tab_box">
+					<li class="li"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<div class="btn_box">
+					<a href="javascript:;" class="btn prev"></a>
+					<a href="javascript:;" class="btn next"></a>
+				</div>
+			</div>
+		</div>
+	
+		<script type="text/javascript" src="js/banner.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				banner({
+					banner : $("#banner div.box"),//外围盒子
+					btn : $("#banner div.box div.btn_box"),//左右按钮
+					tabLi : $("#banner div.box ul.tab_box li"),//小圆点
+					Ul : $("#banner div.box ul.list_box"),//滚动的ul
+					speed : 500,//滚动速度
+					auto : true,//是否自动轮播
+					time : 5000//轮播时间
+				})
+
+				/*function banner( BJson ){
+					var $banner = BJson.banner;
+					var $btn = BJson.btn;
+					var $TabLi = BJson.tabLi;
+					var $Ul = BJson.Ul;
+					var $Time = BJson.time || 1000;
+					
+					var auto;
+					if( BJson.auto ){
+						
+						if( BJson.auto ){
+							auto = BJson.auto;
+						}else{
+							auto = BJson.auto;
+						}
+					};
+
+					var speed = BJson.speed || 500;
+
+					var $Liwidth = $Ul.find("li").width();
+					var $index = 0;
+					var nowTime = new Date();
+					var $tabLi_length  = $TabLi.length;
+					var Time = null;
+
+					$TabLi.click(function(){
+						$index = $(this).index();
+						$(this).addClass("li").siblings().removeClass("li");
+						$Ul.stop().animate({
+							"marginLeft" : -$Liwidth * ($index+1) + "px"
+						},speed)
+					});
+		
+					$banner.hover(function(){
+						$btn.fadeIn();
+						if( auto ){
+							clearInterval( Time )
+						};
+					},function(){
+						$btn.fadeOut();
+						if( auto ){
+							auto();
+						}
+					});
+						
+					$btn.children().click(function(){
+						if( new Date() - nowTime > speed ){
+							nowTime = new Date();
+
+							var i = $(this).index();
+
+							i ? $index++ : $index--;
+							
+							banner();
+						};
+					});
+
+					if( auto ){
+						function auto(){
+							Time = setInterval(function(){
+								$index++;
+								banner();
+							},$Time)
+						};
+						auto();
+					}
+					
+					function banner(){
+						var li_index = $index;
+						if( li_index >= $tabLi_length ){
+							
+							li_index = 0;
+						}else if( li_index < 0 ){
+							li_index = $tabLi_length-1;
+						}
+		
+						$TabLi.eq(li_index).addClass("li").siblings().removeClass("li");
+
+						$Ul.stop().animate({
+							"marginLeft" : -$Liwidth * ( $index + 1 ) + "px"
+						},speed,function(){
+							if( $index >= $tabLi_length ){
+								$Ul.css("marginLeft" , -$Liwidth+"px");
+								$index = 0;
+							}else if( $index < 0 ){
+								$Ul.css("marginLeft" , -$Liwidth*( $tabLi_length )+"px");
+								$index = $tabLi_length-1
+							}
+						});	
+					};
+				};*/
+			});
+		</script>
+	</body>
+
+
+</html>

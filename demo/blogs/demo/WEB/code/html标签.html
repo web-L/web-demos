@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+	<head>
+		<!--声明当前页面编码集（中文编码<gbk,gb2312>,国际编码<utf-8>）-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--声明当前页面的三要素-->
+		<title>html 标签</title>
+		<meta name="keywords" content="关键词,关键词">
+		<meta name="description" content="">
+
+		<!--css/js-->		
+		<link type="text/css" rel="stylesheet" href="css/index.css" />
+	</head>
+	
+
+<body>
+
+	<h1>HTML 语法</h1>
+			
+		<div id="nav">
+			<ul class="n_topnav">
+				<li><a href="#one">HTML注释</a></li>
+				<li><a href="#two">标题标签</a></li>
+				<li><a href="#three">段落标签</a></li>
+				<li><a href="#four">加粗和斜体</a></li>
+				<li><a href="#fivo">超链接和锚标记</a></li>
+				<li><a href="#botton">图片标签</a></li>
+				<li><a href="#botton">路径</a></li>
+			</ul>
+		</div>
+
+		<a name="one"></a>
+	<h2>HTML注释：</h2>
+		<ul>
+			<li>可以将注释插入 HTML 代码中，这样可以提高其可读性，使代码更易被人理解。浏览器会忽略注释，也不会显示它们。</li>
+			<li>开始括号之后（左边的括号）需要紧跟一个叹号，结束括号之前（右边的括号）不需要。</li>
+			<li>语法：&lt!--注释内容--&gt</li>
+			<li>合理地使用注释可以对未来的代码编辑工作产生帮助。</li>
+			
+		</ul>
+	<div class="i"></div>
+
+	<a name="two"></a>
+	<h2>标题标签 h1-h6:</h2>
+		<ul>
+			<li>其中&lt h1&gt定义最大标题，&lt h6&gt定义最小标题</li>
+			<li>&lt h1&gt-&lt h6&gt标签定义标题</li>
+			<li>从h1到h6随着数字增大，字体大小越来越小</li>
+			<li>从h1到h6随着数字增大，权重越来越来低&nbsp &nbsp&nbsp如下：</li>
+			<li>标题（H1-H6）标签是指网页html 中对文本标题所进行的着重强调的一种标签，以标签&lt h1&gt、&lt h2&gt、&lt h3&gt到&lt h6&gt依次显示重要性的递减，制作&lt h&gt标签的主要意义是告诉搜索引擎这个是一段文字的标题，起强调作用。</li>
+			<li>H1标签的作用-网站建设，H1标签是在网站制作过程中，经常用到的一个标签，他的作用仅次于Title，在seo方面，这个标签还有H2,H3，这些标签用好了，对网站的优化会有事半功倍的效果。</li>
+			<li class="i_com">
+				<a href="demo/h1.html">点我试试&gt&gt&gt</a>
+			</li>
+		</ul>
+	<div class="i"></div>
+
+			<a name="three"></a>
+	<h2>段落标签:</h2>
+		<ul>
+			<li>&lt p&gt标签:定义文本段落</li>
+			<li>块级元素标签</li>
+			<li>默认独占一行</li>
+			<li class="i_com">
+				<a href="demo/p.html" >点我试试&gt&gt&gt</a>
+			</li>
+		</ul>
+	<div class="i"></div>
+
+	<a name="four"></a>
+	<h2>加粗标签：</h2>
+		<ul>
+			<li>&lt strong&lt和&lt b&lt都能加粗文本</li>
+			<li>但seo中&lt strong&gt表示强调文本</li>
+			<li>注意：不要因为加粗而使用&lt strong&gt标签</li>
+			<li class="i_com">
+				<strong>加粗标签</strong>
+			</li>
+		</ul>
+	<div class="i"></div>
+
+	<a name=""></a>
+	<h2>斜体标签：</h2>
+		<ul>
+			<li>&lt em&lt和&lt i&gt都能定义斜体字</li>
+			<li>但seo中&lt em&gt表示强调文本</li>
+			<li>注意：不要因为斜体而使用&lt em&gt标签</li>
+			<li class="i_com">
+				<em>斜体标签</em>
+			</li>
+		</ul>
+	<div class="i"></div>
+
+	<a name="fivo"></a>
+	<h2>超链接</h2>
+		<ul>
+			<li>&lt a&gt超链接标签可以从通过点击从一个页面跳到另一个页面</li>
+			<li>&lt a href="" target="_blnk  rel="nofollw" &gt&lt /a&gt</li>
+			<li>href"网址" - 要跳转目标连接</li>
+			<li>herf:里边的常用值， # （当前页面不跳转）</li>
+			<li>javascript; javascript:void(0);（当前页面不跳转）</li>
+			<li>target="_blnk" 是否新开一个浏览器窗口，如果不添加默认当前页面打开。</li>
+			<li>rel="nofollw" 这个标签意义是告诉大家搜索引擎，不要追踪此网页链接或不要追踪此特定连接。</li>
+			<li class="i_com">
+				<a href="#">我是超链接>>></a><br />
+				<a href="#" target="blnk">我是超链接>>></a>
+			</li>
+		</ul>
+	<div class="i"></div>
+
+		<a name="botton"></a>
+	<h2>锚标记：</h2>
+		<ul>
+			<li>相当于书签，当使用锚标记时，我们可以创建直接跳至该命名锚的链接</li>
+			<li>语法：&lt a name=“自定义名字"&gt锚（显示在页面上的文本）&lt/a&gt</li>
+			<li>创建使用该锚的链接：&lt a href=“#自定义的锚名字”&gt显示内容</a></li>
+		</ul>
+	<div class="i"></div>
+
+		<a name="botton"></a>
+	<h2>图片标签：</h2>
+		<ul>
+			<li>&lt img /&gt标签将其他文件夹或服务器的图片显示到网页中</li>
+			<li>&lt img /&gt标签只包含属性，并且没有闭合标签结尾加反斜杠</li>
+			<li>语法：&lt img src=“图片地址”title="可见提示文本" width="图片宽度" height="图片高度" alt=“自定义替代文本"/&gt</li>
+			<li>src:属性指定图片文件的路径，分为绝对路径和相对路径。相对路径</li>
+			<li>绝对路径：指带域名的文件的完整路径。</li>
+			<li>相对路径：同一个目录的文件引用如果源文件和引用文件在同一个目录里，直接写引用文件名即可。</li>
+			<li>width和height来指定图片尺寸 注意：在网页中插入图片必须加上width宽度height高度否则网页在浏览器中打开时就会重新计算图片大小如果网页中有张图片这样就会严重影响网页打开的速度。</li>
+			<li>title属性，指鼠标悬停时的可见提示文本，主要用于增加用户体验，并且只能提示文本：</li>
+			<li>alt属性:表示图片无法显示时的说明性替代文字 如下：</li>
+			<li class="i_com">
+				&lt img src="images/lsdkglskgl.jpg" alt="图片提示文本" width="270" height="129"/&gt<br />
+				<a href="demo/a.html">点我试试>>></a>
+			</li>
+		</ul>
+	<div class="i"></div>
+
+</body>
+
+</html>

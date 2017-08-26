@@ -1,0 +1,66 @@
+body,div,
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+ul,li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+img{
+	vertical-align:top;
+	border:none;
+}
+ body {
+	font-family:"微软雅黑";
+	color:#333;
+}
+ul {
+	list-style:none}
+.product {
+	width:1200px;
+	margin:auto;
+}
+.product ul li {
+	width:290px;
+	height:190px;
+	float:left;
+margin-right:10px;
+	position:relative;
+	overflow:hidden}
+.pro_ab {
+	width:100px;
+	height:160px;
+	padding:30px 0 0 10px;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1;
+	background:rgba(255,255,255,0.5);
+	cursor:pointer}
+.title {
+	font-size:22px;
+}
+.text1 {
+	margin-top:5px;
+	font-size:14px;
+}
+.text2 {
+	font-size:14px;
+	line-height:22px;
+	margin-top:15px;
+}
+.por_img {
+	display:block;
+	width:295px;
+	height:190px;
+}
+.por_img img {
+	position:absolute;
+	top:0;
+	left:0;
+	transition:all 0.3s ease 0s;
+}
+.product ul li:hover .por_img img {
+	transition:all 0.3s ease 0s;
+	left:-12px;
+}

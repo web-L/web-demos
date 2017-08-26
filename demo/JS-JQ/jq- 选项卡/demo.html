@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title></title>
+		<meta name="keywords" content="关键词，关键词">
+		<meta name="description" content="描述">
+
+		<!--css,js-->
+
+		<style type="text/css">
+			body,div,
+			ul,li,p,
+			input,
+			button,
+			dl,dt,dd{margin:0px;padding:0px;}
+			html,body{
+				width:100%;
+				height:100%;
+			}
+			ul,li{
+				list-style:none;
+			}
+			a{
+				text-decoration:none;
+			}
+			img{
+				vertical-align:top;
+				border:none;
+			}
+			.main {
+				width:580px;
+				height:470px;
+				border:5px solid #333;
+				margin:50px auto;
+				position:relative;
+				top:0;
+				left:0;
+			}
+			.bd {
+				left:149px;
+				position:absolute;
+				top:0;
+				width:282px;
+			}
+			.tit li {
+				height:233px;
+				opacity:0.35;
+				width:147px;
+				position:absolute;
+			}
+			.bd li {
+				position:relative;
+				height:468px;
+			}
+			.bd li img {
+				border:2px solid #f00
+			}
+			.tf {
+				top:0;
+				left:0;
+			}
+			.tr {
+				top:0;
+				right:0;
+			}
+			.bf {
+				bottom:0;
+				left:0;
+			}
+			.br {
+				bottom:0;
+				right:0;
+			}
+			.tit .on {
+				opacity:1;
+			}
+			.tx {
+				width:204px;
+				height:135px;
+				background:url(img/bg21.png) no-repeat scroll;
+				position:absolute;
+				bottom:0;
+				left:40px;
+				padding-top:37px;
+				text-align:center;
+			}
+			.tx p,span {
+				display:block;
+				margin:0 auto;
+			}
+			.tx span {
+				width:130px;
+				height:32px;
+				color:#000;
+				font-size:14px;
+				margin-bottom:18px;
+			}
+			.tx a:hover span {
+				text-decoration:underline;
+			}
+			.tx p {
+				width:150px;
+				height:72px;
+				line-height:12px;
+				color:#FFF;
+			}
+
+		</style>
+		
+	</head>
+
+	<body>
+	
+			<div class="main">
+		<ul class="tit">
+        	<li class="tf"><img src="img/derg.jpg" width="147" height="233" alt="ssss"/></li>
+            <li class="tr"><img src="img/sdsdw.jpg" width="147" height="233" alt="ssss"/></li>
+            <li class="bf"><img src="img/sdwrv.jpg" width="147" height="233" alt="ssss"/></li>
+            <li class="br"><img src="img/xsd.jpg" width="147" height="233" alt="ssss"/></li>
+        </ul>
+        <ul class="bd">
+			<li class="tf"><img src="img/derg.jpg" width="278" height="464" alt="ssss"/>
+            	<div class="tx">
+                     <a href="#"><span>透视衬衫凹陷轻性感职业休闲聚会一装齐</span></a>
+                     <p>太过喜爱衬衣的随意与优雅，喜欢将衬衣系在高腰裙里面搭配高跟鞋的优雅造型。所以总是喜欢用衬衣选择搭配不同的下装……</p>
+                </div>
+            </li>
+            <li class="tr">
+            <img src="img/sdsdw.jpg" width="278" height="464" alt="ssss"/>
+            <div class="tx">
+                 <a href="#"><span>清新碎花修身体恤衫 可爱出行甜美惹人爱</span></a>
+                 <p>女孩子对于花儿的喜爱永远是那么浓郁，简单的碎花衬衫配上蕾丝裙，上面的花朵设计也很洋气哦，女人味十足……</p>
+            </div>
+            </li>
+            <li class="bf">
+            <img src="img/sdwrv.jpg" width="278" height="464" alt="ssss"/>
+            <div class="tx">
+                 <a href="#"><span>镂空三角复古图案T穿出不一样的feel</span></a>
+                 <p>夏日来临，不喜欢花费心思搭配的美眉们一身简单的着装绝对是她们的首选。一条牛仔裤各种配上不同的T-恤衫就能穿出不一样的feel……</p>
+            </div>
+            </li>
+            <li class="br">
+            <img src="img/xsd.jpg" width="278" height="464" alt="ssss"/>
+            <div class="tx">
+                 <a href=""><span>轻快活泼极致休闲风 荧光色系美丽不打折</span></a>
+                 <p>荧光绿色露肩T，舒适轻薄的牛仔裤再配上一双舒服运动的夏日橙色的布鞋，如此舒服的搭配让您外出踏青的时候都可以轻盈舒适……</p>
+            </div>
+            </li>
+        </ul>
+	</div>
+		
+	<script src="js/jquery1.42.min.js"></script>
+	<script src="js/jquery.SuperSlide.2.1.1.js"></script>
+	<script type="text/javascript">
+		$(".main").slide({
+			titCell:".tit li",//选项元素
+			mainCell:".bd",//选项展示元素
+			trigger:"mouseover",//用什么事件触发
+			autoPlay:true,//是否轮播 true false
+			effect:"fold",//切换效果
+			delayTime:500//切换时间
+		});
+	</script>
+	</body>
+
+
+</html>

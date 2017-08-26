@@ -1,0 +1,50 @@
+body,div,
+ul,li,p,
+input,
+button,
+dl,dt,dd{margin:0px;padding:0px;}
+ul,li{
+	list-style:none;
+}
+#box{
+	width:960px;
+	height:600px;
+	margin:150px auto;
+	position:relative;
+}
+#box #left{
+	width:75px;
+	height:75px;
+	border-radius:6px;
+	background:rgba(255,255,255,0.3) url("../images/arrow.png")no-repeat;
+	position:absolute;
+	top:50%;
+	left:10px;
+	display:none;
+}
+#box:hover #left{
+	display:block;
+}
+#box #right{
+	width:75px;
+	height:75px;
+	border-radius:6px;
+	background:rgba(255,255,255,0.3) url("../images/arrow.png")no-repeat -160px 0px;
+	position:absolute;
+	top:50%;
+	right:10px;
+	display:none;
+}
+#box:hover #right{
+	display:block;
+}
+#box #right:hover{
+	background-position:-240px 0px;
+}
+#box #list li{
+	width:192px;
+	height:200px;
+	background:url("../images/1.jpg")no-repeat;
+	float:left;
+	box-shadow:0 0 1px #000;/*css3 边框阴影效果*/
+}

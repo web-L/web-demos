@@ -1,0 +1,78 @@
+body,div,
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+ul,li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+img{
+	vertical-align:top;
+	border:none;
+}
+#wrap{
+	width:400px;
+	height:500px;
+	border:1px solid #bbb;
+	margin:100px;
+}
+#wrap .pic{
+	width:400px;
+	height:400px;
+	position:relative;
+	background:#f6f6f6;
+}
+#wrap .pic .pic_cover{
+	position:absolute;
+	top:0;
+	left:0;
+}
+#wrap .pic .pic_cover img{
+	display:block;
+}
+#wrap .pic .pic_cover .cover{
+	width:200px;
+	height:200px;
+	background-image:url(../img/cover.png);
+	position:absolute;
+	top:0;
+	left:0;
+	cursor:move;
+	display:none;
+}
+
+#wrap .tab{
+	width:400px;
+	height:54px;
+	margin-top:20px;
+}
+#wrap .tab li{
+	width:50px;
+	height:50px;
+	float:left;
+	margin:0 13px;
+	cursor:pointer;
+	border:2px solid #fff;
+	transition:border .3s;
+	position:relative;
+}
+#wrap .tab li img{
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
+}
+#wrap .tab li.on{
+	border:2px solid #f60;
+}
+
+#wrap .show{
+	width:400px;
+	height:400px;
+	position:absolute;
+	top:0;
+	right:-410px;
+	background:#ffffcc;
+	display:none;
+	background-image:url(../img/1.jpg);
+}

@@ -1,0 +1,443 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>瑞丽网排行榜效果</title>
+		<meta name="keywords" content="关键词，关键词">
+		<meta name="description" content="描述">
+
+		<!--css,js-->
+
+		<style type="text/css">
+			body,div,
+			body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+			ul,li{
+				list-style:none;
+			}
+			a{
+				text-decoration:none;
+			}
+			img{
+				vertical-align:top;
+				border:none;
+			}
+			#Con{
+				width:1200px;
+				height:320px;
+				margin:100px auto;
+			}
+			#Con div.C_list{
+				float:left;
+				width:280px;
+				height:318px;
+				border:1px solid #ddd;
+				margin-right:18px;
+			}
+			#Con div.C_list h3{
+				width:280px;
+				height:60px;
+				line-height:60px;
+				background:#f7f7f7;
+				text-align:center;
+				font-family:"微软雅黑";
+				font-weight:500;
+			}
+			#Con div.C_list ul{
+				padding:10px;
+			}
+			#Con div.C_list ul li{
+				line-height:34px;
+				color:#666;
+			}
+			#Con div.C_list ul li p.hover{
+				display:none;
+			}
+			#Con div.C_list ul li a{
+				color:#666;
+			}
+			#Con div.C_list ul li div.l_hide{
+				height:104px;
+				display:none;
+			}
+			
+			#Con div.C_list ul li div.l_hide div.h_left{
+				float:left;
+				margin-right:16px;
+				border:1px solid #f7f7f7;
+			}
+			#Con div.C_list ul li div.l_hide div.l_right{
+				float:left;
+				width:140px;
+				height:100px;
+			}
+			#Con div.C_list ul li div.show{
+				display:block;
+			}
+		</style>
+		
+	</head>
+
+	<body>
+
+		<div id="Con">
+			<div class="C_list">
+				<h3>人气品牌</h3>
+				<ul>
+					<li>
+						<p class="l_box hover" >
+							<span>1</span>
+							<a href="">雅诗兰黛</a>
+						</p>
+						<div class="l_hide show">
+							<div class="h_left">
+								<img src="images/pic1.jpg" width="100" height="100" alt="" />
+							</div>
+							<div class="l_right">
+								<p class="p1">雅诗兰黛</p>
+								<p class="p2">产品数：<span class="num">657</span></p>
+								<p class="p3">关注数：<span class="num">666</span></p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<p class="l_box">
+							<span>2</span>
+							<a href="">香奈儿</a>
+						</p>
+						<div class="l_hide">
+							<div class="h_left">
+								<img src="images/pic2.jpg" width="100" height="100" alt="" />
+							</div>
+							<div class="l_right">
+								<p class="p1">香奈儿</p>
+								<p class="p2">产品数：<span class="num">657</span></p>
+								<p class="p3">关注数：<span class="num">666</span></p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<p class="l_box">
+							<span>3</span>
+							<a href="">欧珀莱</a>
+						</p>
+						<div class="l_hide">
+							<div class="h_left">
+								<img src="images/pic3.jpg" width="100" height="100" alt="" />
+							</div>
+							<div class="l_right">
+								<p class="p1">欧珀莱</p>
+								<p class="p2">产品数：<span class="num">657</span></p>
+								<p class="p3">关注数：<span class="num">666</span></p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<p class="l_box">
+							<span>4</span>
+							<a href="">巴黎欧莱雅</a>
+						</p>
+						<div class="l_hide">
+							<div class="h_left">
+								<img src="images/pic4.jpg" width="100" height="100" alt="" />
+							</div>
+							<div class="l_right">
+								<p class="p1">巴黎欧莱雅</p>
+								<p class="p2">产品数：<span class="num">657</span></p>
+								<p class="p3">关注数：<span class="num">666</span></p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<p class="l_box">
+							<span>5</span>
+							<a href="">兰芝</a>
+						</p>
+						<div class="l_hide">
+							<div class="h_left">
+								<img src="images/pic5.jpg" width="100" height="100" alt="" />
+							</div>
+							<div class="l_right">
+								<p class="p1">兰芝</p>
+								<p class="p2">产品数：<span class="num">657</span></p>
+								<p class="p3">关注数：<span class="num">666</span></p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="C_list">
+				<h3>人气品牌</h3>
+				<ul>
+					<li>
+						<p class="l_box hover" >
+							<span>1</span>
+							<a href="">雅诗兰黛</a>
+						</p>
+						<div class="l_hide show">
+							<div class="h_left">
+								<img src="images/pic1.jpg" width="100" height="100" alt="" />
+							</div>
+							<div class="l_right">
+								<p class="p1">雅诗兰黛</p>
+								<p class="p2">产品数：<span class="num">657</span></p>
+								<p class="p3">关注数：<span class="num">666</span></p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<p class="l_box">
+							<span>2</span>
+							<a href="">香奈儿</a>
+						</p>
+						<div class="l_hide">
+							<div class="h_left">
+								<img src="images/pic2.jpg" width="100" height="100" alt="" />
+							</div>
+							<div class="l_right">
+								<p class="p1">香奈儿</p>
+								<p class="p2">产品数：<span class="num">657</span></p>
+								<p class="p3">关注数：<span class="num">666</span></p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<p class="l_box">
+							<span>3</span>
+							<a href="">欧珀莱</a>
+						</p>
+						<div class="l_hide">
+							<div class="h_left">
+								<img src="images/pic3.jpg" width="100" height="100" alt="" />
+							</div>
+							<div class="l_right">
+								<p class="p1">欧珀莱</p>
+								<p class="p2">产品数：<span class="num">657</span></p>
+								<p class="p3">关注数：<span class="num">666</span></p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<p class="l_box">
+							<span>4</span>
+							<a href="">巴黎欧莱雅</a>
+						</p>
+						<div class="l_hide">
+							<div class="h_left">
+								<img src="images/pic4.jpg" width="100" height="100" alt="" />
+							</div>
+							<div class="l_right">
+								<p class="p1">巴黎欧莱雅</p>
+								<p class="p2">产品数：<span class="num">657</span></p>
+								<p class="p3">关注数：<span class="num">666</span></p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<p class="l_box">
+							<span>5</span>
+							<a href="">兰芝</a>
+						</p>
+						<div class="l_hide">
+							<div class="h_left">
+								<img src="images/pic5.jpg" width="100" height="100" alt="" />
+							</div>
+							<div class="l_right">
+								<p class="p1">兰芝</p>
+								<p class="p2">产品数：<span class="num">657</span></p>
+								<p class="p3">关注数：<span class="num">666</span></p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="C_list">
+				<h3>人气品牌</h3>
+				<ul>
+					<li>
+						<p class="l_box hover" >
+							<span>1</span>
+							<a href="">雅诗兰黛</a>
+						</p>
+						<div class="l_hide show">
+							<div class="h_left">
+								<img src="images/pic1.jpg" width="100" height="100" alt="" />
+							</div>
+							<div class="l_right">
+								<p class="p1">雅诗兰黛</p>
+								<p class="p2">产品数：<span class="num">657</span></p>
+								<p class="p3">关注数：<span class="num">666</span></p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<p class="l_box">
+							<span>2</span>
+							<a href="">香奈儿</a>
+						</p>
+						<div class="l_hide">
+							<div class="h_left">
+								<img src="images/pic2.jpg" width="100" height="100" alt="" />
+							</div>
+							<div class="l_right">
+								<p class="p1">香奈儿</p>
+								<p class="p2">产品数：<span class="num">657</span></p>
+								<p class="p3">关注数：<span class="num">666</span></p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<p class="l_box">
+							<span>3</span>
+							<a href="">欧珀莱</a>
+						</p>
+						<div class="l_hide">
+							<div class="h_left">
+								<img src="images/pic3.jpg" width="100" height="100" alt="" />
+							</div>
+							<div class="l_right">
+								<p class="p1">欧珀莱</p>
+								<p class="p2">产品数：<span class="num">657</span></p>
+								<p class="p3">关注数：<span class="num">666</span></p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<p class="l_box">
+							<span>4</span>
+							<a href="">巴黎欧莱雅</a>
+						</p>
+						<div class="l_hide">
+							<div class="h_left">
+								<img src="images/pic4.jpg" width="100" height="100" alt="" />
+							</div>
+							<div class="l_right">
+								<p class="p1">巴黎欧莱雅</p>
+								<p class="p2">产品数：<span class="num">657</span></p>
+								<p class="p3">关注数：<span class="num">666</span></p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<p class="l_box">
+							<span>5</span>
+							<a href="">兰芝</a>
+						</p>
+						<div class="l_hide">
+							<div class="h_left">
+								<img src="images/pic5.jpg" width="100" height="100" alt="" />
+							</div>
+							<div class="l_right">
+								<p class="p1">兰芝</p>
+								<p class="p2">产品数：<span class="num">657</span></p>
+								<p class="p3">关注数：<span class="num">666</span></p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="C_list">
+				<h3>人气品牌</h3>
+				<ul>
+					<li>
+						<p class="l_box hover" >
+							<span>1</span>
+							<a href="">雅诗兰黛</a>
+						</p>
+						<div class="l_hide show">
+							<div class="h_left">
+								<img src="images/pic1.jpg" width="100" height="100" alt="" />
+							</div>
+							<div class="l_right">
+								<p class="p1">雅诗兰黛</p>
+								<p class="p2">产品数：<span class="num">657</span></p>
+								<p class="p3">关注数：<span class="num">666</span></p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<p class="l_box">
+							<span>2</span>
+							<a href="">香奈儿</a>
+						</p>
+						<div class="l_hide">
+							<div class="h_left">
+								<img src="images/pic2.jpg" width="100" height="100" alt="" />
+							</div>
+							<div class="l_right">
+								<p class="p1">香奈儿</p>
+								<p class="p2">产品数：<span class="num">657</span></p>
+								<p class="p3">关注数：<span class="num">666</span></p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<p class="l_box">
+							<span>3</span>
+							<a href="">欧珀莱</a>
+						</p>
+						<div class="l_hide">
+							<div class="h_left">
+								<img src="images/pic3.jpg" width="100" height="100" alt="" />
+							</div>
+							<div class="l_right">
+								<p class="p1">欧珀莱</p>
+								<p class="p2">产品数：<span class="num">657</span></p>
+								<p class="p3">关注数：<span class="num">666</span></p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<p class="l_box">
+							<span>4</span>
+							<a href="">巴黎欧莱雅</a>
+						</p>
+						<div class="l_hide">
+							<div class="h_left">
+								<img src="images/pic4.jpg" width="100" height="100" alt="" />
+							</div>
+							<div class="l_right">
+								<p class="p1">巴黎欧莱雅</p>
+								<p class="p2">产品数：<span class="num">657</span></p>
+								<p class="p3">关注数：<span class="num">666</span></p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<p class="l_box">
+							<span>5</span>
+							<a href="">兰芝</a>
+						</p>
+						<div class="l_hide">
+							<div class="h_left">
+								<img src="images/pic5.jpg" width="100" height="100" alt="" />
+							</div>
+							<div class="l_right">
+								<p class="p1">兰芝</p>
+								<p class="p2">产品数：<span class="num">657</span></p>
+								<p class="p3">关注数：<span class="num">666</span></p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var $Li = $("#Con div.C_list ul li");
+				
+				$Li.hover(function(){
+					$(this).find(".l_box").hide().parent().siblings().find(".l_box").show();
+					$(this).find(".l_hide").show().parent().siblings().find(".l_hide").hide();
+					
+				},function(){
+					
+				});
+
+			});
+		</script>
+	</body>
+
+
+</html>

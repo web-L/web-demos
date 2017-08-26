@@ -1,0 +1,82 @@
+body,div,
+ul,li,p,
+input,
+button,
+dl,dt,dd{margin:0px;padding:0px;}
+html,body{
+	width:100%;
+	height:100%;
+}
+ul,li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+img{
+	vertical-align:top;
+	border:none;
+}
+#banner{
+	width:520px;
+	height:280px;
+	margin:100px auto;
+	border:1px solid red;
+}
+#banner div.box{
+	width:520px;
+	height:280px;
+	position:relative;
+	overflow:hidden;
+	
+}
+#banner div.box ul.list_box{
+	width:1000%;
+	height:280px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	margin-left:-520px;
+	
+}
+#banner div.box ul.list_box li{
+	float:left;
+}
+#banner div.box ul.tab_box{
+	position:absolute;
+	bottom:20px;
+	left:40%;
+	padding: 4px 10px;
+	background:rgba(255,255,255,.4);
+	border-radius:22px;
+}
+#banner div.box ul.tab_box li{
+	width:10px;
+	height:10px;
+	background:#B7B7B7;
+	float:left;
+	margin:0px 2px;
+	border-radius:50%;
+	cursor:pointer;
+}
+#banner div.box a.btn{
+	width: 35px;
+	height: 80px;
+	position:absolute;
+	top:30%;
+	background:url("../images/prex.png") no-repeat;
+}
+#banner div.box a.prev{
+	left:0px;
+	background-position: 0px -50px;
+}
+#banner div.box a.next{
+	right:0px;
+	background-position:-46px -50px;
+}
+#banner div.box ul.tab_box .li{
+	background:#F40;
+}
+#banner div.box div.btn_box{
+	display:none;
+}

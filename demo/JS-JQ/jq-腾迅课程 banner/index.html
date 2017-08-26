@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title></title>
+		<meta name="keywords" content="关键词，关键词">
+		<meta name="description" content="描述">
+
+		<!--css,js-->
+
+		<style type="text/css">
+			body,div,
+			ul,li,p,
+			input,
+			button,
+			dl,dt,dd{margin:0px;padding:0px;}
+			html,body{
+				width:100%;
+				height:100%;
+			}
+			ul,li{
+				list-style:none;
+			}
+			a{
+				text-decoration:none;
+			}
+			img{
+				vertical-align:top;
+				border:none;
+				
+			}
+			#banners{
+				width:100%;
+				height:300px;
+				position:relative;
+			}
+			#banners div.banner{
+				width: 762px;
+				height: 100%;
+				margin: 0px auto;
+				position:relative;
+			}
+			#banners div.banner ul li{
+				width:100%;
+				height:100%;
+				position:absolute;
+				top:0px;
+				left:0px;
+				text-align:center;
+		
+			}
+			
+			#banners a.same{
+				width:46px;
+				height:72px;
+				background:url("images/button.png") no-repeat;
+				position:absolute;
+				top:114px;
+				z-index:999;
+				display:none;
+			}
+			#banners a.prev{
+				background-position:1px -133px;
+				left:0px;
+			}
+			#banners a.prev:hover{
+				background-position:-132px 0px;
+			}
+			#banners a.next{
+				background-position:-53px -133px;
+				right:0px;
+			}
+			#banners a.next:hover{
+				background-position:-186px 0px;
+			}
+			#banners ul.buts{
+				background-color: rgba(0,0,0,.3);
+				position: absolute;
+				bottom: 10px;
+				left: 50%;
+				border-radius: 30px;
+				z-index:99;
+				padding: 7px 10px;
+			}
+			#banners ul.buts li{
+				width: 8px;
+				height: 8px;
+				border-radius: 30px;
+				float:left;
+				border:1px solid #fff;
+				margin:0px 4px;
+				cursor:pointer;
+			}
+			.color{
+				background:#fff;
+			}
+		</style>
+		
+	</head>
+
+	<body>
+
+	<div id="banners" style="background:rgb(53, 138, 201);">
+
+		<div class="banner">
+			<ul>
+				<li bgColor="rgb(53, 138, 201)" style="z-index:1;">
+					<a href="javascript:;">
+						<img src="images/1.jpg" width="760" height="300" alt="" />
+					</a>
+				</li>
+				<li bgColor="rgb(89, 174, 71)">
+					<a href="javascript:;">
+						<img src="images/2.jpg" width="760" height="300" alt="" />
+					</a>
+				</li>
+				<li bgColor="rgb(21, 24, 55)">
+					<a href="javascript:;">
+						<img src="images/3.jpg" width="760" height="300" alt="" />
+					</a>
+				</li>
+				<li bgColor="rgb(54, 160, 208)">
+					<a href="javascript:;">
+						<img src="images/4.jpg" width="760" height="300" alt="" />
+					</a>
+				</li>
+				<li bgColor="rgb(216, 221, 227)">
+					<a href="javascript:;">
+						<img src="images/5.jpg" width="760" height="300" alt="" />
+					</a>
+				</li>
+			</ul>
+			
+			<a href="javascript:;" class="prev same"></a>
+			<a href="javascript:;" class="next same"></a>
+
+		</div>
+		<ul class="buts">
+			<li class="color"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		
+	</div>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var $Li = $("#banners div.banner ul li");
+			var $btu = $("#banners ul.buts li");
+			var $index = 0;
+			var Time = null;
+			$("#banners div.banner").hover(
+				function(){//鼠标移上
+					$("#banners a.same").show(500);
+					clearInterval( Time );//停止定义时
+				},function(){//鼠标移开
+					$("#banners a.same").hide();
+					take();
+				}
+			);
+			$("#banners a.next").click(function(){
+				$index++
+				$banner();
+				
+			});
+			$("#banners a.prev").click(function(){
+				$index--
+				$banner();
+			});
+
+			function $banner(){
+				$index %= $Li.size();//取余$Li 的个数
+				$Li.eq($index).stop().fadeIn(500).siblings().stop().hide();
+				$btu.eq($index).addClass("color").siblings().removeClass("color");
+				var $bg = $("#banners div.banner ul li").eq($index).attr("bgColor");
+				$("#banners").css("background",$bg);
+			}
+			
+			
+			function take(){
+				Time = setInterval(function(){	
+					$banner();
+					$index++
+				},2000);
+			}
+			take();
+			$btu.mouseover(function(){
+				$index = $(this).index();
+				$banner();
+			});
+			
+			
+
+		});
+	</script>
+	</body>
+
+
+</html>

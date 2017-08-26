@@ -1,0 +1,21 @@
+.logo{
+	float:left;
+}
+div.nav{
+	width:70px;
+	height:580px;
+	background:#fff;
+	float:left;
+	margin-top: 116px;
+	margin-left: -83px;
+	border-radius:10px;
+	transition:1s;
+}
+a{
+	display:block;
+	float:left;
+	width:40px;
+	height:40px;
+	margin:16px 15px;
+	
+}

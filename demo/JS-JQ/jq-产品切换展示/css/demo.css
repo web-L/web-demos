@@ -1,0 +1,73 @@
+body,div,
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+ul,li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+img{
+	vertical-align:top;
+	border:none;
+}
+body {
+	background:#fff;
+}
+#Con {
+	width:570px;
+ height:270px;
+	margin:100px auto 0px;
+	border:1px dashed #ccc;
+	position:relative;
+}
+#Con img.but1 {
+	position:absolute;
+	top:100px;
+	left:0px;
+	cursor:pointer;
+}
+#Con img.but2 {
+	position:absolute;
+	top:100px;
+	right:0px;
+	cursor:pointer;
+}
+#Con .scroll {
+	width:510px;
+	height:220px;
+	margin:30px auto 0px;
+	overflow:hidden;
+	position:relative;
+}
+#Con .ImgList {
+	width:10000px;
+	height:215px;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+#Con .scroll .ImgList dl {
+	width:150px;
+	height:210px;
+	float:left;
+	/*左浮动*/
+ margin:0px 10px;
+}
+#Con .scroll .ImgList dl dt {
+	width:150px;
+	height:150px;
+	background:#66ff33;
+}
+#Con .scroll .ImgList dl dd {
+	width:150px;
+	height:25px;
+	font-size:12px;
+	text-align:center;
+	/*水平距中*/
+ line-height:25px;
+}
+#Con .scroll .ImgList dl dd span {
+	color:#ff0066;
+	font-weight:bold;
+	/*加粗*/
+}

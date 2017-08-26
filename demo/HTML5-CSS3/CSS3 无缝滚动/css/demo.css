@@ -1,0 +1,71 @@
+body {
+	background:url("../img/bg.jpg") 100% center;
+	height:680px;
+}
+#main {
+	position:fixed;
+	top:196px;
+	left:-28px;
+	width:720px;
+	height:350px;
+	perspective:1000px;
+}
+#main .box,#main .box2 {
+	width:720px;
+	height:190px;
+	cursor:pointer;
+	background:#000;
+	position:relative;
+	overflow:hidden;
+}
+#main .box2 {
+	transform:rotateX(-110deg);
+	top:-10px;
+	left:0px;
+	opacity:0.5;
+}
+ul {
+	width:1920px;
+	position:absolute;
+	left:0px;
+	top:-16px;
+	animation:slide2 20S linear infinite;
+}
+li {
+	list-style:none;
+	float:left;
+	margin:20px 5px;
+}
+/*svg 矢量图形画线条*/
+svg {
+	position:absolute;
+	left:-800px;
+	top:3px;
+	animation:slide 12S linear infinite;
+}
+svg line {
+	stroke:#fff;
+	stroke-dasharray:15 20;
+}
+svg line.top {
+	stroke-width:27px;
+}
+svg line.bottom {
+	stroke-width:14px;
+}
+@keyframes slide {
+	from {
+	left:-800px;
+}
+to {
+	left:0px;
+}
+}
+@keyframes slide2 {
+	from {
+	left:0px;
+}
+to {
+	left:-800px;
+}
+}

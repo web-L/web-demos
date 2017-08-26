@@ -1,0 +1,74 @@
+*{margin:0px;padding:0px;}
+
+body,a{font-size:14px;color:#E7AA1C;background:#000; text-decoration:none;}
+
+/*主体*/
+#main{width:1030px; height:4841px; margin:0px auto;}
+/*头部样式开始*/
+#main .top{width:1000px; height:440px; background:url("../images/ds.jpg") no-repeat;  margin:0px auto;}
+#main .top_1{width:900px; height:350px; margin:0px auto;}
+#main .top_2{width:1000px; height:33px; margin:40px auto; }
+#main .top_2 .nav{width:800px; height:33px; margin:0px 140px;}
+#main .top_2 .nav a{ font-size:15px;color:#E7AA1C; text-decoration:none; margin:0px 10px;}
+#main .top_2 .nav a:hover{font-size:16px;}
+	/*头部样式结束*/
+
+	/*内容开始*/
+
+/* left 开始*/
+#main .centent{width:1024px; height:4400px; background:url("../images/bg.jpg"); margin:0px 15px;}
+
+#main .centent .cen_main{width:805px;height:4400px; background:; margin:0px 110px;}
+
+#main .centent .cen_main .cen_left{width:610px; height:4365px; float:left;}
+#main .centent .cen_main .cen_left .l_tab{width:600px; height:60px; }
+#main .centent .cen_main .cen_left .l_tab 
+									.l_left{width:120px; height:42px;
+									background:url("../images/l_tab.jpg"); float:left;
+									padding:16px 0px 0px 60px;
+									}
+#main .centent .cen_main .cen_left .l_tab 
+										.l_right{width:300px; height:27px; 
+										float:right;padding:16px 0px;}
+#main .centent .cen_main .cen_left .l_tab 
+										.l_right .r_ds{color:#E7AA1C;border:1px solid #E7AA1C;}
+#main .centent .cen_main .cen_left .l_list{width:540px; height:38px;  padding:36px 30px;}
+#main .centent .cen_main .cen_left .l_list a{font-size:14px; color:#E7AA1C; text-decoration:none; font-weight:900;}
+#main .centent .cen_main .cen_left .l_list a:hover{font-size:15px;}
+#main .centent .cen_main .cen_left .l_list_2{width:600px; height:30px; }
+#main .centent .cen_main .cen_left .l_list_3{width:600px; height:30px;padding:5px;}
+#main .centent .cen_main .cen_left .l-list_p{width:600px; font-size:12px; text-indent:15px;margin:10px; 
+											line-height:20px;letter-spacing:3px;}
+#main .centent .cen_main .cen_left .l_list_4{width:600px; height:30px; border-bottom:1px dotted #e7aa1c;padding-top:20px;}
+#main .centent .cen_main .cen_left .l_list_5{width:588px; height:130px; margin:10px;text-align:center; line-height:130px;}
+#main .centent .cen_main .cen_left .l_list_4, .l_list_5 a{font-size:12px; color:#e7aa1c; text-decoration:none;
+												text-indent:30px; }
+#main .centent .cen_main .cen_left .l_list_4 a:hover{font-size:13px;text-decoration:underline;}
+#main .centent .cen_main .cen_left .l_list_5 a:hover{font-size:13px;text-decoration:underline;}
+#main .centent .cen_main .cen_left .l_list_4 a{font-size:12px; color:#e7aa1c; text-decoration:none;text-indent:30px;}
+#main .centent .cen_main .cen_left .l_list_6{color:#666; font-size:12px;margin-left:160px; }
+#main .centent .cen_main .cen_left .l_list_7{color:#77C; font-size:12px; text-decoration:underline;}
+/* left 结束*/
+
+/*right 开始*/
+#main .centent .cen_main .cen_right{width:180px; height:3900px;  float:right;}
+#main .centent .cen_main .cen_right .cen_right_1{width:172px; height:60px; font-size:14px; font-weight:900;
+													text-align:center; line-height:60px; margin:2px;}
+#main .centent .cen_main .cen_right .cen_right_2{width:160px; height:380px; background:#fff; #0f0; margin:8px;}
+
+#main .centent .cen_main .cen_right dl dt{width:167px; height:70px;  margin:6px; text-align:center; line-height:60px; font-weight:900;}
+#main .centent .cen_main .cen_right dl dd{width:167px;  border-bottom:1px dotted #E7AA1C;font-size:12px; margin:6px; 
+											text-align:center; padding:10px 0px;}
+#main .centent .cen_main .cen_right dl a{text-decoration:none; color:#E7AA1C; }
+#main .centent .cen_main .cen_right dl a:hover{text-decoration:underline;color:#cf0;}
+#main .centent .cen_main .cen_right .c_r_bottom ,.c_r_b_4{width:58px; padding:20px 60px; font-weight:900;}
+#main .centent .cen_main .cen_right .c_r_b_1{width:60px; height:14px; }
+#main .centent .cen_main .cen_right .c_r_b_2 {width:140px; height:2px; font-size:14px; display:block; padding:20px; border-bottom:1px dotted #e7aa1c;}
+#main .centent .cen_main .cen_right .c_r_b_3{width:180px; display:block; padding-top:5px; font-size:14px;}
+#main .centent .cen_main .cen_right .c_r_b_2:hover ,.c_r_b_3:hover{text-decoration:underline; color:#cf0;}
+#main .centent .cen_main .cen_right .c_r_b_5{ display:block; padding:55px 60px;}
+/*right 开始*/
+
+	/*内容结束*/
+
+.bottom{width:1024px; height:130px; margin-left:175px;}

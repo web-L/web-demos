@@ -1,0 +1,32 @@
+*{ margin:0; padding:0;}
+#wrap{
+	width:520px;
+	height:62px;
+	margin:100px auto;
+}
+#show{
+	width:462px;
+	height:62px;
+	overflow:hidden;
+	float:left;
+	margin:0 8px;
+}
+#wrap ul{
+	width:1000%;
+	height:61px;
+	margin-left:0;
+}
+#wrap ul li{
+	list-style:none;
+	float:left;
+	width:132px;
+	height:59px;
+	border:1px solid #ddd;
+	margin:0 10px;
+}
+#prev,#next{
+	width:20px;
+	height:59px;
+	float:left;
+	cursor:pointer;
+}

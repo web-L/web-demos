@@ -1,0 +1,138 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+ul,li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+img{
+	vertical-align:top;
+	border:none;
+}
+body {
+	background:url("../img/bg.png");
+	font-family:"Microsoft yahei";
+}
+#nav {
+	width:940px;
+	height:52px;
+	margin:0 auto;
+}
+#nav h1 {
+	width:158px;
+	height:52px;
+	float:left;
+}
+#nav h1 a {
+	display:block;
+	width:158px;
+	height:52px;
+}
+#nav ul {
+	width:630px;
+	height:52px;
+	float:right;
+}
+#nav ul li {
+	float:left;
+	line-height:52px;
+	margin-left:60px;
+}
+#nav ul li a {
+	color:#fff;
+	font-size:14px;
+	text-decoration:none;
+}
+#nav ul li a:hover {
+	color:#50D9CF;
+}
+#show {
+	width:940px;
+	height:610px;
+	margin:20px auto 0;
+	background:#000;
+}
+#show ul {
+	width:940px;
+	height:610px;
+}
+#show ul li {
+	float:left;
+	width:235px;
+	height:610px;
+	opacity:.5;
+	transition:.5s;
+}
+#show ul li:hover {
+	opacity:1;
+}
+#show .l1 {
+	background:url("../img/1.jpg");
+}
+#show .l2 {
+	background:url("../img/2.jpg");
+}
+#show .l3 {
+	background:url("../img/3.jpg");
+}
+#show .l4 {
+	background:url("../img/4.jpg");
+}
+#show .info {
+	color:#fff;
+	width:200px;
+	height:135px;
+	background:rgba(0,0,0,.5);
+	margin:450px auto 0;
+	text-align:center;
+	position:relative;
+	cursor:default;
+}
+#show .info h2 {
+	line-height:60px;
+	font-size:20px;
+	font-weight:100;
+	border-bottom:1px solid #fff;
+}
+#show .info p {
+	font-size:12px;
+	margin-top:10px;
+}
+#show .detail {
+	width:200px;
+	height:135px;
+	position:absolute;
+	top:20px;
+	color:#000;
+	text-align:left;
+	text-indent:20px;
+	cursor:default;
+	opacity:0;
+	transition:.5s;
+	background:#E7E7E7;
+	box-shadow:0 0 10px #fff;
+}
+#show ul li:hover .detail {
+	opacity:1;
+	top:0;
+}
+#show .detail p {
+	margin:0;
+}
+#show .detail .p1 {
+	line-height:35px;
+	font-size:14px;
+	border-bottom:1px solid #d4d4d4;
+}
+#show .detail .p2 {
+	border-top:1px solid #f1f1f1;
+	padding:7px 0;
+}
+#show .detail .p3 {
+	padding-bottom:20px;
+	border-bottom:1px solid #d4d4d4;
+}
+#show .detail .p4 {
+	border-top:1px solid #f1f1f1;
+	color:#4B8FD0;
+}

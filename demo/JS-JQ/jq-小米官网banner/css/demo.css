@@ -1,0 +1,175 @@
+body,div,
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+ul,li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+img{
+	vertical-align:top;
+	border:none;
+}
+body {
+	background:#F4F4F4;
+}
+#nav {
+	width:930px;
+	height:49px;
+	margin:0 auto;
+	margin-top:100px;
+}
+#all {
+	width:248px;
+	height:49px;
+	float:left;
+}
+#all a {
+	display:block;
+	width:248px;
+	height:49px;
+	background:#FF4A00;
+	color:#fff;
+	text-decoration:none;
+	font-size:18px;
+	line-height:50px;
+	text-indent:20px;
+}
+#main {
+	width:682px;
+	height:49px;
+	float:left;
+	background:#404144;
+	position:relative;
+}
+#main ul li {
+	list-style:none;
+	float:left;
+}
+#main ul li a {
+	display:block;
+	color:#fff;
+	text-decoration:none;
+	padding:14px 11px;
+}
+#main ul li a:hover {
+	background:#333;
+}
+#main .hid {
+	width:682px;
+	height:0px;
+	background:#fff;
+	position:absolute;
+	left:0;
+	overflow:hidden;
+}
+#main .hid ul li {
+	float:left;
+	width:340px;
+	height:200px;
+	border-right:1px solid#ccc;
+}
+#main .hid .left {
+	width:160px;
+	height:160px;
+	float:left;
+	margin-top:30px;
+}
+#main .hid .right .p1 {
+	font-size:20px;
+	margin-top:40px;
+}
+#main .hid .right .p2 {
+	font-size:14px;
+	color:#6D6D6D;
+}
+#main .hid .right .p3 {
+	color:#FF4A00;
+	margin-top:20px;
+}
+#main .hov span {
+	display:block;
+	border-width:5px;
+	position:absolute;
+	bottom:0;
+	border-style:solid;
+	display:none;
+	border-color:transparent transparent #fff;
+}
+#content {
+	width:930px;
+	height:593px;
+	margin:0 auto;
+}
+#slider {
+	width:682px;
+	height:420px;
+	background:#F4F4F4;
+	position:relative;
+	overflow:hidden;
+}
+#pic {
+	width:682px;
+	height:420px;
+	position:relative;
+}
+#pic img {
+	position:absolute;
+	top:0;
+	left:0;
+	display:none;
+}
+#but {
+	width:160px;
+	height:20px;
+	position:absolute;
+	right:10px;
+	bottom:15px;
+	z-index:1;
+}
+#but ul li {
+	list-style-type:none;
+	float:left;
+	width:16px;
+	height:18px;
+	border:1px solid rgba(255,255,255,.5);
+	background:rgba(0,0,0,.3);
+	color:#fff;
+	font-size:12px;
+	text-align:center;
+	line-height:18px;
+	margin:0 5px;
+	cursor:pointer;
+	border-radius: 100%;
+	transition:0.5s;
+}
+#but ul li:hover,#but ul .cli {
+	background:rgba(0,0,0,.8);
+}
+#left,#right {
+	width:40px;
+	height:70px;;
+	position:absolute;
+	top:50%;
+	margin-top:-35px;
+	cursor:pointer;
+	display:none;
+	
+}
+#slider:hover #left,#slider:hover #right {
+	display:block;
+}
+#left {
+	left:0;
+	background:url("../img/arrow.png") no-repeat -84px center;
+}
+#right {
+	right:0;
+	background:url("../img/arrow.png") no-repeat -126px center;
+}
+#left:hover {
+	background-position:0 center;
+}
+#right:hover {
+	background-position:-43px center;
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+	<head>
+		<!--声明当前页面编码集（中文编码<gbk,gb2312>,国际编码<utf-8>）-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--声明当前页面的三要素-->
+		<title>label 标签</title>
+		<meta name="keywords" content="关键词,关键词">
+		<meta name="description" content="">
+
+		<!--css/js-->
+		
+		<style type="text/css">
+			body{ background:url("../images/2.gif");font-size:14px;font-family:"微软雅黑";color:#fff;}
+		</style>
+
+
+	</head>
+
+
+<body>
+	<h1>label 标签</h1>
+
+	<p>&lt label&gt 标签为 input 元素定义标注（标记）；label 元素不会向用户呈现任何特殊效果。不过，它为鼠标用户改进了可用性。如果您在 label 元素内点击文本，就会触发此控件。<br />就是说，当用户选择该标签时，浏览器就会自动将焦点转到和标签相关的表单控件上&lt label&gt 标签的 for 属性应当与相关元素的 id 属性相同。</p>
+	<p>
+		由于多选按钮本身比较小，因此出于用户体验的考虑，通常点击选项的文本就应该代表着选择对应的checkbox项，可通过label的for属性关联checkbox的id达到此目的。
+	</p>
+	<p>&lt input type=“checkbox”name=“interest”id=“interest” value=“传给后台的值” checked&gt&lt label for=“interest”&gt 写程序&lt /label&gt</p>
+	<p>例如：
+	<input type="checkbox"name="interest" id="interest" value="传给后台的值" checked><label for="interest">写程序</label>
+	<p>这样，当点击“写程序”这个label的时候，就会触发checkbox的选中注意：&lt label&gt 标签的 for 属性应当与相关元素的 id 属性相同。</p>
+
+	</p>
+		语法：
+			<pre>
+			&lt form&gt
+				 &lt label for="nan"&gt男&lt/label&gt
+				 &lt input type="radio" name="sex" id="nan" /&gt&ltbr /&gt
+				 &lt label for="nv"&gt女&lt/label&gt
+				 &lt input type="radio" name="sex" id="nv" /&gt&ltbr /&gt
+				 &lt label for="xq"&gt篮球&lt/label&gt
+				 &lt input type="checkbox" id="xq"/&gt
+			&lt/form&gt
+		</pre>  
+	
+		性别：<input type="radio" name="sex" id="a" /><label for="a">男</label>
+			  <input type="radio" name="sex" id="s" /><label for="s">女</label>
+			  <input type="radio" name="sex" id="d" /><label for="d">人</label>
+		<br /><br />
+		兴趣爱好：<input type="checkbox" id="f" /><label for="f">音乐</label>
+				  <input type="checkbox" id="g" /><label for="g">篮球</label>
+				  <input type="checkbox" id="h" /><label for="h">计算机</label>
+
+
+</body>
+
+</html>

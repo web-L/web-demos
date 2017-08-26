@@ -1,0 +1,227 @@
+html { 
+	font-family: "Helvetica Neue",Helvetica, sans-serif;
+	/*谷歌浏览器字体最小字体12px*/
+	-webkit-text-size-adjust: 100%;/*100%/none 关闭字体大小自动调整功能*/
+	/*a标签及拥有 :active伪类的元素有默认的高亮框*/
+	-webkit-tap-hightlight-color: transparent;
+	/*禁止文本被选中*/
+	-webkit-user-select: none;
+}
+body{
+	overflow-x:hidden;
+	/*开启moblie网页快速滚动和回弹的效果*/
+	-webkit-overflow-scrolling: touch;
+	font-size: 12px;
+}
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+a{
+	display: block;
+	color: #333;
+	text-decoration: none;
+}
+img{
+	width: 100%;
+	border: 0;
+	display: block;
+	vertical-align: middle;
+}
+input{
+	-webkit-appearance: none;
+	outline: none;
+	border: none;
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.clearfix:after{
+	content:"";
+	display:block;
+	width:100%;
+	height:0;
+	clear:both;
+}
+li,ol{
+	list-style:none;
+}
+
+.sprite-icon{
+	display:inline-block;
+	background:url("../images/jd-sprites.png") no-repeat;
+	background-size:200px 200px;
+}
+.dis-flex{
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    flex-wrap:wrap;
+    -webkit-flex-wrap:wrap;
+}
+.swiper-slide img{
+	width: 100%;
+}
+.foor-container{
+	overflow: hidden;
+	padding: 0 8px;
+	position: relative;
+}
+.right-line:after{
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 1px;
+	border-right:1px solid #ccc;
+	-webkit-transform: scaleX(0.5);
+	transform: scaleX(0.5);
+}
+.top-line:after{
+	content: '';
+	position: absolute;
+    left: -50%;
+    top: 0;
+    height: 1px;
+    width: 200%;
+    border-right: 1px solid #ccc;
+    -webkit-transform: scaleX(0.5);
+    transform: scaleX(0.5);
+    background: #e5e5e5;
+}
+.bg-fff{
+	background: #fff;
+}
+
+
+footer{
+	width: 100%;
+}
+.l-link,.l-platform{
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	background: #fff;
+}
+.l-link ul,.l-platform ul{
+	width: 320px;
+	margin: auto;
+	display: table;
+	padding: 18px 0;
+}
+.l-link ul li{
+	display: table-cell;
+	width: 69px;
+	text-align: center;
+	position: relative;
+	border-right: 1px solid #ccc;
+}
+.l-link ul li:nth-child(1),.l-link ul li:last-child{
+	width: 90px;
+}
+.l-link ul li:last-child{
+	border: 0;
+}
+
+.l-platform ul{
+	padding: 8px 0;
+}
+.l-platform ul li{
+	display: table-cell;
+	text-align: center;
+	position: relative;
+}
+.l-platform ul li a {
+    display: block;
+    width: 45px;
+    margin: auto;
+    position: relative;
+    opacity: .6;
+}
+.l-platform ul li:nth-child(1) a:before {
+    background-position: -120px -70px;
+}
+.l-platform ul li:nth-child(2) a:before {
+    background-position: -40px -70px;
+}
+.l-platform ul li:nth-child(3) a:before {
+    background-position: -80px -70px;
+}
+.l-platform ul li a:before {
+    content: '';
+    display: block;
+    height: 38px;
+    width: 33px;
+    margin: 9px auto 0;
+    background: url(../images/jd-sprites.png) no-repeat;
+    background-size: 200px 200px;
+}
+.l-platform ul li a.platform1:after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 2px;
+    right: 3px;
+    background: url(../images/jd-sprites.png) no-repeat;
+    background-size: 200px 200px;
+    background-position: -150px 0;
+}
+.l-copyright {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: #ccc;
+    margin-bottom: 40px;
+    position: relative;
+    background: #fff;
+    text-align: center;
+}
+
+
+#menu {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    z-index: 99;
+    width: 100%;
+    height: 44px;
+    box-shadow: 0 -5px 5px #ccc;
+    background: #fff;
+}
+#menu ul li {
+    width: 20%;
+    float: left;
+}
+#menu ul li a {
+    width: 57px;
+    height: 44px;
+    margin: auto;
+}
+
+
+.goTop {
+    position: fixed;
+    right: 10px;
+    bottom: 60px;
+    width: 40px;
+    height: 40px;
+    display: none;
+    z-index: 99;
+}

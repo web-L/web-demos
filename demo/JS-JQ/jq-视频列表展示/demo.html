@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style type="text/css">
+	*{margin:0px;padding:0px;}
+	.cont{border:20px solid #33cc33;width:910px;height:456px;margin:100px 200px;}
+	.cont ul li{width:225px;float:left;list-style-type:none;margin-left:2px;position:relative;}
+	.cont ul li .note{width:100%;height:150px;text-decoration:none;position:absolute;left:0px;top:0px;display:none;} 
+	.cont ul li .note img{
+						display:block;
+						margin:0px auto;
+						margin-top:33px;
+						}
+	.cont ul li .note p{
+						width:100%;height:36px;
+						position:absolute;
+						bottom:0px;
+						background:#303031;
+						text-align:center;
+						line-height:36px;
+						color:#fff;
+						font-size:13px;
+						opacity:0.8;
+						letter-spacing:1px;
+	
+						}
+  </style>
+ </head>
+ <body>
+    <div class="cont">
+      <ul>
+        <li>
+          <img src="images/1.png">
+		  <a href="http://zoo.baidu.com/video.html?id=10" target='_blank'>
+			<div class="note">
+				<img src="images/play.png">
+				<p>小老虎</p>
+			</div>
+		  </a>
+        </li>
+
+		<li>
+          <img src="images/2.png">
+		  <a href="http://zoo.baidu.com/video.html?id=10" target='_blank'>
+			<div class="note">
+				<img src="images/play.png">
+				<p>环尾狐猴</p>
+			</div>
+		  </a>
+        </li>
+
+		<li>
+          <img src="images/3.png">
+		  <a href="http://zoo.baidu.com/video.html?id=10" target='_blank'>
+			<div class="note">
+				<img src="images/play.png">
+				<p>翠猴</p>
+			</div>
+		  </a>
+        </li>
+
+		<li>
+          <img src="images/4.png">
+		  <a href="http://zoo.baidu.com/video.html?id=10" target='_blank'>
+			<div class="note">
+				<img src="images/play.png">
+				<p>滇金丝猴</p>
+			</div>
+		  </a>
+        </li>
+
+		<li>
+          <img src="images/5.png">
+		  <a href="http://zoo.baidu.com/video.html?id=10" target='_blank'>
+			<div class="note">
+				<img src="images/play.png">
+				<p>象龟</p>
+			</div>
+		  </a>
+        </li>
+
+		<li>
+          <img src="images/6.png">
+		  <a href="http://zoo.baidu.com/video.html?id=10" target='_blank'>
+			<div class="note">
+				<img src="images/play.png">
+				<p>扬子鳄</p>
+			</div>
+		  </a>
+        </li>
+
+		<li>
+          <img src="images/7.png">
+		  <a href="http://zoo.baidu.com/video.html?id=10" target='_blank'>
+			<div class="note">
+				<img src="images/play.png">
+				<p>白化网纹蟒</p>
+			</div>
+		  </a>
+        </li>
+	
+		<li>
+          <img src="images/8.png">
+		  <a href="http://zoo.baidu.com/video.html?id=10" target='_blank'>
+			<div class="note">
+				<img src="images/play.png">
+				<p>耳廓狐</p>
+			</div>
+		  </a>
+        </li>
+
+		<li>
+          <img src="images/9.png">
+		  <a href="http://zoo.baidu.com/video.html?id=10" target='_blank'>
+			<div class="note">
+				<img src="images/play.png">
+				<p>长颈鹿</p>
+			</div>
+		  </a>
+        </li>
+
+		<li>
+          <img src="images/10.png">
+		  <a href="http://zoo.baidu.com/video.html?id=10" target='_blank'>
+			<div class="note">
+				<img src="images/play.png">
+				<p>火烈鸟</p>
+			</div>
+		  </a>
+        </li>
+
+		<li>
+          <img src="images/11.png">
+		  <a href="http://zoo.baidu.com/video.html?id=10" target='_blank'>
+			<div class="note">
+				<img src="images/play.png">
+				<p>大熊猫</p>
+			</div>
+		  </a>
+        </li>
+
+		<li>
+          <img src="images/12.png">
+		  <a href="http://zoo.baidu.com/video.html?id=10" target='_blank'>
+			<div class="note">
+				<img src="images/play.png">
+				<p>企鹅</p>
+			</div>
+		  </a>
+        </li>
+		
+	   </div>
+	</div>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		$('.cont ul li').hover(function(){
+			var i=$(this).index()
+			$('.cont ul .note').eq(i).show();
+		})
+		$('.cont ul li').mouseleave(function(){
+			$('.cont ul .note').hide();
+		})
+	</script>
+ </body>
+</html>

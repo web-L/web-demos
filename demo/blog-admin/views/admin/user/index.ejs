@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>用户中心</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link rel="stylesheet" href="../frame/layui/css/layui.css">
+  <link rel="stylesheet" href="../css/global.css">
+</head>
+<body>
+
+<div class="layui-clear">
+  <div class="fly-panel fly-panel-user" pad20>
+    <!--
+    <div class="fly-msg" style="margin-top: 15px;">
+      您的邮箱尚未验证，这比较影响您的帐号安全，<a href="activate.html">立即去激活？</a>
+    </div>
+    -->
+    <ul class="layui-tab-title" id="LAY_mine">
+      <li data-type="mine-jie" lay-id="index" class="layui-this"><a href="/aliadmin/user" >用户中心</a></li>
+      <li data-type="collection" lay-id="collection"><a href="/aliadmin/user/edit" >基本设置</a></li>
+    </ul>
+    <div class="layui-tab layui-tab-brief" lay-filter="user">
+      <div class="layui-tab-content" style="padding: 20px 0;">
+        <div class="layui-tab-item layui-show">
+            <table class="layui-table" lay-skin="line">
+              <colgroup>
+                <col width="150">
+                <col width="200">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td>头像：</td>
+                  <td><a href="../../<%= data[0].head %>"  target="_blank"><img src="../<%= data[0].head %>" alt="" style="width:40px;height:40px;"></a></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>用户名：</td>
+                  <td><%= data[0].user_name %></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>昵称：</td>
+                  <td><%= data[0].nickname %></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>邮箱：</td>
+                  <td><%= data[0].e_mail %></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>等级：</td>
+                  <td><%= data[0].grade %></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+        <div class="layui-tab-item">
+          <ul class="mine-view jie-row">
+            <li>
+            <!--   <a class="jie-title" href="http://fly.layui.com/jie/5366.html" target="_blank">layui 常见问题的处理和实用干货集锦</a>
+              <i>收藏于23小时前</i>  </li> -->
+          </ul>
+          <div id="LAY_page1"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="../frame/layui/layui.js"></script>
+
+</body>
+</html>

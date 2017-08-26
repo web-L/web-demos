@@ -1,0 +1,19 @@
+.piclist{
+	margin:50px auto;
+	width:642px;
+	font-size:0;
+	line-height:0;
+}
+.piclist li{
+	display:inline-block; 
+	width:200px; 
+	height:150px;
+	margin:2px;
+	border:5px solid #FFF;
+	-webkit-transition:all .9s ease;
+}
+
+.piclist:hover li:not(:hover){
+	opacity:.5;
+	filter:blur(2px) grayscale(1);
+}

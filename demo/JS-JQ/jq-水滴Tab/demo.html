@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style type="text/css">
+	*{margin:0px;padding:0px;}
+	.sdnav{
+			width:310px;height:400px;border:4px solid #ddd;
+			margin:0px auto;
+			position:relative;
+			box-shadow:0px 0px 20px #000;
+			}
+	.top{width:295px;height:105px;margin:0px auto;}
+	.top ul li{
+				width:69px;height:77px;/*加了25的内边距 原来是102px*/
+				list-style-type:none;
+				background:url("images/navpic1.png");
+				padding-top:25px;text-align:center;/*让文字居中*/
+				font-size:14px;color:#333;
+				margin-right:4px;position:relative;float:left;
+				}
+	.con{
+			width:218px;height:258px;
+			position:absolute;top:100px;left:43px;
+			box-shadow:0px 0px 10px #000;
+			overflow:hidden;
+			}
+  </style>
+ </head>
+ <body>
+	<div class="sdnav">
+		<img src="images/title.png" />
+		<div class="top">
+			<ul>
+				<li>美丽真相</li>
+				<li>评鉴团</li>
+				<li>美妍院</li>
+				<li>美人计</li>
+			</ul>
+		</div>
+		<div class="con">
+			<img src="images/1.jpg" />
+			<img src="images/2.jpg" />
+			<img src="images/3.jpg" />
+			<img src="images/4.jpg" />
+		</div>
+		<div class="bottom"></div>
+	</div>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" >
+		$(".sdnav .top ul li").hover(function(){
+			var i=0;
+			$(this).css("z-index","1").css("color","#fff").css("background","url(images/navpic.png)");
+			i=$(this).index();
+			$(".con img").eq(i).show().siblings().hide();
+		},function(){
+			$(this).css("z-index","0").css("color","#333").css("background","url(images/navpic1.png)");
+		})
+	</script>
+ </body>
+</html>

@@ -1,0 +1,99 @@
+#big {
+	width:100%;
+	height:430px;
+	background:url(../images/bg.jpg) center;
+	min-width:1000px;
+}
+/* nav 开始*/
+#nav {
+	width:1000px;
+	height:55px;
+	margin:0 auto;
+}
+#nav ul {
+	list-style-type:none;
+	margin-left:350px;
+}
+#nav ul li {
+	float:left;
+	width:140px;
+	height:55px;
+	line-height:55px;
+}
+#nav ul li a {
+	color:#fff;
+	text-decoration:none;
+}
+#nav ul li a:hover {
+	color:#1CBF8B;
+}
+/* nav 结束*/
+ /* info 开始*/
+#info {
+	width:1000px;
+	height:142px;
+	margin:217px auto 0;
+}
+#info .logo {
+	width:142px;
+	height:142px;
+	float:left;
+	background:url(../images/logo.png);
+}
+#info .detail {
+	width:345px;
+	height:80px;
+	float:left;
+	margin:60px 30px 0;
+	color:#fff;
+}
+#info .detail h3 {
+	font-size:36px;
+	font-weight:normal;
+}
+#info .detail p {
+	font-size:14px;
+}
+#info .download {
+	width:194px;
+	height:104px;
+	float:left;
+	margin:35px 0 0 120px;
+}
+#info .download a {
+	color:#fff;
+	text-decoration:none;
+	width:194px;
+	height:47px;
+	display:block;
+	text-align:center;
+	line-height:47px;
+	border-radius:5px;
+}
+#info .download .a1 {
+	background:#0F9CFE;
+}
+#info .download .a2 {
+	background:#63D42B;
+	margin-top:10px;
+}
+#info .scan {
+	width:120px;
+	height:100px;
+	float:right;
+	margin-top:40px;
+}
+#info .scan .sys {
+	width:100px;
+	height:100px;
+	border-radius:5px;
+	background:url(../images/sys.png) no-repeat #fff center;
+	float:left;
+}
+#info .scan p {
+	float:right;
+	width:20px;
+	hieght:100px;
+	font-size:12px;
+	color:#fff;
+}

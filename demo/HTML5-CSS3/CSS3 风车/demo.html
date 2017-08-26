@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title></title>
+		<meta name="keywords" content="关键词，关键词">
+		<meta name="description" content="描述">
+
+		<!--css,js-->
+
+		<style type="text/css">
+			body,div,
+			ul,li,p,
+			input,
+			button,
+			dl,dt,dd{margin:0px;padding:0px;}
+			html,body{
+				width:100%;
+				height:100%;
+				background:#000;
+			}
+			ul,li{
+				list-style:none;
+			}
+			a{
+				text-decoration:none;
+			}
+			img{
+				vertical-align:top;
+				border:none;
+			}
+			.box{
+				width: 192px;
+				height: 195px;
+				position: relative;
+				border-radius: 50%;
+				z-index: 3;	
+				top: 99px;
+				left: 284px;
+				animation: play 6s infinite cubic-bezier(0.6, -0.28, 0.74, 0.05);/*自定义动画*/
+			}
+			.box p:nth-child(1){
+				width: 50px;
+				height: 90px;
+				border-top-left-radius: 50px;/*边框圆角*/
+				border-bottom-left-radius: 44px;;/*边框圆角*/
+				position: absolute;
+				top: 5px;
+				left: 40px;
+				transform: rotate(-7deg);/*2D旋转*/
+				z-index: 1;
+				box-shadow:-8px 0px 16px #0092D5;/*盒子阴影*/
+				background:#0092D5;
+				background: -webkit-gradient(linear,center top,center bottom,from(#f5f5f5), to(#0092D5));/*线形渐变*/
+			}
+			.box p:nth-child(2){
+				width: 50px;
+				height: 90px;
+				border-top-left-radius: 50px;
+				border-bottom-left-radius: 44px;
+				position: absolute;
+				top: 7px;
+				left: 106px;
+				transform: rotate(65deg);/*2D旋转*/
+				z-index: 1;
+				box-shadow:-8px 0px 16px #7E6191;/*盒子阴影*/
+				background:#7E6191;
+				background: -webkit-gradient(linear,center top,center bottom,from(#ff8686), to(#7E6191));/*线形渐变*/
+			}
+			.box p:nth-child(3){
+				width: 50px;
+				height: 90px;
+				border-top-left-radius: 50px;
+				border-bottom-left-radius: 44px;
+				position: absolute;
+			    top: 69px;
+				left: 19px;
+				transform: rotate(-84deg);/*2D旋转*/
+				z-index: 1;
+				box-shadow:-8px 0px 16px #DF5344;/*盒子阴影*/
+				background:#DF5344;
+				background: -webkit-gradient(linear,center top,center bottom,from(#f5f5f5), to(#DF5344));/*线形渐变*/
+				
+			}
+			.box p:nth-child(4){
+				width: 50px;
+				height: 90px;
+				border-top-left-radius: 50px;
+				border-bottom-left-radius: 44px;
+				position: absolute;
+				top: 110px;
+				left: 71px;
+				transform: rotate(-154deg);/*2D旋转*/
+				z-index: 1;
+				box-shadow:-8px 0px 16px #F7BA07;/*盒子阴影*/
+				background:#F7BA07;
+				background: -webkit-gradient(linear,center top,center bottom,from(#f5f5f5), to(#F7BA07));/*线形渐变*/
+			}
+			.box p:nth-child(5){
+				width: 50px;
+				height: 90px;
+				border-top-left-radius: 50px;
+				border-bottom-left-radius: 44px;
+				position: absolute;
+				top: 69px;
+				left: 123px;
+				transform: rotate(-228deg);/*2D旋转*/
+				z-index: 1;
+				box-shadow:-8px 0px 16px #1ef556;/*盒子阴影*/
+				background:#1ef556;
+				background: -webkit-gradient(linear,center top,center bottom,from(#f5f5f5), to(#1ef556));/*线形渐变*/
+			}
+			.box1{
+				position:relative;
+				width:500px;
+				height:300px;
+			}
+			.nth{
+				width:30px;
+				height:30px;
+				background:#fff;
+				position:absolute;
+				top: 183px;
+				left: 365px;
+				border-radius: 50%;
+			    z-index: 4;
+				box-shadow: 1px 0px 10px #000;
+				background:-webkit-radial-gradient(#945a5a, #769676, red);/*球形渐变*/
+			}
+			.nth p{
+				width:14px;
+				height:14px;
+				background:#86C0BA;
+				position:absolute;
+				top:8px;
+				left:8px;
+				z-index:9999;
+				border-radius:50%;
+				background:-webkit-radial-gradient(white, #1b821b, black);/*球形渐变*/
+			}
+			.go{
+				width:10px;
+				height:300px;
+				background:#86C0BA;
+				position:absolute;
+				top: 142px;
+				left: 440px;
+				transform: rotate(-32deg);
+				border-radius:0px 0px 26px 30px;
+				background: -webkit-gradient(linear,center top,center bottom,from(#4a3939), to(#e2e2e2));/*线形渐变*/
+				box-shadow: -1px 0px 4px #fff;
+			}
+			@keyframes play{
+					from{transform:rotate(0deg)}/*动画开始值*/
+					to{transform:rotate(360deg)}/*动画结束值*/
+			}
+			.p1{
+				font-size: 30px;
+				color: #fff;
+				position: relative;
+				text-align: center;
+				top: -142px;
+				text-shadow: 1px 1px 2px #fff;
+			}
+		</style>
+		
+	</head>
+
+	<body>
+			
+		<div class="box">
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+			
+		</div>
+		<div class="nth">
+			<p></p>
+		</div>
+		<div class="go"></div>
+		<p class="p1">请用Chrome(谷歌)或uc浏览器打开</p>
+	</body>
+
+
+</html>

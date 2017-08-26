@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>添加会员</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link rel="stylesheet" href="../../frame/layui/css/layui.css">
+  <link rel="stylesheet" href="../../css/global.css">
+</head>
+<body>
+
+
+<div class="layui-clear">
+  <div class="fly-panel fly-panel-user" pad20>
+    <div class="layui-tab layui-tab-brief">
+      <div class="layui-form layui-tab-content" id="LAY_ucm" style="padding: 20px 0;">
+        <div class="layui-tab-item layui-show">
+          <div class="layui-form layui-form-pane">
+            <form method="post" enctype="multipart/form-data" >
+              <div class="layui-form-item">
+                <label class="layui-form-label">网站名称</label>
+                <div class="layui-input-inline">
+                  <input type="text" name="title" required lay-verify="required" autocomplete="off" class="layui-input" value="<%= locals.configureData[0].title %>">
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label">版权信息</label>
+                <div class="layui-input-inline">
+                  <input type="text" name="copyright" autocomplete="off" class="layui-input" value="<%= locals.configureData[0].copyright %>" />
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label">站点关键字</label>
+                <div class="layui-input-inline">
+                  <input type="text" name="keyword" autocomplete="off" class="layui-input" value="<%= locals.configureData[0].keyword %>" />
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label">站点描述</label>
+                <div class="layui-input-inline">
+                  <input type="text" name="describe" autocomplete="off" class="layui-input" value="<%= locals.configureData[0].describe %>" />
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label">网站备案号</label>
+                <div class="layui-input-inline">
+                  <input type="text" name="record_number" autocomplete="off" class="layui-input" value="<%= locals.configureData[0].record_number %>" />
+                </div>
+              </div>
+             <!--  <div class="layui-form-item">
+                <label for="L_vercode" class="layui-form-label">人类验证</label>
+                <div class="layui-input-inline">
+                  <input type="text" id="L_vercode" name="vercode" required lay-verify="required" placeholder="请回答后面的问题" autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-mid">
+                  <span style="color: #c00;">{{d.vercode}}</span>
+                </div>
+              </div> -->
+              <div class="layui-form-item">
+                <button class="layui-btn" lay-submit="" lay-filter="sub">提交修改</button>
+                <button class="layui-btn layui-btn-primary" onclick="history.go(-1)">返回</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script type="text/javascript" src="../../frame/layui/layui.js"></script>
+<script type="text/javascript" src="../../js/md5.js"></script>
+<script>
+   layui.use(['element','jquery','form','layer','upload'], function(){
+    var element = layui.element(),
+        $ = layui.jquery,
+        form = layui.form(),
+        layer = layui.layer;
+
+      //监听表单提交
+      form.on('submit(sub)', function (data) {
+          $.post( '/aliadmin/configure/edit' ,data.field,function(res){
+              if(res.type=='success'){
+                  layer.msg(res.content,{time:1800});
+              }else{
+                  layer.msg(res.content,{time:1000});
+              }
+              setTimeout(function(){
+                  window.location.reload();
+              },500);
+          });
+          return false;
+      });
+
+  });
+</script>
+
+</body>
+</html>

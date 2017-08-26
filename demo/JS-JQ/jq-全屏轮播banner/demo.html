@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style type="text/css">
+	*{margin:0px;padding:0px;}
+	.web{
+		width:100%;height:527px;
+		position:relative; /*相对定位*/
+		}
+	.con{
+		width:100%;height:527px;background:#fff;
+		overflow:hidden; /*超出con区域隐藏*/
+		}
+	.con ul li{
+		width:100%;height:527px;
+		list-style-type:none;/*去掉li默认的黑点*/
+		}
+	.nav{
+		width:60px;height:12px;
+		position:absolute; /*绝对定位*/ left:50%;bottom:20px;
+		margin-left:-30px;padding-left:6px;
+		}
+	.nav ul li{
+		list-style-type:none;width:12px;height:12px;
+		float:left;margin-right:6px;border-radius:12px; /*圆角边框*/
+		background:#ffffff;
+		}
+	.nav ul .bg{background:blue;}
+  </style>
+ </head>
+ <body>
+	<div class="web">
+		<div class="con">
+			<ul>
+				<li style="background:url(images/1.jpg) center;"></li>
+				<li style="background:url(images/2.jpg) center;"></li>
+				<li style="background:url(images/3.jpg) center;"></li>
+			</ul>
+		</div>
+		<div class="nav">
+			<ul>
+				<li class="bg"></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		var i=0; //存放li的下标
+		$(".nav ul li").hover(function(){
+			$(this).addClass("bg").siblings().removeClass("bg");
+			i=$(this).index();
+			$(".con ul li").eq(i).fadeIn(100).siblings().fadeOut(100);
+			clearInterval(time);
+		},function(){
+			time=setInterval("junmper()",3000);
+		})
+		function junmper(){
+			i=i+1; 
+			if(i>2)
+			i=0;
+			$(".nav ul li").eq(i).addClass("bg").siblings().removeClass("bg");
+			$(".con ul li").eq(i).fadeIn(100).siblings().fadeOut(100);	
+		}
+		var time=setInterval("junmper()",3000);
+	</script>
+	<!--所有html标签名都可以直接拿到css中控制样式-->
+ </body>
+</html>

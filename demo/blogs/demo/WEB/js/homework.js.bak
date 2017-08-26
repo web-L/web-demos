@@ -1,0 +1,8 @@
+$(function(){
+	$("#nav ul li").click(function(){
+		$(this).children("ul").slideToggle().parent()
+			.siblings().children("ul").slideUp();
+		$(this).children("h3").css({"opacity":0.8,"color":"#000"}).parent()
+			.siblings().children("h3").css({"opacity":1,"color":"#fff"});
+	});
+})

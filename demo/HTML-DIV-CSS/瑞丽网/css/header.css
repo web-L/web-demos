@@ -1,0 +1,343 @@
+
+
+@charset "utf-8";
+	* {
+	margin:0px;
+	padding:0px;
+	list-style-type:none;
+	text-decoration:none;
+	border:0px;
+}
+/*头部样式*/
+#Top {
+	width:100%;
+	height:30px;
+	background:#ee1c24;
+}
+#Top .TopCon {
+	width:1150px;
+	height:30px;
+	margin:0px auto;
+}
+#Top .TopCon .search {
+	/*width:230px;
+	*/
+ width:0px;
+	height:30px;
+	float:right;
+	position:relative;
+	 overflow:hidden;
+	}
+#Top .TopCon a {
+	width:30px;
+	height:16px;
+	float:right;
+	font-size:12px;
+	color:#e3e3e3;
+	text-decoration:none;
+	padding:8px 0px 0px 20px;
+}
+#Top .TopCon a:hover {
+	color:#fff;
+}
+#Top .TopCon img.seaImg {
+	float:right;
+	padding-top:8px;
+}
+#Top .TopCon .search input.seaTxt {
+	width:230px;
+	height:20px;
+	line-height:20px;
+	background:#fff;
+	border:0px;
+	border-radius:5px;
+	/*圆角半径*/
+ position:absolute;
+	/*绝对定位*/
+ left:0px;
+	top:5px;
+	text-indent:30px;
+}
+#Top .TopCon .search input.seaBut {
+	width:30px;
+	height:20px;
+	background:url("../images/search2.gif") no-repeat center;
+	border:0px;
+	position:absolute;
+	left:0px;
+	top:5px;
+}
+#Top .TopCon .search label.txt {
+	position:absolute;
+	font-size:12px;
+	left:35px;
+	top:8px;
+	color:#c1c1c1;
+}
+/*banner样式*/
+.banner {
+	width:100%;
+	height:130px;
+	background:#ee1c24;
+	text-align:center;
+}
+.banner a {
+	width:245px;
+	height:100px;
+	display:block;
+	margin:0px auto;
+	padding-top:30px;
+}
+/*导航样式*/
+#Logo {
+	width:100%;
+	height:70px;
+	background:#c6171e;
+}
+#Logo #LogoCon {
+	width:1180px;
+	height:70px;
+	margin:0px auto;
+}
+#Logo #LogoCon dl {
+	width:260px;
+	height:60px;
+	padding-top:10px;
+	float:left;
+	padding-right:15px;
+}
+#Logo #LogoCon dl dt {
+	width:50px;
+	line-height:50px;
+	float:left;
+	font-size:22px;
+	color:#fff;
+	font-family:"微软雅黑"}
+#Logo #LogoCon dl dd {
+	width:200px;
+	height:50px;
+	line-height:25px;
+	float:right;
+}
+#Logo #LogoCon dl dd a {
+	color:#fff;
+	text-decoration:none;
+	font-family:"微软雅黑";
+	padding:0px 14px;
+	position:relative;
+}
+#Logo #LogoCon dl dd a img.news {
+	position:absolute;
+	left:80px;
+	top:5px;
+}
+#Logo #LogoCon dl dd a:hover {
+	color:#e989ac;
+}
+#Logo #LogoCon dl.menu2 {
+	width:200px;
+}
+#Logo #LogoCon dl.menu2 dd {
+	width:140px;
+}
+#Logo #LogoCon dl.menu3 {
+	width:230px;
+}
+#Logo #LogoCon dl.menu3 dd {
+	width:170px;
+}
+#Logo #LogoCon a.apps {
+	width:150px;
+	height:70px;
+	display:block;
+	background:green;
+	float:left;
+	background:url("../images/app.gif") no-repeat 20px 30px;
+}
+#Logo #LogoCon a.apps:hover {
+	background-position:20px 25px;
+}
+
+/*底部 开始*/
+#footer{
+	width:100%;
+	background:#000;
+}
+#footer div.f_box1{
+	width:1180px;
+	margin:0px auto;
+	padding-top:18px;
+}
+#footer div.f_box1 ul.b_list{
+	padding-top:10px;
+}
+#footer div.f_box1 ul.b_list li{
+	float:left;
+	width:90px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	color:#666;
+	cursor:pointer;
+}
+#footer div.f_box1 ul.b_list li.on{
+	background:#0c0c0c;
+}
+#footer div.f_box1 div.f_Tab{
+	width:1180px;
+	margin:0px auto;
+
+}
+#footer div.f_box1 div.f_Tab div.T_Com{
+	width:1160px;
+	background:#0c0c0c;
+	padding:20px 10px;
+	position:relative;
+	display:none;
+}
+#footer div.f_box1 div.f_Tab div.T_Com ul li{
+	float:left;
+	margin:5px 10px;
+	line-height:30px;
+}
+#footer div.f_box1 div.f_Tab div.T_Com ul li a{
+	color:#848484;
+}
+#footer div.f_box2{
+	width:1180px;
+	height:210px;
+	margin:0px auto;
+	padding:36px 0px 8px 0px;
+}
+#footer div.f_box2 div.b_attention{
+	width:268px;
+	float:left;
+}
+#footer div.f_box2 p.b_title{
+	line-height:30px;
+	color:#373737;
+}
+#footer div.f_box2 div.b_attention ul li{
+	float:left;
+	width:130px;
+	height:112px;
+}
+#footer div.f_box2 div.b_attention ul li a{
+	float:left;
+	width:55px;
+	height:50px;
+	background:url("../images/85_sl.jpg") no-repeat;
+	transition:0.5s;
+	margin-left: 4px;
+    margin-bottom: 4px;
+}
+}
+#footer div.f_box2 div.b_attention ul li a.a_icon1{
+	background-position:0px 0px;
+}
+#footer div.f_box2 div.b_attention ul li a.a_icon1:hover{
+	background-position:0px -112px;
+}
+#footer div.f_box2 div.b_attention ul li a.a_icon2{
+	background-position:-56px 0px;
+}
+#footer div.f_box2 div.b_attention ul li a.a_icon2:hover{
+	background-position:-56px -112px;
+}
+#footer div.f_box2 div.b_attention ul li a.a_icon3{
+	background-position:0px -56px;
+}
+#footer div.f_box2 div.b_attention ul li a.a_icon3:hover{
+	background-position:0px -170px;
+}
+#footer div.f_box2 div.b_attention ul li a.a_icon4{
+	background-position:-56px -60px;
+}
+#footer div.f_box2 div.b_attention ul li a.a_icon4:hover{
+	background-position:-56px -170px;
+}
+#footer div.f_box2 div.b_contact{
+	width:598px;
+	float:left;
+	padding:0px 10px;
+	border-left: 1px solid #161616;
+    border-right: 1px solid #161616;
+}
+
+#footer div.f_box2 div.b_contact ul.c_list{
+	height:20px;
+	line-height:20px;
+	margin-bottom:20px;
+}
+#footer div.f_box2 div.b_contact ul.c_list li{
+	float:left;
+	color:#373737;
+
+}
+#footer div.f_box2 div.b_contact ul.c_list li a{
+	color:#373737;
+	padding:0px 8px;
+	font-size:14px;
+}
+
+#footer div.f_box2 div.b_contact ul.c_list li a:hover{
+	color:#c6171e;
+}
+#footer div.f_box2 div.b_contact div.copyright div.c_left{
+	float:left;
+	padding-left: 26px;
+}
+#footer div.f_box2 div.b_contact div.copyright div.c_left P{
+	line-height:30px;
+	width:444px;
+	text-align:center;
+	font-size:12px;
+	color:#373737;
+}
+#footer div.f_box2 div.b_contact div.copyright div.c_left P a:hover{
+	color:#c6171e;
+	text-decoration:none;
+}
+#footer div.f_box2 div.b_contact div.copyright div.c_left a{
+	font-size:12px;
+	color:#373737;
+	text-decoration:underline;
+}
+#footer div.f_box2 div.b_contact div.copyright div.c_right{
+	float:left;
+	text-align:center;
+}
+#footer div.f_box2 div.b_contact div.copyright div.c_right dl{
+	color:#373737;
+}
+#footer div.f_box2 div.b_contact div.copyright div.c_right dl dt{
+	padding-bottom:10px;
+}
+#footer div.f_box2 div.b_contact div.copyright div.c_right dl dd{
+	line-height:26px;
+}
+#footer div.f_box2 div.b_menu{
+	width:280px;
+	float:left;
+	padding-left:10px;
+}
+#footer div.f_box2 div.b_menu dl {
+	padding:24px 0px;
+}
+#footer div.f_box2 div.b_menu dl dt{
+	float:left;
+	color:#373737;
+	padding:0px 10px;
+}
+#footer div.f_box2 div.b_menu dl dd{
+	float:left;
+}
+#footer div.f_box2 div.b_menu dl dd a{
+	color:#373737;
+	font-size:12px;
+	padding:0px 6px;
+}
+#footer div.f_box2 div.b_menu dl dd a:hover{
+	color:#c6171e;
+}
+/*结束 底部*/

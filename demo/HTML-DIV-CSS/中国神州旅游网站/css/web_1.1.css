@@ -1,0 +1,74 @@
+/*P_left start*/
+.P_left{
+	width:214px;
+}
+.Part1 .r_sidebar {
+	border:1px solid #c3c3c3;
+	border-top:none;
+	margin-top:16px;
+}
+.Part1 h3 {
+	line-height:28px;
+	background:url("../images/bg_1.jpg") no-repeat;
+}
+.Part1 h3 a {
+	color:#fff;
+	padding-left:30px;
+}
+.Part1 h3 a span {
+	font-weight:300;
+	padding-left:4px;
+	font-size:12px;
+}
+.Part1 .r_sidebar .s_box {
+	padding:4px;
+}
+.Part1 .r_sidebar .s_box .b_title {
+	line-height:20px;
+	background:#edffcf;
+	color:#4a5d60;
+	text-align:center;
+}
+.Part1 .r_sidebar .s_box dl {
+	float:left;
+	padding:3px;
+	margin:1px;
+	border-bottom:1px dotted #484949;
+}
+.Part1 .r_sidebar .s_box dl dd {
+	text-align:center;
+	line-height:20px;
+}
+.Part1 .r_sidebar .s_box dl dd a {
+	color:#484949;
+}
+.Part1 .r_sidebar .s_box dl dd a:hover {
+	color:red;
+}
+/*end P_left*/
+/*P_right start*/
+.Part1 .P_right{
+	width:769px;
+}
+.Part1 .P_right .r_title{
+	line-height:34px;
+	background:url("../images/title.jpg") no-repeat;
+	padding:0px 30px;
+}
+.Part1 .P_right .r_title .t_left{
+	font-size:14px;
+	font-weight:bold;
+	color:#000;
+}
+.Part1 .P_right .r_title .t_right{
+	color:#666;
+}
+.Part1 .P_right .r_title .t_right a{
+	color:#666;
+}
+.Part1 .P_right .r_box{
+	height:666px;
+	border:1px solid #c3c3c3;
+	border-top:none;
+}
+/*end P_right*/

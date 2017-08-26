@@ -1,0 +1,48 @@
+#main {
+	background:url("../img/1.jpg") no-repeat;
+	background-size:100% 100%;
+	position:relative;
+	overflow:hidden;
+}
+#left,#right {
+	width:50%;
+	height:100px;
+	background:yellow;
+	position:absolute;
+}
+#left {
+	background:url("../img/2.jpg") no-repeat;
+	background-size:100% 100%;
+}
+#right {
+	background:url("../img/3.jpg") no-repeat;
+	background-size:100% 100%;
+}
+#left {
+	left:0;
+	animation:oL 3s linear;
+	animation-delay:2s;
+	animation-fill-mode:forwards;
+}
+#right {
+	right:0;
+	animation:oR 3s linear;
+	animation-delay:2s;
+	animation-fill-mode:forwards;
+}
+@keyframes oR {
+	from {
+	right:0;
+}
+to {
+	right:-50%;
+}
+}
+@keyframes oL {
+	from {
+	left:0;
+}
+to {
+	left:-50%;
+}
+}

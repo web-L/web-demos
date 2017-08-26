@@ -1,0 +1,82 @@
+body,div,body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td {
+	margin:0;
+	padding:0;
+}
+ul,li {
+	list-style:none;
+}
+a {
+	text-decoration:none;
+}
+img {
+	vertical-align:top;
+	border:none;
+}
+body,html {
+	width:100%;
+	height:100%;
+}
+.wrap {
+	width:100%;
+	height:100%;
+	background:url("../img/bj.jpg") no-repeat;
+	background-size:100% 100%;
+}
+#product {
+	width:900px;
+	height:300px;
+	position:absolute;
+	bottom:10px;
+	right:10px;
+	perspective:1000px;
+}
+#product .scene {
+	width:240px;
+	height:240px;
+	float:left;
+	margin-right:60px;
+	transform-style:preserve-3D;
+	/*设置为3D 场境*/
+ transform-origin:50%;
+	/*设置旋转中心点*/
+-webkit-animation:slide 9s linear infinite;
+}
+#product .scene:nth-child(1) {
+	-webkit-animation-delay:3s;
+}
+#product .scene:nth-child(2) {
+	-webkit-animation-delay:9s;
+}
+#product .scene:nth-child(3) {
+	-webkit-animation-delay:15s;
+}
+#product .scene ul {
+}
+#product .scene ul li {
+	list-style:none;
+	width:230px;
+	height:230px;
+	padding:5px;
+	position:absolute;
+	opacity:0.8;
+	backface-visibility:hidden;
+	/*设置不正面对着我们的隐藏*/
+ background:rgba(255,255,255,0.7)}
+#product .scene ul li:nth-child(1) {
+	transform:rotateY(0deg) translateZ(70px);
+}
+#product .scene ul li:nth-child(2) {
+	transform:rotateY(-120deg)translateZ(70px);
+}
+#product .scene ul li:nth-child(3) {
+	transform:rotateY(120deg)translateZ(70px);
+}
+/*css3 动画的开始*/
+@-webkit-keyframes slide {
+	from {
+	transform:rotateY(0deg);
+}
+to {
+	transform:rotateY(-360deg);
+}
+}

@@ -1,0 +1,122 @@
+			body,div,
+			ul,li,p,
+			input,
+			button,
+			dl,dt,dd{margin:0px;padding:0px;}
+			html,body{
+				width:100%;
+				height:100%;
+				
+				background:#f4b8ca;
+			}
+			ul{
+				list-style:none;
+			}
+			a{
+				text-decoration:none;
+			}
+			#game{
+				width:800px;
+				height:600px;
+				margin:auto;			
+			}
+			#game ul{
+				width:100%;
+				height:416px;
+			}
+			#game ul li{
+				width:42%;
+				height:100%;
+				float:left;
+				text-align:center;
+			}
+			#game ul li div.anim{
+				width:223px;
+				height:328px;
+				border:10px solid #FF6699;
+				border-radius:50%;
+				margin:auto;center center
+				background-position:center;
+				box-shadow:4px 14px 85px #FF6699;
+			}
+			div.user{
+				background:url("../images/readyl.png") no-repeat center;
+			}
+			div.comp{
+				background:url("../images/readyr.png") no-repeat center;
+			}
+			#game #op{
+				width:200px;
+				height:60px;
+				border:10px solid #FF6699;
+				background:#f4b8ca;
+				border-radius:50%;
+				margin:0 auto;
+				outline:none;
+				cursor:pointer;/*光标为手的形状*/
+				font-size:30px;
+				font-weight:bold;
+				display: block;
+				box-shadow:10px 12px 44px #FF6699;
+			}
+			#game #op:hover{
+				border-color:red;
+				font-size:30px;
+				background:red;
+				color:#f4b8ca;
+			}
+			#game #guess{
+				position:fixed;
+				top:0px;
+				left:0px;
+				width:220px;
+				height:100%;
+				display:none;
+			}
+			#game #guess li{
+				width:100%;
+				height:240px;
+				margin-top:10px;
+			}
+			
+			#game #guess li div{
+				width:100%;
+				height:90%;
+				border:10px solid #FF6699;
+				border-radius:50%;
+				cursor:pointer;
+				font-size:30px;
+				box-shadow:10px 12px 44px #FF6699;
+			}
+			
+			div.g_guess0{
+					background:url("../images/0.png")no-repeat center;
+			}
+			div.g_guess1{
+					background:url("../images/1.png") no-repeat center;
+			}
+			div.g_guess2{
+					background:url("../images/2.png") no-repeat center;
+			}
+			#game #guess li div:hover{
+				background-color: #ff6699;
+				color: #fff;
+			}
+			#game .text{
+				text-align:center;
+				font-size:34px;
+				font-weight:bold;
+				margin-top:16px;
+				padding-left:56px;
+			}
+			#game .pk{
+				margin-top: 220px;
+				float: left;
+
+			}
+			#game .title{
+				font-size:30px;
+				font-weight:bold;
+				text-align:center;
+				margin: 28px 0px;
+			}

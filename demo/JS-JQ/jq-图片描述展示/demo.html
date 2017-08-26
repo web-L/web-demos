@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style type="text/css">
+	*{margin:0px;padding:0px;}
+	.web{
+			width:1000px;height:585px;
+			margin:50px auto;
+			}
+	.web .title{
+				width:992px;height:57px;border-top:4px solid #E5E5E5;
+				}
+	.web .title p{
+					width:287px;height:57px;
+					border-top:4px solid #000;
+					margin:-4px auto;
+					font-size:38px;font-weight:bold;
+					line-height:57px;
+					}
+	.web .title p img{margin-top:-8px;}
+	.web .pic{
+				width:390px;height:520px;
+				float:left;
+				position:relative;
+				overflow:hidden;
+				}
+	.web .pic .pic_con{
+						width:340px;height:95px;background:#fff;opacity:0.7;
+						position:absolute;left:15px;bottom:-145px;
+						font-size:14px;line-height:25px;
+						padding:10px;
+						}
+	.web .pic .pic_con p{font-size:16px;}
+	.web ul li{
+				list-style-type:none;
+				border-right:1px solid #fff;
+				border-bottom:1px solid #fff;
+				width:200px;height:260px;
+				float:left;
+				position:relative;
+				}
+	.web ul li .li_con{
+						width:200px;height:260px;background:#fff;opacity:0.7;
+						position:absolute;left:0px;top:0px;
+						line-height:25px;
+						display:none;
+						}
+	.web ul li .li_con p{
+							background:#c69;height:40px;
+							color:#fff;line-height:40px;
+							}
+	.web .pic:hover{opacity:0.9;}
+  </style>
+ </head>
+ <body>
+	<div class="web">
+		<div class="title">
+			<p>明星大片<img align="absmiddle" src="images/start.png" /></p>
+		</div>
+		<div class="pic">
+			<img src="images/1.jpg" />
+			<div class="pic_con">
+				<p>光影旧梦中的诱惑女神 玛丽莲·梦露</p>
+1926年6月1日出生于洛杉矶的玛丽·莲梦露，是美国20世纪最著名的电影女演员之一。
+			</div>
+		</div>
+		<ul>
+			<li>
+				<img src="images/2.jpg">
+				<div class="li_con">
+					<p>大片</p>1926年6月1日出生于洛杉矶的玛丽·莲梦露，是美国20世纪最著名的电影女演员之一。
+				</div>
+			</li>
+			<li>
+				<img src="images/3.jpg">
+				<div class="li_con">
+					<p>大片</p>1926年6月1日出生于洛杉矶的玛丽·莲梦露，是美国20世纪最著名的电影女演员之一。
+				</div>
+			</li>
+			<li>
+				<img src="images/4.jpg">
+				<div class="li_con">
+					<p>大片</p>1926年6月1日出生于洛杉矶的玛丽·莲梦露，是美国20世纪最著名的电影女演员之一。
+				</div>
+			</li>
+			<li>
+				<img src="images/5.jpg">
+				<div class="li_con">
+					<p>大片</p>1926年6月1日出生于洛杉矶的玛丽·莲梦露，是美国20世纪最著名的电影女演员之一。
+				</div>
+			</li>
+			<li>
+				<img src="images/6.jpg">
+				<div class="li_con">
+					<p>大片</p>1926年6月1日出生于洛杉矶的玛丽·莲梦露，是美国20世纪最著名的电影女演员之一。
+				</div>
+			</li>
+			<li>
+				<img src="images/7.jpg">
+				<div class="li_con">
+					<p>大片</p>1926年6月1日出生于洛杉矶的玛丽·莲梦露，是美国20世纪最著名的电影女演员之一。
+				</div>
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		$('.web .pic').hover(function(){
+			$('.web .pic .pic_con').animate({bottom:"30px"},300);
+		},function(){
+			$('.web .pic .pic_con').animate({bottom:"-145px"},300);
+		})
+		$('.web ul li').hover(function(){
+			$(this).children(".li_con").show();
+		},function(){
+			$(this).children(".li_con").hide();
+		})
+	</script>
+ </body>
+</html>

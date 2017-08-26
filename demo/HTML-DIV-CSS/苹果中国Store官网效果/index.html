@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>仿苹果中国Store官网效果</title>
+		<meta name="keywords" content="关键词，关键词">
+		<meta name="description" content="描述">
+
+		<link rel="stylesheet" href="css/demo.css" />
+
+	</head>
+
+	<body>
+		<div id="ui-container">
+			<div class="ui-logo">预购现已开始，仅限 Apple Store 在线商店。</div>
+			<ul class="ui-product">
+				<li class="ui-watch1">
+					<div>
+						<video src="video/watch1.mp4" loop autoplay></video>
+						<span></span>
+					</div>
+					<p class="anim">
+						<img src="images/watch1/watch1.jpg"/><br/>
+						<a href="#">查看款式和价格&nbsp;>&nbsp;</a>
+					</p>
+				</li>
+				<li class="ui-watch2">
+					<div>
+						<video src="video/watch2.mp4" loop autoplay></video>
+						<span></span>
+					</div>
+					<p class="anim">
+						<img src="images/watch2/watch1.jpg"/><br/>
+						<a href="#">查看款式和价格&nbsp;>&nbsp;</a>
+					</p>
+				</li>
+				<li class="ui-watch3">
+					<div>
+						<video src="video/watch3.mp4" loop autoplay></video>
+						<span></span>
+					</div>
+					<p class="anim">
+						<img src="images/watch3/watch1.jpg"/><br/>
+						<a href="#">查看款式和价格&nbsp;>&nbsp;</a>
+					</p>
+				</li>
+			</ul>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript">
+			//window onload
+			$(function(){
+				$('#ui-container div.ui-logo,p.anim').animate({top:'0px',opacity:1},'slow');
+			});
+		</script>
+	</body>
+</html>

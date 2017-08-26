@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<!--声明当前页面编码集（中文编码《gbk-gb2312》,国际编码<utf-8>）-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--声明当前页面的三要素-->
+		<title></title>
+		<meta name="keywords" content="关键词，关键词">
+		<meta name="description" content="描述">
+
+		<!--css,js-->
+
+		<style type="text/css">
+			body,div,
+			ul,li,p,
+			input,
+			button,
+			dl,dt,dd{margin:0px;padding:0px;}
+			ul,li{
+				list-style:none;
+			}
+			#box{
+				width:960px;
+				height:600px;
+				margin:150px auto;
+				position:relative;
+			}
+			#box #left{
+				width:75px;
+				height:75px;
+				border-radius:6px;
+				background:rgba(255,255,255,0.3) url("images/arrow.png")no-repeat;
+				position:absolute;
+				top:50%;
+				left:10px;
+				display:none;
+			}
+			#box:hover #left{
+				display:block;
+			}
+			#box #right{
+				width:75px;
+				height:75px;
+				border-radius:6px;
+				background:rgba(255,255,255,0.3) url("images/arrow.png")no-repeat -160px 0px;
+				position:absolute;
+				top:50%;
+				right:10px;
+				display:none;
+			}
+			#box:hover #right{
+				display:block;
+			}
+			#box #right:hover{
+				background-position:-240px 0px;
+			}
+			#box #list li{
+				width:192px;
+				height:200px;
+				background:url("images/1.jpg")no-repeat;
+				float:left;
+				box-shadow:0 0 1px #000;/*css3 边框阴影效果*/
+			}
+		</style>
+		
+	</head>
+
+	<body>
+
+	<div id="box">
+		<ul id="list">
+			
+		</ul>
+		<a href="javascript:;" id="left" ></a>
+		<a href="javascript:;" id="right"></a>
+	</div>
+
+	<script type="text/javascript">
+	
+		var oList = document.getElementById("list");
+		var oLeft = document.getElementById("left");
+		var oRight = document.getElementById("right");
+		var oLi = oList.getElementsByTagName("li");//动态获取li
+		var li,num = 1,Timer = null;
+		for ( var i=0;i<15;i++ )
+		{
+			var x = i % 5;
+			var y = Math.floor( i/5 );//Math.floor 向下取整
+			li = document.createElement('li');
+			li.style.backgroundPosition = x*-192 + 'px '+ y*-200 +'px';//改变每张li的背景图片位置
+			oList.appendChild( li );//动态在ul里添加li
+		};
+		
+		
+		oRight.onclick = function(){
+			clearInterval( Timer )//清除定时器	
+			cha( 0)
+		};
+		oLeft.onclick = function(){
+			clearInterval( Timer )//清除定时器	
+			cha( 1 )
+		};
+		
+		function cha( dr ){
+			if(dr){
+				num--
+				if( num < 1 ){
+					num = 8
+				}
+			}else{
+				num++
+				if(num > 8){
+					num = 1
+				}
+			}
+			var arr = []
+			for(var i = 0;i<15;i++){
+				arr[i] = i
+			}
+			Timer = setInterval(function(){//setInterval 定时器
+				var index = Math.floor(Math.random()*arr.length);//生成0-23之间的随机数
+				oLi[arr[index]].style.backgroundImage = "url(images/"+ num +".jpg)"
+				arr.splice(index,1);// 从index 数组删除 1 位
+				if(arr.length == 0 ){
+					clearInterval( Timer )//清除定时器	
+				}
+			},50);
+
+		}
+	</script>
+
+	</body>
+
+
+</html>

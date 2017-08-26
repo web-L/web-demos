@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>星空</title>
+		<meta name="keywords" content="关键词，关键词">
+		<meta name="description" content="描述">
+
+		<!--css,js-->
+
+		<style type="text/css">
+			body,div,
+			ul,li,p,
+			input,
+			button,
+			dl,dt,dd{margin:0px;padding:0px;}
+			html,body{
+				width:100%;
+				height:100%;
+			}
+			ul,li{
+				list-style:none;
+			}
+			a{
+				text-decoration:none;
+			}
+			img{
+				vertical-align:top;
+				border:none;
+			}
+			#bg{
+				width:100%;
+				height:100%;
+				background:url("images/bg.jpg") no-repeat center;
+				position:fixed;
+				background-size:100% 100%;
+			}
+			.img{
+				width:18px;
+				height:18px;
+				position:absolute;
+				top:0px;
+				left:0px;
+			}
+		</style>
+		
+	</head>
+
+	<body>
+		
+		<div id="bg"></div>
+
+		
+	<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+
+		function Particle(  ){//星星构造器
+			this.elment = $("<img src='images/1.jpg' class='img' />");
+		}
+		
+		Particle.prototype = {
+			display : function(){//星星显示功能
+				$("body").append(this.elment);
+				this.elment.css({"top" : this.pointX+"px" , "left" : this.pointY + "px"});
+				return this;
+			},
+			
+			nwePoInt : function(){//随机位置
+				this.pointX = randomInt(window.innerWidth+300);
+				this.pointY = randomInt(window.innerHeight-500);
+				return this;
+			},
+
+			speed : function(){//星星随机移动速度
+				this.duration = (randomInt(10) + 20) * 1000 ;
+				return this;
+			},
+				
+			fly : function(){//星星移动
+				var This = this;
+				this.elment.animate({
+					"top":this.pointY,
+					"left":this.pointX
+				},this.duration,function(){
+					This.speed().nwePoInt().fly();
+				});
+			}
+		
+		};
+
+		function randomInt( max ){
+			
+			return Math.floor( Math.random() * max  );//生成随机数
+		}
+
+		$(function(){
+			
+			var tole = 100;//星星个数
+			var elment = [];
+
+			for( var i=0;i<tole;i++ ){
+				elment[i] = new Particle();
+				elment[i].nwePoInt().speed().display().fly();
+			}
+		});
+	</script>
+	</body>
+
+
+</html>

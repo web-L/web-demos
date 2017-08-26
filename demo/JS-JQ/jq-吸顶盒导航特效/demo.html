@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Keywords" content="关键词">
+		<meta name="Description" content="描述">
+		<title>Document</title>
+		<style>
+		*{
+			margin:0px;padding:0px;
+		}
+		html,body{
+			width:100%;height:100%;
+		}
+		#wrap{
+			width:100%;height:100%;
+		}
+		.common{
+			width:1200px;
+			margin:0 auto;
+		}
+		#header{
+			height:150px;
+			
+		}
+		#nav{
+			height:50px;width:100%;
+			border-bottom:3px solid #f0f;
+			background:#fff;
+		}
+		ul{list-style:none;}
+		li{
+			float:left;margin:0 25px 0;
+			line-height:50px;
+			font-size:14px;font-family:"微软雅黑";
+			font-weight:bold;
+		}
+		li.first{
+			color:#f0f;
+		}
+		li:hover{
+			color:#f0f;
+		}
+		.fixed{
+			position:fixed;
+			left:0px;top:0px;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			
+			<div id="header" class="common">
+				
+				<img src="images/1.png" width="100%" height="100%" alt="头部"/>
+			</div>
+		
+			<div id="nav">
+				<ul class="common">
+					<li class="first">首页</li>
+					<li>最热</li>
+					<li>上衣</li>
+					<li>裤子</li>
+					<li>鞋子</li>
+					<li>包包</li>
+					<li>配饰</li>
+					<li>内衣</li>
+					<li>美妆</li>
+					<li>男装</li>
+					<li>童装</li>
+					<li>家居</li>
+					<li>小家电</li>
+					<li>食品</li>
+				</ul>
+			</div>
+		
+			<div id="main" class="common">
+				<img src="images/2.png" width="100%" height="100%" alt="壁纸"/>
+				<img src="images/3.png" width="100%" height="100%" alt="说明"/>
+			</div>
+
+			<div id="footer" class="common"></div>
+	
+		</div>
+		<script src="js/jquery.js"></script>
+		<script >
+		
+			$(window).scroll(function(){//滚动条事件
+				var _top = $(this).scrollTop();//获取滚动条的高度
+				//console.log(_top);
+				if (_top>150)
+				{
+					$("#nav").addClass("fixed");//判断成功 添加一个类名
+				}else{
+					$("#nav").removeClass("fixed");//否则去除这个类名
+				}
+			});
+		</script>
+	</body>
+</html>

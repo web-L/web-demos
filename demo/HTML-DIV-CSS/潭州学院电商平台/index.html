@@ -1,0 +1,854 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>潭州电商平台</title>
+		<meta name="keywords" content="关键词，关键词">
+		<meta name="description" content="描述">
+
+		<!--css,js-->
+		<link type="text/css" rel="stylesheet" href="css/index.css" />
+			<!--引用jquery-->
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript">
+	
+		/*
+			1:哪些是块级元素 特点是什么
+			2:哪些行内元素  特点什么
+			3:修饰的文字和图片的样式
+			4:哪些是用来控制布局
+			4:哪些元素是不被继承的，哪些元素是被继承
+			5:定位(position)和布局(float width height padding margin line-height display flexbox flex box-sizing)的关系 修饰元素
+		*/
+	
+		/*
+			格式公式:
+			<div overflow:hidden
+			  <ul width:1000%;position:relative; 
+				<li><img/></li>
+			  </ul>
+			</div>
+
+			目标是:改变ul改变 left位置 
+		*/
+
+		//初始化banner
+		function initBanner(){
+			//获取图片的盒子对象
+			var $ulDom = $("#banner_ul");
+			//控制轮播的索引
+			var index = 1;
+			//获取宽度
+			var w = $ulDom.find("li").eq(0).width();
+			//动画执行的时间
+			var timer = 2000;
+			//定时器
+			var bannerTimer = null;
+			
+			//附加元素收尾相加的元素
+			var $first = $ulDom.find("li:first").clone();
+			var $last= $ulDom.find("li:last").clone();
+			//var $first = $ulDom.find("li").eq(0);
+			//var $last= $ulDom.find("li").eq(length-1);
+			$ulDom.append($first);
+			$ulDom.prepend($last);
+			//获取长度
+			var length = $("#banner_ul").children().length;
+
+			//下一张
+			$("#next").click(function(){
+				//清除动画
+				clearInterval(bannerTimer);
+				index++;
+				if(index == length-1){
+					$ulDom.css("left",0);
+					index = 1;
+				};
+				$ulDom.stop(true,true).animate({"left":-1 * w * index });
+				$("#bannerbox").find(".cyclebox li").eq(index-1).addClass("selected").siblings().removeClass("selected");
+			}).mouseleave(function(){
+				//离开的执行动画
+				playBanner();
+			}).mouseover(function(){
+				clearInterval(bannerTimer);
+			});
+		
+			//上一张
+			$("#prev").click(function(){
+				//清除动画
+				clearInterval(bannerTimer);
+				index--;
+				if(index == 0){
+					//最后一张
+					index = length - 2;	
+					$ulDom.stop(true,true).animate({"left":0},function(){
+						//显示最后一个张图片
+						$(this).css("left",-1 * w * index);
+					});
+				}else{
+					$ulDom.stop(true,true).animate({"left":-1 * w * index});
+				}
+
+				$("banner_ul").find(".cyclebox li").eq(index-1).addClass("selected").siblings().removeClass("selected");
+			}).mouseleave(function(){
+				//离开的执行动画
+				playBanner();
+			}).mouseover(function(){
+				clearInterval(bannerTimer);
+			});
+
+
+			/*小圆圈的绑定事件*/
+			$("#bannerbox").find(".c_banner li").click(function(){
+				clearInterval(bannerTimer);
+				index = $(this).index()+1;
+				$(this).addClass("selected").siblings().removeClass("selected");
+				$ulDom.stop(true,true).animate({"left":-1 * w * index });
+			}).mouseleave(function(){
+				//离开的执行动画
+				playBanner();
+			}).mouseover(function(){
+				clearInterval(bannerTimer);
+			});
+
+			//banner的定时器轮播
+			function playBanner(){
+				bannerTimer = setInterval(function(){
+					$("#next").trigger("click");
+				},timer);	
+			};
+			
+			//执行轮播
+			playBanner();
+		};
+
+
+		$(function(){
+			//调用banner效果
+			initBanner();
+		});
+			$(function(){
+
+		// 按钮淡入淡出
+		$(window).scroll(function(){
+			if($(window).scrollTop() >= 100){
+				$(".tz_top").fadeIn(500);
+			} else {
+				$(".tz_top").stop(true,true).fadeOut(500);
+			}
+		});
+		
+		// 回到顶部
+		$(".tz_top").click(function(){
+			$("html,body").animate({
+				scrollTop:0
+			},1000);
+		});
+	});
+	</script>
+
+	</head>
+
+<body>
+	<div class="tz_top">
+		<a href="#tz_top"></a>
+	</div>
+	<a name="tz_top"></a>
+	<!--top start-->
+	<div class="top">
+		<a href="#" class="t_logo"></a>
+		<div class="t_logoin">
+			<ul class="l_desc">
+				<li><a href="">登录</a></li>
+				<li>｜</li>
+				<li><a href="">注册</a></li>
+			</ul>
+		</div>
+	</div>
+	<!--ned top-->
+	
+	<!--toold start-->
+	<div class="tools">
+		<!--nav strat-->
+		 <div class="t_nav">
+
+			<div class="n_icon">
+				<ul class="i_con">
+					<li>
+						<a href="" class="c_i">
+							<i class="c_index"></i>
+							<span>首页</span>
+						</a>
+					</li>
+					<li>
+						<a href="" class="c_v">
+							<i class="c_vip"></i>
+							<span>VIP课程</span>
+						</a>
+					</li>
+					<li>
+						<a href="" class="c_f">
+							<i class="c_free"></i>
+							<span>免费体验课</span>
+						</a>
+					</li>
+				</ul>
+			<!--end nav-->
+		</div>
+			<!--n_search strat-->
+			<div class="n_search">
+				<div class="s_box">
+					<a href="#" class="b_btn">搜索</a>	<!--html5 属性：placeholder iE浏览器不支持-->
+					<input type="text" class="b_txt" placeholder="搜索你喜欢的课程" />
+					<div class="b_key">
+						<a href="#">java</a>
+						<a href="#">php</a>
+						<a href="#">C++</a>
+						<a href="#">WEB前端</a>
+						<a href="#">软件测试</a>
+					</div>
+				</div>
+				<a href="#" class="s_car">
+					<i class="c_icon"></i>
+					购物车<span>(0)</span>
+				</a>
+			</div>
+			<!-- end n_search-->
+			
+			</div>
+		<!-- end toold-->
+	</div>	
+	<!--banner strat-->
+	<div class="banner">
+		<div class="b_con">
+			<div class="c_nav">
+				<div class="n_all">
+					<span>全部课程</span>
+				</div>
+				<ul class="n_list">
+					<li>
+						<div class="l_box">
+							<div class="b_icon b_it"></div> 
+								<div class="b_title">
+									<h3>IT培训</h3>
+									<div class="t_com">
+										<a href="#">JAVA</a>
+										<span>|</span>
+										<a href="#">安卓</a>
+										<span>|<span>
+										<a href="#">PHP</a>
+									</div>
+							</div> 
+							<div class="b_more"></div> 
+						</div>
+						<!--l_box_long strat-->
+						<div class="l_box_long">
+							<div class="b_icon b_it"></div> 
+								<div class="b_title">
+									<h3>IT培训</h3>
+									<div class="t_com">
+										<a href="#">JAVA</a>
+										<span>|</span>
+										<a href="#">安卓</a>
+										<span>|<span>
+										<a href="#">PHP</a>
+										<span>|<span>
+										<a href="#">游戏动漫</a>
+										<span>|<span>
+										<a href="#">软件测试</a>
+										<span>|<span>
+										<a href="#">WEB前端</a>
+										<span>|<span>
+										<a href="#">C++</a>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="l_box">
+							<div class="b_icon b_skil"></div> 
+								<div class="b_title">
+									<h3>职业技能</h3>
+									<div class="t_com">
+										<a href="#">JAVA</a>
+										<span>|</span>
+										<a href="#">安卓</a>
+										<span>|<span>
+										<a href="#">PHP</a>
+									</div>
+								</div> 
+							<div class="b_more"></div> 
+						</div>
+
+						<div class="l_box_long">
+							<div class="b_icon b_skil"></div> 
+								<div class="b_title">
+									<h3>职业技能</h3>
+									<div class="t_com">
+										<a href="#">JAVA</a>
+										<span>|</span>
+										<a href="#">安卓</a>
+										<span>|<span>
+										<a href="#">PHP</a>
+										<span>|<span>
+										<a href="#">游戏动漫</a>
+										<span>|<span>
+										<a href="#">软件测试</a>
+										<span>|<span>
+										<a href="#">WEB前端</a>
+										<span>|<span>
+										<a href="#">C++</a>
+								</div>
+							</div>
+						</div>
+
+					</li>
+
+					<li>
+						<div class="l_box">
+							<div class="b_icon b_language"></div> 
+								<div class="b_title">
+									<h3>语言培训</h3>
+									<div class="t_com">
+										<a href="#">JAVA</a>
+										<span>|</span>
+										<a href="#">安卓</a>
+										<span>|<span>
+										<a href="#">PHP</a>
+									</div>
+								</div> 
+							<div class="b_more"></div> 
+						</div>
+
+						<div class="l_box_long">
+							<div class="b_icon b_language"></div> 
+								<div class="b_title">
+									<h3>语言培训</h3>
+									<div class="t_com">
+										<a href="#">JAVA</a>
+										<span>|</span>
+										<a href="#">安卓</a>
+										<span>|<span>
+										<a href="#">PHP</a>
+										<span>|<span>
+										<a href="#">游戏动漫</a>
+										<span>|<span>
+										<a href="#">软件测试</a>
+										<span>|<span>
+										<a href="#">WEB前端</a>
+										<span>|<span>
+										<a href="#">C++</a>
+								</div>
+							</div>
+						</div>
+
+					</li>
+				</ul>
+
+			</div>
+
+			<!--c_banner start-->
+			<div class="c_banner">
+				<ul id="banner_ul">
+					<li>
+						<a href="#"><img src="images/banner.png" width="874" height="376" alt="" /></a>
+					</li>
+					<li>
+						<a href="#"><img src="images/banner_3.png" width="874" height="376" alt="" /></a>
+					</li>
+					<li>
+						<a href="#"><img src="images/banner_2.jpg" width="874" height="376" alt="" /></a>
+					</li>
+				</ul>
+
+			<a href="javascript:void(0);" class="pn" id="next"> < </a>
+			<a href="javascript:void(0);" class="pn" id="prev"> > </a>
+			<div class="b_boddin">
+				<ul class="b_btn">
+					<li class="selected">1</li>
+					<li>2</li>
+					<li>3</li>
+				</ul>
+			</div>
+	<!-- ned c_banner-->
+
+			</div>
+		</div>
+	<div>
+	<!--end banner-->
+
+	<!--strat course-->
+		<!--strat course-->
+	<div class="course">
+		<div class="c_title">
+			<h3>IT培训</h3>
+			<div class="c_type">
+				<ul>
+					<li class="t_sel">精选课程</li>
+					<li>师资力量</li>
+				</ul>
+			</div>
+			<a href="#" class="t_more">更多精品课程&nbsp&gt&gt</a>
+		</div>
+		<div class="clear"></div>
+		<div class="c_com">
+			<ul class="c_list">
+				<li>
+					<div class="l_img">
+						<img src="images/1.png" width="280" height="188" alt="网页制作" />
+					</div>
+					<p class="l_title">
+						<a href="#">网页制作基础到实战学习班</a>
+						<span>￥1580</span>
+					</p>
+					<div  class="l_num">共150人购买</div>
+					<div class="l_yy">
+						<div class="y_text">
+							<span>课题：项目实战</span>
+							<a href="#">查看课程详情</a>
+						</div>
+					</div>
+				</li>
+				 <li>
+					<div class="l_img">
+						<img src="images/2.png" width="280" height="188" alt="网页制作" />
+					</div>
+					<p class="l_title">
+						<a href="#">网页制作基础到实战学习班</a>
+						<span>￥1580</span>
+					</p>
+					<div  class="l_num">共150人购买</div>
+					<div class="l_yy">
+						<div class="y_text">
+							<span>课题：项目实战</span>
+							<a href="#">查看课程详情</a>
+						</div>
+					</div>
+				</li>
+				 <li>
+					<div class="l_img">
+						<img src="images/3.png" width="280" height="188" alt="网页制作" />
+					</div>
+					<p class="l_title">
+						<a href="#">网页制作基础到实战学习班</a>
+						<span>￥1580</span>
+					</p>
+					<div  class="l_num">共150人购买</div>
+					<div class="l_yy">
+						<div class="y_text">
+							<span>课题：项目实战</span>
+							<a href="#">查看课程详情</a>
+						</div>
+					</div>
+				</li>
+				 <li>
+					<div class="l_img">
+						<img src="images/1.png" width="280" height="188" alt="网页制作" />
+					</div>
+					<p class="l_title">
+						<a href="#">网页制作基础到实战学习班</a>
+						<span>￥1580</span>
+					</p>
+					<div  class="l_num">共150人购买</div>
+					<div class="l_yy">
+						<div class="y_text">
+							<span>课题：项目实战</span>
+							<a href="#">查看课程详情</a>
+						</div>
+					</div>
+				</li>
+								<li>
+					<div class="l_img">
+						<img src="images/2.png" width="280" height="188" alt="网页制作" />
+					</div>
+					<p class="l_title">
+						<a href="#">网页制作基础到实战学习班</a>
+						<span>￥1580</span>
+					</p>
+					<div  class="l_num">共150人购买</div>
+					<div class="l_yy">
+						<div class="y_text">
+							<span>课题：项目实战</span>
+							<a href="#">查看课程详情</a>
+						</div>
+					</div>
+				</li>
+				 <li>
+					<div class="l_img">
+						<img src="images/3.png" width="280" height="188" alt="网页制作" />
+					</div>
+					<p class="l_title">
+						<a href="#">网页制作基础到实战学习班</a>
+						<span>￥1580</span>
+					</p>
+					<div  class="l_num">共150人购买</div>
+					<div class="l_yy">
+						<div class="y_text">
+							<span>课题：项目实战</span>
+							<a href="#">查看课程详情</a>
+						</div>
+					</div>
+				</li>
+				 <li>
+					<div class="l_img">
+						<img src="images/1.png" width="280" height="188" alt="网页制作" />
+					</div>
+					<p class="l_title">
+						<a href="#">网页制作基础到实战学习班</a>
+						<span>￥1580</span>
+					</p>
+					<div  class="l_num">共150人购买</div>
+					<div class="l_yy">
+						<div class="y_text">
+							<span>课题：项目实战</span>
+							<a href="#">查看课程详情</a>
+						</div>
+					</div>
+				</li>
+				 <li>
+					<div class="l_img">
+						<img src="images/2.png" width="280" height="188" alt="网页制作" />
+					</div>
+					<p class="l_title">
+						<a href="#">网页制作基础到实战学习班</a>
+						<span>￥1580</span>
+					</p>
+					<div  class="l_num">共150人购买</div>
+					<div class="l_yy">
+						<div class="y_text">
+							<span>课题：项目实战</span>
+							<a href="#">查看课程详情</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+
+	</div>
+	<!-- end course-->
+
+	<!--strat course-->
+	<div class="course">
+		<div class="c_title">
+			<h3>职业技能</h3>
+			<div class="c_type">
+				<ul>
+					<li class="t_sel">精选课程</li>
+					<li>师资力量</li>
+				</ul>
+			</div>
+			<a href="#" class="t_more">更多精品课程&nbsp&gt&gt</a>
+		</div>
+		<div class="clear"></div>
+		<div class="c_com">
+			<ul class="c_list">
+				<li>
+					<div class="l_img">
+						<img src="images/4.png" width="280" height="188" alt="网页制作" />
+					</div>
+					<p class="l_title">
+						<a href="#">网页制作基础到实战学习班</a>
+						<span>￥1580</span>
+					</p>
+					<div  class="l_num">共150人购买</div>
+					<div class="l_yy">
+						<div class="y_text">
+							<span>课题：项目实战</span>
+							<a href="#">查看课程详情</a>
+						</div>
+					</div>
+				</li>
+				 <li>
+					<div class="l_img">
+						<img src="images/5.png" width="280" height="188" alt="网页制作" />
+					</div>
+					<p class="l_title">
+						<a href="#">网页制作基础到实战学习班</a>
+						<span>￥1580</span>
+					</p>
+					<div  class="l_num">共150人购买</div>
+					<div class="l_yy">
+						<div class="y_text">
+							<span>课题：项目实战</span>
+							<a href="#">查看课程详情</a>
+						</div>
+					</div>
+				</li>
+				 <li>
+					<div class="l_img">
+						<img src="images/4.png" width="280" height="188" alt="网页制作" />
+					</div>
+					<p class="l_title">
+						<a href="#">网页制作基础到实战学习班</a>
+						<span>￥1580</span>
+					</p>
+					<div  class="l_num">共150人购买</div>
+					<div class="l_yy">
+						<div class="y_text">
+							<span>课题：项目实战</span>
+							<a href="#">查看课程详情</a>
+						</div>
+					</div>
+				</li>
+				 <li>
+					<div class="l_img">
+						<img src="images/5.png" width="280" height="188" alt="网页制作" />
+					</div>
+					<p class="l_title">
+						<a href="#">网页制作基础到实战学习班</a>
+						<span>￥1580</span>
+					</p>
+					<div  class="l_num">共150人购买</div>
+					<div class="l_yy">
+						<div class="y_text">
+							<span>课题：项目实战</span>
+							<a href="#">查看课程详情</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+
+	</div>
+	<!-- end course-->
+
+	<!--strat course-->
+	<div class="course">
+		<div class="c_title">
+			<h3>语言培训</h3>
+			<div class="c_type">
+				<ul>
+					<li class="t_sel">精选课程</li>
+					<li>师资力量</li>
+				</ul>
+			</div>
+			<a href="#" class="t_more">更多精品课程&nbsp&gt&gt</a>
+		</div>
+		<div class="clear"></div>
+		<div class="c_com">
+			<ul class="c_list">
+				<li>
+					<div class="l_img">
+						<img src="images/5.png" width="280" height="188" alt="网页制作" />
+					</div>
+					<p class="l_title">
+						<a href="#">网页制作基础到实战学习班</a>
+						<span>￥1580</span>
+					</p>
+					<div  class="l_num">共150人购买</div>
+					<div class="l_yy">
+						<div class="y_text">
+							<span>课题：项目实战</span>
+							<a href="#">查看课程详情</a>
+						</div>
+					</div>
+				</li>
+				 <li>
+					<div class="l_img">
+						<img src="images/6.png" width="280" height="188" alt="网页制作" />
+					</div>
+					<p class="l_title">
+						<a href="#">网页制作基础到实战学习班</a>
+						<span>￥1580</span>
+					</p>
+					<div  class="l_num">共150人购买</div>
+					<div class="l_yy">
+						<div class="y_text">
+							<span>课题：项目实战</span>
+							<a href="#">查看课程详情</a>
+						</div>
+					</div>
+				</li>
+				 <li>
+					<div class="l_img">
+						<img src="images/5.png" width="280" height="188" alt="网页制作" />
+					</div>
+					<p class="l_title">
+						<a href="#">网页制作基础到实战学习班</a>
+						<span>￥1580</span>
+					</p>
+					<div  class="l_num">共150人购买</div>
+					<div class="l_yy">
+						<div class="y_text">
+							<span>课题：项目实战</span>
+							<a href="#">查看课程详情</a>
+						</div>
+					</div>
+				</li>
+				 <li>
+					<div class="l_img">
+						<img src="images/6.png" width="280" height="188" alt="网页制作" />
+					</div>
+					<p class="l_title">
+						<a href="#">网页制作基础到实战学习班</a>
+						<span>￥1580</span>
+					</p>
+					<div  class="l_num">共150人购买</div>
+					<div class="l_yy">
+						<div class="y_text">
+							<span>课题：项目实战</span>
+							<a href="#">查看课程详情</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+
+	</div>
+	<!-- end course-->
+
+	<!--strat course-->
+	<div class="course">
+		<div class="c_title">
+			<h3>兴趣爱好</h3>
+			<div class="c_type">
+				<ul>
+					<li class="t_sel">精选课程</li>
+					<li>师资力量</li>
+				</ul>
+			</div>
+			<a href="#" class="t_more">更多精品课程&nbsp&gt&gt</a>
+		</div>
+		<div class="clear"></div>
+		<div class="c_com">
+			<ul class="c_list">
+				<li>
+					<div class="l_img">
+						<img src="images/7.png" width="280" height="188" alt="网页制作" />
+					</div>
+					<p class="l_title">
+						<a href="#">网页制作基础到实战学习班</a>
+						<span>￥1580</span>
+					</p>
+					<div  class="l_num">共150人购买</div>
+					<div class="l_yy">
+						<div class="y_text">
+							<span>课题：项目实战</span>
+							<a href="#">查看课程详情</a>
+						</div>
+					</div>
+				</li>
+				 <li>
+					<div class="l_img">
+						<img src="images/8.png" width="280" height="188" alt="网页制作" />
+					</div>
+					<p class="l_title">
+						<a href="#">网页制作基础到实战学习班</a>
+						<span>￥1580</span>
+					</p>
+					<div  class="l_num">共150人购买</div>
+					<div class="l_yy">
+						<div class="y_text">
+							<span>课题：项目实战</span>
+							<a href="#">查看课程详情</a>
+						</div>
+					</div>
+				</li>
+				 <li>
+					<div class="l_img">
+						<img src="images/7.png" width="280" height="188" alt="网页制作" />
+					</div>
+					<p class="l_title">
+						<a href="#">网页制作基础到实战学习班</a>
+						<span>￥1580</span>
+					</p>
+					<div  class="l_num">共150人购买</div>
+					<div class="l_yy">
+						<div class="y_text">
+							<span>课题：项目实战</span>
+							<a href="#">查看课程详情</a>
+						</div>
+					</div>
+				</li>
+				 <li>
+					<div class="l_img">
+						<img src="images/8.png" width="280" height="188" alt="网页制作" />
+					</div>
+					<p class="l_title">
+						<a href="#">网页制作基础到实战学习班</a>
+						<span>￥1580</span>
+					</p>
+					<div  class="l_num">共150人购买</div>
+					<div class="l_yy">
+						<div class="y_text">
+							<span>课题：项目实战</span>
+							<a href="#">查看课程详情</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+
+	</div>
+	<!-- end course-->
+	
+	<!--strant footer-->
+	<div  class="footer">
+		<div class="f_link">
+			<div class="l_com">
+			友情链接： <a href="#">SEO研究中心</a> | <a href="#">考试在线</a> | <a href="#">腾讯课堂</a>
+			</div>
+			<div class="f_info">
+				<div class="i_footer">
+					<div class="f_box">
+						<a href="#" class="b_icom">
+							<i></i>
+						</a>
+						<div class="b_com">
+							<a href="#">了解潭州</a>
+							<a href="#">联系我们</a> 
+							<a href="#">退款维权</a> 
+							<a href="#">加入潭州</a> 
+							<a href="#">学员风采</a> 
+							<a href="#">学习课程</a> 
+
+						</div>
+					</div>
+					<div class="f_box f_txt">
+						<a href="#" class="b_icom">
+							<i class="i_wx">
+							<div class="w_qrcode">
+								<img src="images/erweima.png" width="119" height="130" alt="二维码" />
+							</div>
+							</i>
+						</a>
+						<a href="#" class="i_text">关注官方微信</a>
+					</div>
+
+					<div class="f_box f_txt">
+						<a href="#" class="b_icom">
+							<i class="i_tx"></i>
+						</a>
+						<a href="#" class="i_text">进入腾讯课堂</a>
+					</div>
+
+					<div class="f_box f_time">
+						<a href="#" class="b_icom">
+							<i class="i_tx"></i>
+						</a>
+						<p>联系Q Q：3115057393</p>
+						<p>联系客服：400 - 009 - 6359</p>
+						<p>周一至六9:30-23:00[仅收市话费]</p> 
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!--end footer-->
+
+	<p class="f_copyright">
+		Copyright © 2013-2015 www.mooncollege.cn All Rights Reserved 版权所有：湖南潭州教育咨询有限公司 备案号：备13016338号
+	</p>
+	
+
+
+</body>
+
+
+</html>

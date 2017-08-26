@@ -1,0 +1,31 @@
+body{background:url("../images/bg.jpg");}
+	#web{width:100%;height:393px;background:url("../images/h_ban.jpg") center;}
+	#con{
+			width:1190px;height:1000px;
+			margin:30px auto;
+			}
+	.title{width:1190px;height:160px;background:url("../images/un_img.png");}
+	.pic{width:1000px;height:345px;margin:-105px auto;}
+	.pic a{
+			width:240px;height:315px;display:block;
+			float:left;margin-left:8px;
+			
+			}
+	.pic .a1{background:url("../images/un_img.png");background-position:0px -165px;}
+	.pic .a2{background:url("../images/un_img.png");background-position:-250px -165px;}
+	.pic .a3{background:url("../images/un_img.png");background-position:-500px -165px;}
+	.pic .a4{background:url("../images/un_img.png");background-position:-755px -165px;}
+	.pic .a1:hover{background-position:0px -500px;}
+	.pic .a2:hover{background-position:-250px -500px;}
+	.pic .a3:hover{background-position:-500px -500px;}
+	.pic .a4:hover{background-position:-755px -500px;}
+	#ewm{
+			width:128px;height:128px;background:url("../images/ewm.png");
+			background-size:128px;border:2px solid #00a7e1;
+			position:fixed;right:0px;top:515px;
+			}
+	#top{
+			width:40px;height:135px;background:url("../images/un_img.png");
+			background-position:-1150px -285px;
+			position:fixed;right:40px;top:635px;
+			}

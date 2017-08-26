@@ -1,0 +1,74 @@
+body,div,
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+ul,li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+img{
+	vertical-align:top;
+	border:none;
+}
+body {
+	background:url("../img/pifu7.jpg") no-repeat center fixed;
+	/*为body 加上一个背景图片*/
+}
+#login {
+	width:400px;
+	height:500px;
+	background:rgba(255,255,255,0.5);
+	margin:60px auto 30px auto;
+}
+#login .login_top {
+	height:60px;
+	background:rgba(29,4,32,0.5);
+	color:#333;
+	font-size:18px;
+	text-align:center;
+	/*文字水平居中*/
+ line-height:60px;
+	/*文字垂直居中*/
+ font-weight:600;
+}
+#login .login_logo a {
+	display:block;
+	/*行元素-》内容决定宽度和高度 -》 转为块*/
+width:180px;
+	height:180px;
+	margin:20px auto;
+	background:rgba(12,2,2,0.31) url("../img/login_logo.png")no-repeat center;
+	/*多重背景 css3*/
+ border-radius:50%;
+}
+/*公用的input*/
+input {
+	width:340px;
+	height:45px;
+	margin:5px 0px;
+	border-radius:5px;
+	border:none;
+	font-size:14px;
+}
+#login .login_input {
+	width:340px;
+	margin:0px auto;
+}
+#login .login_input input {
+	background:rgba(62,81,188,0.4);
+	padding-left:12px;
+	color:#120606;
+}
+#login .login_btn {
+	width:340px;
+	margin:10px auto;
+}
+#login .login_btn input {
+	background:#dc5a5a;
+	color:#fff;
+	box-shadow:0px 5px 0px #992f2f;
+	/*css3阴影 水平 垂直 扩散*/
+}
+#login .login_btn input:hover {
+	box-shadow:0px -5px 0px #992f2f;
+}

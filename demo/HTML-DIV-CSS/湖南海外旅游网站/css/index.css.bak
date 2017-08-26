@@ -1,0 +1,38 @@
+
+*{margin:0px; padding:0px;}
+#Top{/*width:100%;*/ height:149px; background:url("../images/headbg.jpg");}
+#Top .head{width:1000px; height:30px;line-height:30px;  margin:0px auto;/*水平距中*/font-size:13px;font-family:"微软雅黑"; color:#666;}
+#Top .head span{color:#E20076; font-weight:bold;/*加粗*/padding:0px 4px;}
+#Top .head a{color:#666;text-decoration:none;/*去掉下划线*/ font-weight:800;/*加粗*/
+				padding:0px 5px;}
+#Top .head a:hover{color:#E20076;}/*鼠标放上去改变文字颜色*/
+
+#header{width:1000px;height:70px;  margin:0px auto;}
+#header .banner{width:221px; height:44px; float:left;/*左浮动*/	padding-top:14px;}
+#header .logo{width:511px; height:70px;float:left;/*左浮动*/line-height:70px;font-size:16px;font-family:"微软雅黑"; padding-left:80px;}
+
+#header .search{width:180px; height:35px;float:right;/*左浮动*/	padding-top:16px; position:relative;/*相对定位*/}
+#header .logo a{color:#000; font-weight:bold; text-decoration:none;
+					padding:0px 20px; float:left;}
+#header .logo a:hover{color:#E20076;}
+
+#header .search input.txt{width:140px; height:23px; border:1px solid #e1e1e1; font-size:12px; 
+							color:#999; text-indent:10px;/*首行缩进*/ position:absolute; 
+							left:0px; top:20px;}
+#header .search input.but{width:26px; height:25px; background:url("../images/sosoh.jpg");
+						border:0px;/*边框设置为0*/ position:absolute; left:141px; top:20px;}
+
+#Nav{width:1000px;height:49px;margin:0px auto;}
+#Nav .mainNav{width:550px;height:49px;float:left;}
+#Nav .smallNav{width:150px;height:49px;float:right;}
+#Nav .mainNav ul li{list-style-type:none;/*去掉圆点*/width:100px;height:49px;float:left;/*浮动*/
+					line-height:49px;text-align:center;/*文字水平居中*/font-size:14px;/*文字大小*/
+					font-family:"微软雅黑";/*文字类型*/position:relative;/*相对定位*/}
+#Nav .mainNav ul li a{color:#fff;/*文字颜色*/text-decoration:none;}
+#Nav .mainNav ul li .meun{width:350px;height:300px;border:2px solid #e10076;/*边框*/border-top:0px;/*上边框*/position:absolute;/*绝对定位*/
+							background:#fff;filter:alpha(opacity=90);moz-opacity:0.9;opacity:0.9;/*背景透明*/
+							left:0px;top:49px;display:none;/*隐藏当前对象*/}
+#Nav .mainNav ul li .hover{background:#b80064;}
+#Nav .smallNav{line-height:/*行高*/49px;font-size:14px;font-family:"微软雅黑"}
+#Nav .smallNav a{text-decoration:none;color:#fff;｝
+Nav .smallNav a:hover{text-decoration:underline;/*加下划线*/}

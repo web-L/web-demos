@@ -1,0 +1,7 @@
+#QQ{width:187px;/*宽度*/ height:193px;/*高度*/ /*background:#FF0099;背景颜色*/
+	position:fixed;/*固定定位*/ top:100px; right:-187px;}
+.QQ_chat{width:217px; height:324px; background:url("../images/qq_bg.png");
+	position:fixed; top:100px; right:-217px; /*display:none;隐藏*/}
+.QQ_chat .chat{width:170px; height:210px; /*background:#663333;*/ margin:90px 0px 0px 32px;}
+.QQ_chat .chat p{ font-size:14px; font-family:"微软雅黑";  margin:0px;margin-top:20px;}
+.QQ_chat .chat p img{ margin-left:10px;}

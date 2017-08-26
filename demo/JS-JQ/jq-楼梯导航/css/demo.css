@@ -1,0 +1,73 @@
+body,div,
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+ul,li{
+	list-style:none;
+}
+
+a{
+	text-decoration:none;
+}
+img{
+	vertical-align:top;
+	border:none;
+}
+div{
+	width:1200px;
+	margin:0px auto;
+	text-align:center;
+}
+
+#header{
+	width:1200px;
+	height:500px;
+	margin:0px auto;
+}
+div.box{
+	width:1200px;
+	position:relative;
+}
+.fotter{
+	text-align:center;
+}
+#nav{
+	height:384px;
+	width:50px;
+	border-radius:4px;
+	background-color: #f6f9fa;
+	border: 1px solid #e5e9ef;
+	position:fixed;
+	top: 50%;
+	right: 50%;
+	margin-right: -550px;
+	margin-top: -162px;
+	z-index:9999;
+}
+#nav ul li.control{
+	width:50px;
+	height:32px;
+	line-height:32px;
+	text-align:center;
+	font-size:14px;
+	color:#222;
+	cursor:pointer;
+	font-family:"微软雅黑";
+	transition:background 0.5s;
+	position:relative;
+	z-index:2;
+}
+#nav ul li.hide{
+	width:50px;
+	height:32px;
+	background:#00A1d6;
+	position:absolute;
+	top:0px;
+	display:none;
+}
+#nav ul li:hover{
+	background:#00A1d6;
+	color:#fff;
+}
+#nav ul li.on{
+	background:#00A1d6;
+	color:#fff;
+}

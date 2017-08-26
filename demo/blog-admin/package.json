@@ -1,0 +1,17 @@
+{
+  "name": "blogAdmin",
+  "version": "0.0.1",
+  "description": "blog博客后台管理系统",
+  "keywords": ["后台管理系统","Node后台管理系统","管理系统","博客后台管理系统"],
+  "author": "Ali",
+  "license": "",
+  "dependencies": {
+    "express":"latest",
+	"ejs":"latest",
+	"mysql" : "latest",
+	"body-parser" : "latest" ,
+	"cookie-parser" : "latest",
+	"express-session" : "latest",
+	"multer" : "latest"
+  },
+}

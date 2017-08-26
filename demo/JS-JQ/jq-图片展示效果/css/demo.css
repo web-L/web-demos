@@ -1,0 +1,12 @@
+*{margin:0px;}
+
+.imgList{width:985px;/*宽度*/ height:370px;
+			margin:100px auto;}
+.imgList .List{width:324px; height:370px;
+				float:left;/*左浮动*/ margin-right:4px;  }
+.imgList .List .bigImg{width:324px; height:244px; margin-bottom:4px;}
+.imgList .List .sImg{width:160px; height:120px;float:left;  }
+.imgList .List .mar{margin-right:4px;}
+.imgList .List div{position:relative;}
+.imgList .List div p{width:100%; height:0px; background-color:rgba(0,0,0,0.5); position:absolute;/*绝对定位*/ left:0px; bottom:0px; text-align:center;
+		padding-top:0px; overflow:hidden;}

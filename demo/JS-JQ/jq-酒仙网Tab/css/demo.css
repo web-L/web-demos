@@ -1,0 +1,33 @@
+body,div,
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+ul,li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+img{
+	vertical-align:top;
+	border:none;
+}
+.main{
+	width:929px;height:500px;border:1px solid #ddd;
+	margin:20px auto;
+	}
+.main .nav li{
+		width:185px;height:35px;
+		list-style-type:none;
+		float:left;
+		text-align:center;line-height:35px;
+		font-weight:bold;color:#666;
+		border:1px solid #ddd;border-right:none;
+		cursor:pointer;
+		}
+.main .nav .first{border-left:none;}
+.main .nav li.hover{
+				color:#c41921;
+				border-bottom:none;
+				border-top:3px solid #c41921;
+				height:34px;
+				}
+.main .con{width:914px;height:460px;overflow:hidden;}

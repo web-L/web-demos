@@ -1,0 +1,88 @@
+body,div,
+ul,li,p,
+input,
+button,
+dl,dt,dd{margin:0px;padding:0px;}
+html,body{
+	width:100%;
+	height:100%;
+}
+ul,li{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+img{
+	vertical-align:top;
+	border:none;
+}
+#banner{
+	width:500px;
+	height:360px;
+	border:3px solid #ccc;
+	margin:100px auto 0px;
+	position:relative;
+	border-radius: 4px;
+}
+#banner div#box{
+	width:500px;
+	height:360px;
+	position:relative;
+	overflow:hidden;
+}
+#banner div#box ul{
+	width:1000%;
+	position:absolute;
+	top:0px;
+	left:0px;
+	margin-left:0px;
+}
+#banner div#box ul li{
+	float:left;
+}
+#banner ul#Tab {
+	width:128px;
+	position:absolute;
+	bottom:20px;
+	left:40%;
+	z-index:999;
+	padding:4px 6px;
+	border-radius:30px;
+	background:rgba(0,0,0,0.4);
+}
+#banner ul#Tab li{
+	width:10px;
+	height:10px;
+	border:1px solid #fff;
+	float:left;
+	border-radius:50%;
+	margin:0px 6px;
+	cursor:pointer;
+}
+#banner ul#Tab li.hover{
+	background:#f60;
+}
+#banner div.pic a.i{
+	width: 40px;
+	height: 70px;
+	background: rgba(0,0,0,.5);
+	color: #fff;
+	font-size: 26px;
+	font-family: 'Microsoft yahei';
+	font-weight: bold;
+	text-align: center;
+	line-height: 70px;
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	margin-top: -35px;
+	border-radius:4px;
+	display:none;
+}
+#banner div.pic #left{
+	left:0px;
+}
+#banner div.pic #right{
+	right:0px;
+}

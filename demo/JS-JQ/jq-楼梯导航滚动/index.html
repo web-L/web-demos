@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<!--声明当前页面编码集（中文编码《gbk-gb2312》,国际编码<utf-8>）-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--声明当前页面的三要素-->
+		<title></title>
+		<meta name="keywords" content="关键词，关键词">
+		<meta name="description" content="描述">
+
+		<!--css,js-->
+
+		<style type="text/css">
+			body,div,
+			ul,li,p,
+			input,
+			button,
+			dl,dt,dd{margin:0px;padding:0px;}
+			body,html{
+				width:100%;
+				height:100%;
+			}
+			ul,li{
+				list-style:none;
+				font-family:"微软雅黑";
+			}
+			#louti{
+				width:120px;
+				height:510px;
+				position:fixed;
+				top:20%;
+				left:50px;
+			}
+			#louti ul li{
+				height:22px;
+				color:#fff;
+				text-align:center;
+				cursor:pointer;
+				margin-top: 14px;
+				width:20px;
+				border-radius: 100%;
+				border:1px solid #fff;
+			}
+			#louti img.top{
+				display:block;
+			}
+		
+			#louti ul li.bg3{
+				background:#ea2b5e;
+			}
+			.box{
+				width:100%;
+				height:100%;
+				background-size: 100% 100%;
+			}
+			.bog1{
+				background:url("images/bg1.jpg") no-repeat 100% 100%;
+			}
+			.bog2{
+				background:url("images/bg2.jpg") no-repeat 100% 100%;
+			} 
+			.bog3{
+				background:url("images/bg3.jpg") no-repeat 100% 100%;
+			} 
+			.bog4{
+				background:url("images/bg4.jpg") no-repeat 100% 100%;
+			} 
+			.bog5{
+				background:url("images/bg5.jpg") no-repeat 100% 100%;
+			} 
+			.bog6{
+				background:url("images/bg6.jpg") no-repeat 100% 100%;
+			} 
+			.bog7{
+				background:url("images/bg7.jpg") no-repeat 100% 100%;
+			} 
+			.bog8{
+				background:url("images/bg8.jpg") no-repeat 100% 100%;
+			} 
+			.box{
+				width:100%;
+				height:100%;
+				background-size: 100% 100%;
+			}
+		</style>
+		
+	</head>
+
+	<body>
+
+
+	<div id="louti">
+		
+		<ul>
+			<li style="background:#ea2b5e;">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+		</ul>
+		
+	</div>
+
+	<div class="box bog1"></div>
+	<div class="box bog2"></div>
+	<div class="box bog3"></div>
+	<div class="box bog4"></div>
+	<div class="box bog5"></div>
+	<div class="box bog6"></div>
+	<div class="box bog7"></div>
+	<div class="box bog8"></div>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			//$("#louti ul li:even").addClass("bg1");//给偶数(even) li 加bg1
+			//$("#louti ul li:odd").addClass("bg2");//给奇数(odd) li 加bg2
+			var oLi = $("#louti ul li");
+			oLi.click(function(){//当鼠标点击发生的事件
+				//siblings：获取当前其他同级的 li removeClass：移除 bg3样式
+				$(this).addClass("bg3").siblings("li").removeClass("bg3");
+				var $index = $(this).index();//获取对应 li 的序列号 
+				var i = $("body,html").height();//获取当前浏览器高度
+				$("body,html").animate({scrollTop : $index*i},200);//animate 
+				
+			});
+
+		});
+	</script>
+	</body>
+
+
+</html>

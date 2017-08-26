@@ -1,0 +1,11 @@
+*{margin:0px; padding:0px;}
+
+.flash{width:100%; height:400px;
+		position:relative;}
+.flash ul.con li{list-style-type:none; width:100%; height:400px; 
+				position:absolute; left:0px; top:0px;}
+.flash ul.but{ width:100px; position:absolute;
+			top:350px; left:45%; z-index:222;}
+.flash ul.but li{width:13px; height:13px; display:inline-block;
+				background:url("../images/dot.png") -13px 0px;}
+.flash ul.but li.current{background:url("../images/dot.png") 0px 0px;}

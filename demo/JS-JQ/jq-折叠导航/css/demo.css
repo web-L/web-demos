@@ -1,0 +1,79 @@
+/*导入自定义字体*/
+@font-face {font-family: 'iconfont';
+	src: url('../font/iconfont.eot'); /* IE9*/
+	src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('../font/iconfont.woff') format('woff'), /* chrome、firefox */
+	url('../font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+	url('../font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+*{
+	margin:0px;
+	padding:0px;
+}
+html,body{
+	width:100%;
+	overflow-y:hidden;
+	height:100%;
+}
+div.container{
+	/*border:1px solid red;显示出来了边框*/
+	float:left;
+	height:100%;
+}
+#left{
+	width:20%;
+}
+#right{
+	width:80%;
+	padding-top:10px;
+}
+#menu{
+	width:95%;
+	background-color:#252525;
+	margin:auto;
+	margin-top:10px;
+}
+#menu p.logo{
+	width:100%;
+	height:68px;
+	border-bottom:1px solid #424242;
+	background-image:url(../images/logo.png);
+	background-position:center;
+	background-repeat:no-repeat;
+}
+#menu ul.list{
+	list-style:none;
+	color:#fff;
+	font-family:'Microsoft Yahei';
+	font-size:14px;
+}
+#menu ul.list li.item{
+	border-bottom: 1px solid #000;
+	border-top: 1px solid #424242;
+	cursor:pointer;
+}
+#menu ul.list li.item span{
+	height:45px;
+	line-height:45px;
+	padding-left:20px;
+	display:block;
+}
+#menu ul.list li.item span b{
+	font-weight:normal;
+	font-family: 'iconfont';
+	margin-right:10px;
+	font-size:16px;
+}
+#menu ul.list li.item ul.submenu{
+	list-style:none;
+	background-color:#2f3437;
+	margin:0px;
+	padding:0px;
+}
+#menu ul.list li.item ul.submenu li{
+	border-top:1px solid #3f4041;
+	height:36px;
+	line-height:36px;
+	padding-left:30px;
+	font-size:12px;
+}
